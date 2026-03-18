@@ -1,0 +1,39 @@
+---
+permalink: um-admin/manage-session-timeouts-unified.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, manage, session, timeouts 
+summary: 可以为 SANtricity Unified Manager 配置超时，以便在指定时间后断开用户的非活动会话。 
+---
+= 在 SANtricity Unified Manager 中管理会话超时
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以为 SANtricity Unified Manager 配置超时，以便在指定时间后断开用户非活动会话。
+
+.关于此任务
+默认情况下， Unified Manager 的会话超时时间为 30 分钟。您可以调整该时间，也可以完全禁用会话超时。
+
+
+NOTE: 如果使用嵌入在阵列中的 Security Assertion Markup Language (SAML) 功能配置 Access Management，则当用户的 SSO 会话达到最大限制时，可能会发生会话超时。这可能在 System Manager 会话超时之前发生。
+
+.步骤
+. 在菜单栏中，选择用户登录名旁边的下拉箭头。
+. 选择 *Enable/Disable session timeout*。
++
+此时将打开启用/禁用会话超时对话框。
+
+. 使用微调器控件以分钟为单位增加或减少时间。
++
+您可以设置的最短超时时间为 15 分钟。
+
++
+[NOTE]
+====
+要禁用会话超时，请清除 *Set the length of time...* 复选框。
+
+====
+. 单击 *Save*。
+

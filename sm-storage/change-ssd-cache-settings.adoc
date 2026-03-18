@@ -1,0 +1,89 @@
+---
+permalink: sm-storage/change-ssd-cache-settings.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, ssd, cache, settings 
+summary: 您可以编辑 SSD Cache 的名称，并查看其状态、最大和当前容量、Drive Security 和 Data Assurance 状态及其关联的卷和驱动器。 
+---
+= 在 SANtricity System Manager 中更改 SSD Cache 设置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以编辑 SSD Cache 的名称，并查看其状态、最大和当前容量、Drive Security 和 Data Assurance 状态及其关联的卷和驱动器。
+
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 选择要编辑的 SSD Cache，然后单击 *View/Edit Settings*。
++
+此时将显示 SSD 缓存设置对话框。
+
+. 根据需要查看或编辑 SSD Cache 设置。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 设置 | 说明 
+
+
+ a| 
+名称
+ a| 
+显示 SSD Cache 的名称，您可以更改该名称。SSD Cache 的名称是必需的。
+
+
+
+ a| 
+特点
+ a| 
+显示 SSD Cache 的状态。可能的状态包括：
+
+** 最佳
+** 未知
+** 已降级
+** 失败（失败状态会导致严重的 MEL 事件。）
+** 已暂停
+
+
+
+
+ a| 
+容量
+ a| 
+显示 SSD Cache 的当前容量和允许的最大容量。
+
+SSD Cache 允许的最大容量取决于控制器的主缓存大小：
+
+** 高达 1 GiB
+** 1 GiB 至 2 GiB
+** 2 GiB 至 4 GiB
+** 超过 4 GiB
+
+
+
+
+ a| 
+安全与 DA
+ a| 
+显示 SSD Cache 的驱动器安全和 Data Assurance 状态。
+
+** *支持安全* -- 指示 SSD Cache 是否完全由支持安全的驱动器组成。支持安全的驱动器是一种自加密驱动器，可以保护其数据免受未经授权的访问。
+** *已启用安全* -- 指示是否在 SSD Cache 上启用安全功能。
+** *支持 DA* -- 指示 SSD Cache 是否完全由支持 DA 的驱动器组成。支持 DA 的驱动器可以检查并纠正在主机和存储阵列之间传输数据时可能发生的错误。
+
+
+
+
+ a| 
+关联对象
+ a| 
+显示与 SSD Cache 关联的卷和驱动器。
+
+|===
+====
+. 单击 *Save*。
+

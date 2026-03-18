@@ -1,0 +1,14 @@
+---
+permalink: um-certificates/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= SANtricity Unified Manager 7
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+证书管理允许您创建证书签名请求 (CSR)、导入证书和管理现有证书。

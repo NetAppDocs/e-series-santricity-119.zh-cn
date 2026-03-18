@@ -1,0 +1,50 @@
+---
+permalink: um-manage/requirements-for-replicating-storage-configurations.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, requirements, replicating, storage, configurations 
+summary: 将存储配置从一个存储阵列导入到另一个存储阵列之前，请查看要求和准则。 
+---
+= 在 SANtricity Unified Manager 中复制存储阵列配置的要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+将存储配置从一个存储阵列导入到另一个存储阵列之前，请查看要求和准则。
+
+
+
+== 磁盘架
+
+* 控制器所在的盘架在源阵列和目标阵列上必须相同。
+* 源阵列和目标阵列上的盘架 ID 必须相同。
+* 扩展盘架必须在相同插槽中安装相同驱动器类型（如果驱动器用于配置中，未使用驱动器的位置无关紧要）。
+
+
+
+
+== 控制器
+
+* 源阵列和目标阵列之间的控制器类型可以不同（例如，从 E2800 导入到 E5700），但 RBOD 机箱类型必须相同。
+* HIC（包括主机的 DA 功能）在源阵列和目标阵列之间必须相同。
+* 不支持从双工配置导入到单工配置；但是，允许从单工配置导入到双工配置。
+* FDE 设置不包含在导入过程中。
+
+
+
+
+== 状态
+
+* 目标数组必须处于"最佳"状态。
+* 源数组不必处于 Optimal 状态。
+
+
+
+
+== 存储
+
+* 驱动器容量可能因源阵列和目标阵列而异，只要目标上的卷容量大于源。（目标阵列可能具有更新、更大容量的驱动器，这些驱动器不会通过复制操作完全配置到卷中。）
+* 源阵列上 64 TB 或更大的磁盘池卷将阻止目标上的导入过程。
+* 精简卷未包含在导入过程中。
+

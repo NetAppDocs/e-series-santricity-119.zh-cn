@@ -1,0 +1,29 @@
+---
+permalink: sm-storage/cancel-pending-snapshot-image.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, cancel, pending, snapshot, image 
+summary: 您可以在完成之前取消挂起的快照图像。快照异步发生，快照的状态处于挂起状态，直到快照完成。快照图像在同步操作完成后立即完成。 
+---
+= 在 SANtricity System Manager 中取消待处理的快照映像
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在完成之前取消挂起的快照图像。快照异步发生，快照的状态处于挂起状态，直到快照完成。快照图像在同步操作完成后立即完成。
+
+.关于此任务
+由于以下并发条件，快照映像处于 Pending 状态：
+
+* 包含此快照映像的快照组或一致性组的一个或多个成员卷的基本卷是异步镜像组的成员。
+* 此卷或多个卷当前处于异步镜像同步操作中。
+
+
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 单击 *Reserved Capacity* 选项卡。
+. 选择要取消挂起快照映像的快照组，然后单击菜单：Uncommon Tasks[Cancel pending snapshot image]。
+. 单击 *Yes* 以确认要取消挂起的快照映像。
+

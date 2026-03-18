@@ -1,0 +1,35 @@
+---
+permalink: um-manage/perform-pre-upgrade-health-check.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, perform, pre-upgrade, health, check 
+summary: 运行状况检查作为升级过程的一部分运行，但您也可以在开始之前单独运行运行状况检查。运行状况检查会评估存储阵列的组件，以确保升级可以继续。 
+---
+= 在 SANtricity Unified Manager 中执行升级前运行状况检查
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+运行状况检查作为升级过程的一部分运行，但您也可以在开始之前单独运行运行状况检查。运行状况检查会评估存储阵列的组件，以确保升级可以继续。
+
+.步骤
+. 从主视图中，选择 *管理*，然后选择菜单：Upgrade Center[Pre-Upgrade Health Check]。
++
+将打开升级前运行状况检查对话框，并列出所有发现的存储系统。
+
+. 如果需要，请对列表中的存储系统进行筛选或排序，以便查看当前未处于 Optimal 状态的所有系统。
+. 选中要运行运行状况检查的存储系统的复选框。
+. 单击 *Start*。
++
+在执行运行状况检查时，进度会显示在对话框中。
+
+. 健康检查完成后，您可以单击每行右侧的省略号 (...) 查看更多信息并执行其他任务。
++
+[NOTE]
+====
+如果任何阵列未通过运行状况检查，您可以跳过该特定阵列并继续升级其他阵列，也可以停止整个过程并对未通过的阵列进行故障排除。
+
+====
+

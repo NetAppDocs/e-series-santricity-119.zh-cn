@@ -1,0 +1,68 @@
+---
+permalink: sm-storage/rtv-terminology.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, remote, storage, terms 
+summary: 了解远程存储术语如何适用于您的存储阵列。 
+---
+= 了解 SANtricity 软件中的远程存储术语
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解远程存储术语如何适用于您的存储阵列。
+
+[cols="25h,~"]
+|===
+| 术语 | 说明 
+
+
+ a| 
+IQN
+ a| 
+iSCSI 限定名称 (IQN) 标识符，它是 iSCSI 启动程序或目标的唯一名称。
+
+
+
+ a| 
+LUN
+ a| 
+逻辑单元编号，用于标识可以呈现给主机进行访问的逻辑单元。
+
+
+
+ a| 
+远程存储系统
+ a| 
+最初驻留数据的存储系统。远程存储系统可以是 E 系列型号，也可以是其他供应商的系统。
+
+
+
+ a| 
+远程存储设备
+ a| 
+数据最初存储在远程系统上的物理或逻辑设备。在 E 系列存储系统中，这称为"卷"。
+
+
+
+ a| 
+远程存储对象
+ a| 
+包含允许 E 系列系统识别并连接到远程存储系统的信息的对象。此信息包括远程存储系统的 IQN 和 IP 地址。远程存储对象表示远程存储系统与 E 系列系统之间的通信。
+
+
+
+ a| 
+远程存储卷
+ a| 
+E 系列系统上的标准卷，允许对远程存储设备进行数据访问。
+
+
+
+ a| 
+卷
+ a| 
+存储数据的容器。它是为主机创建的用于访问数据的逻辑组件。
+
+|===

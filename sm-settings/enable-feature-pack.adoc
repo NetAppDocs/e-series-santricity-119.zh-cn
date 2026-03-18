@@ -1,0 +1,47 @@
+---
+permalink: sm-settings/enable-feature-pack.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, enable, feature, pack, 
+summary: 功能包是更改存储阵列属性的捆绑包（例如，将协议从 Fibre Channel 更改为 iSCSI）。功能包需要特殊密钥才能启用。 
+---
+= 在 SANtricity System Manager 中启用功能包
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+功能包是更改存储阵列属性的捆绑包（例如，将协议从 Fibre Channel 更改为 iSCSI）。功能包需要特殊密钥才能启用。
+
+.开始之前
+* 您已经遵循了描述新存储阵列属性的转换和准备的相应说明。有关主机协议转换说明，请参见控制器型号的硬件维护指南。
+* 存储阵列处于脱机状态，因此没有主机或应用程序正在访问它。
+* 所有数据都已备份。
+* 您已获得功能包文件。
++
+功能包文件加载到管理客户端（具有用于访问 System Manager 的浏览器的系统）。
+
+
+
+[NOTE]
+====
+必须安排停机维护时段，并停止主机与控制器之间的所有 I/O 操作。此外，请注意，在成功完成转换之前，您无法访问存储阵列上的数据。
+
+====
+.关于此任务
+此任务介绍如何使用 System Manager 启用功能包。完成后，必须重新启动存储阵列。
+
+.步骤
+. 选择菜单：Settings[System]。
+. 在 *Add-ons* 下，选择 *Change Feature Pack*。
+. 单击 *Browse*，然后选择密钥文件。
++
+文件名显示在对话框中。
+
+. 在字段中键入 `change`。
+. 单击 *Change*。
++
+功能包迁移开始，控制器重新启动。会删除未写入的缓存数据，从而确保没有 I/O 活动。要使新功能包生效，两个控制器都会自动重新启动。重启完成后，存储阵列返回到响应状态。
+
+

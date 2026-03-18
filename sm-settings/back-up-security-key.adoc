@@ -1,0 +1,56 @@
+---
+permalink: sm-settings/back-up-security-key.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, backup, security, key, 
+summary: 创建或更改安全密钥后，您可以创建密钥文件的备份副本，以防原始文件损坏。 
+---
+= 在 SANtricity System Manager 中备份安全密钥
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+创建或更改安全密钥后，您可以创建密钥文件的备份副本，以防原始文件损坏。
+
+.关于此任务
+此任务介绍如何备份之前创建的安全密钥。在此过程中，为备份创建新的密码短语。此密码短语不需要与创建或上次更改原始密钥时使用的密码短语相匹配。密码短语仅适用于正在创建的备份。
+
+.步骤
+. 选择菜单：Settings[System]。
+. 在 *Security key management* 下，选择 *Back Up Key*。
++
+此时将打开备份安全密钥对话框。
+
+. 在 *Define a pass phrase/Re-enter pass phrase* 字段中，输入并确认此备份的密码短语。
++
+该值可以包含 8 到 32 个字符，并且必须包含以下每个字符：
+
++
+** 大写字母（一个或多个）
+** 一个数字（一个或多个）
+** 非字母数字字符，例如 !、*、@（一个或多个）
+
+
++
+[CAUTION]
+====
+*请务必记录您的条目以供日后使用*。您需要密码短语才能访问此安全密钥的备份。
+
+====
+. 单击 *Back Up*。
++
+将安全密钥的备份下载到本地主机，然后打开 *Confirm/Record Security Key Backup* 对话框。
+
++
+[NOTE]
+====
+下载的安全密钥文件的路径可能取决于浏览器的默认下载位置。
+
+====
+. 在安全的位置记录您的密码短语，然后单击 *关闭*。
+
+
+.完成后
+您应验证备份安全密钥。

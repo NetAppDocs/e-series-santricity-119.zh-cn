@@ -1,0 +1,53 @@
+---
+permalink: sm-support/activate-controller-software-and-firmware.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, activate, controller, software, firmware 
+summary: 您可以选择立即激活升级文件或等待更方便的时间。 
+---
+= 在 SANtricity System Manager 中激活控制器软件和固件
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以选择立即激活升级文件或等待更方便的时间。
+
+.关于此任务
+您可以下载和传输这些文件，而无需激活它们。您可以选择稍后激活，原因如下：
+
+* *时间* -- 激活软件和固件可能需要很长时间，因此您可能需要等待 I/O 负载较轻。控制器在激活期间发生故障转移，因此在升级完成之前，性能可能会低于正常水平。
+* *包类型* -- 在升级其他存储阵列上的文件之前，您可能需要在一个存储阵列上测试新软件和固件。
+
+
+当您有已传输但未激活的软件或固件时，您会在 System Manager 主页的通知区域以及升级中心页面上看到通知。
+
+[CAUTION]
+====
+激活过程启动后无法停止。
+
+====
+.步骤
+. 选择菜单：Support[Upgrade Center]。
+. 在标记为 SANtricity 操作系统控制器软件升级的区域中，单击*激活*，并确认要执行此操作。
++
+您可以在升级前运行状况检查期间取消此操作，但不能在激活期间取消。
+
++
+升级前运行状况检查开始。如果升级前运行状况检查通过，则升级过程继续激活文件。如果升级前运行状况检查失败，请使用 Recovery Guru 或联系技术支持解决问题。对于某些类型的条件，技术支持可能会建议您通过选中 *Allow Upgrade* 复选框继续升级，尽管存在错误。
+
++
+成功完成升级前运行状况检查后，将进行激活。激活所需的时间取决于您的存储阵列配置和要激活的组件。
+
+. *可选：* 要查看已升级内容的列表，请单击 *Save Log*。
++
+此文件将以此名称保存在浏览器的 Downloads 文件夹中 `drive_upgrade_log-timestamp.txt`。
+
+
+
+.完成后
+* 确认所有组件都显示在 Hardware 页面上。
+* 通过检查软件和固件清单对话框来验证新的软件和固件版本（转到菜单：Support[Upgrade Center]，然后单击 *Software and Firmware Inventory* 的链接）。
+* 如果升级了控制器 NVSRAM，则在激活过程中，应用于现有 NVSRAM 的任何自定义设置都将丢失。激活过程完成后，您需要再次将自定义设置应用于 NVSRAM。
+

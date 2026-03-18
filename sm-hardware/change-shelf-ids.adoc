@@ -1,0 +1,30 @@
+---
+permalink: sm-hardware/change-shelf-ids.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, change, shelf, ids, 
+summary: 货架 ID 是唯一标识存储阵列中货架的数字。货架在每个货架视图的左上角连续编号，从 00 或 01 开始。 
+---
+= 在 SANtricity System Manager 中更改磁盘架 ID
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+货架 ID 是唯一标识存储阵列中货架的数字。货架在每个货架视图的左上角连续编号，从 00 或 01 开始。
+
+.关于此任务
+控制器固件会自动分配货架 ID，但如果要创建不同的订购方案，您可以更改该编号。
+
+.步骤
+. 选择 *Hardware*。
+. 选择控制器架或驱动器架的下拉列表，然后选择 *更改 ID*。
+. 在更改货架 ID 对话框中，选择下拉列表以显示可用编号。
++
+此对话框不显示当前分配给活动磁盘架的 ID。
+
+. 选择一个可用号码，然后单击 *保存*。
++
+根据您选择的编号，可以在"硬件"页面上重新排列货架顺序。如果需要，您可以使用每个货架右上角的向上/向下箭头重新调整顺序。
+
+

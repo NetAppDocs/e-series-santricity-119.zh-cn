@@ -1,0 +1,98 @@
+---
+permalink: sm-hardware/configure-management-ports.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, configure, management, port, 
+summary: 控制器包括一个用于系统管理的 Ethernet 端口。如有必要，您可以更改其传输参数和 IP 地址。 
+---
+= 在 SANtricity System Manager 中配置管理端口
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+控制器包括一个用于系统管理的 Ethernet 端口。如有必要，您可以更改其传输参数和 IP 地址。
+
+.关于此任务
+在此过程中，选择端口 1，然后确定速度和端口寻址方法。端口 1 连接到管理客户端可以访问控制器和 System Manager 的网络。
+
+[NOTE]
+====
+不要在任何一个控制器上使用端口 2。端口 2 保留给技术支持人员使用。
+
+====
+.步骤
+. 选择 *Hardware*。
+. 如果图形显示驱动器，请单击 *Controllers & Components* 选项卡。
++
+图形会更改为显示控制器而不是驱动器。
+
+. 单击具有要配置的管理端口的控制器。
++
+此时将显示控制器的上下文菜单。
+
+. 选择 *Configure management ports*。
++
+此时将打开配置管理端口对话框。
+
+. 确保显示端口 1，然后单击 *Next*。
+. 选择配置端口设置，然后单击 *Next*。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 字段 | 说明 
+
+
+ a| 
+速度和双工模式
+ a| 
+如果您希望 System Manager 确定存储阵列和网络之间的传输参数，请保留自动协商设置；或者如果您知道网络的速度和模式，请从下拉列表中选择参数。只有有效的速度和双工组合显示在列表中。
+
+
+
+ a| 
+启用 IPv4 / 启用 IPv6
+ a| 
+选择一个或两个选项以启用对 IPv4 和 IPv6 网络的支持。
+
+|===
+====
++
+如果您选择*启用 IPv4*，点击*下一步*后将打开一个对话框，用于选择 IPv4 设置。如果您选择*启用 IPv6*，点击*下一步*后将打开一个对话框，用于选择 IPv6 设置。如果您选择这两个选项，则首先打开 IPv4 设置的对话框，然后单击*下一步*后，将打开 IPv6 设置的对话框。
+
+. 自动或手动配置 IPv4 和/或 IPv6 设置。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 字段 | 说明 
+
+
+ a| 
+自动从 DHCP 服务器获取配置
+ a| 
+选择此选项可自动获取配置。
+
+
+
+ a| 
+手动指定静态配置
+ a| 
+选择此选项，然后输入控制器的 IP 地址。（如果需要，您可以剪切地址并将其粘贴到字段中。）对于 IPv4，包括网络子网掩码和网关。对于 IPv6，包括可路由 IP 地址和路由器 IP 地址。
+
+
+NOTE: 如果更改 IP 地址配置，则会丢失到存储阵列的管理路径。如果您使用 SANtricity Unified Manager 全局管理网络中的阵列，请打开用户界面并转到菜单：Manage[Discover]。如果使用 SANtricity Storage Manager，则必须从企业管理窗口（EMW）中删除设备，通过选择菜单将其添加回 EMW：Edit[Add Storage Array]，然后输入新的 IP 地址。
+
+|===
+====
+. 单击 *Finish*。
+
+
+.结果
+管理端口配置显示在控制器设置的 Management Ports 选项卡中。

@@ -1,0 +1,29 @@
+---
+permalink: sm-hardware/update-battery-learn-cycles.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, update, battery, learn, cycles 
+summary: 学习周期是用于校准智能电池仪表的自动周期。周期计划在同一天和同一时间以 8 周的间隔自动启动（每个控制器）。如果要设置其他计划，可以调整学习周期。 
+---
+= 在 SANtricity System Manager 中更新电池学习周期
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+学习周期是用于校准智能电池仪表的自动周期。周期计划在同一天和同一时间以 8 周的间隔自动启动（每个控制器）。如果要设置其他计划，可以调整学习周期。
+
+.关于此任务
+更新学习周期会影响两个控制器电池。
+
+.步骤
+. 选择 *Hardware*。
+. 选择 Controller Shelf 的下拉列表，然后选择 *View settings*。
+. 选择 *Batteries* 选项卡。
+. 选择 *Update battery learn cycles* 。
++
+此时将打开更新电池学习周期对话框。
+
+. 从下拉列表中选择一个新的日期和时间。
+. 单击 *Save*。
+

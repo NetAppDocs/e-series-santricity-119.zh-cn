@@ -1,0 +1,29 @@
+---
+permalink: sm-settings/add-alert-email-addresses.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, add, email, addresses, alerts, 
+summary: 您最多可以为电子邮件提醒添加 20 个收件人。 
+---
+= 在 SANtricity System Manager 中添加警报电子邮件地址
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您最多可以为电子邮件提醒添加 20 个收件人。
+
+.步骤
+. 选择菜单：Settings[Alerts]。
+. 选择 *Email* 选项卡。
+. 选择 *Add Emails*。
++
+此时将打开添加电子邮件对话框。
+
+. 在空白字段中，输入新电子邮件地址。如果要添加多个地址，请选择 *Add another email* 以打开其他字段。
+. 单击 *Add*。
+
+
+.结果
+Alerts 页面的 Email 选项卡显示新的电子邮件地址。

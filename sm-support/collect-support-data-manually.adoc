@@ -1,0 +1,40 @@
+---
+permalink: sm-support/collect-support-data-manually.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, collect, support, data, manually 
+summary: 您可以在单个文件中收集有关存储阵列的各种类型的清单、状态和性能数据。技术支持可以使用该文件进行故障排除和进一步分析。 
+---
+= 在 SANtricity System Manager 中手动收集支持数据
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在单个文件中收集有关存储阵列的各种类型的清单、状态和性能数据。技术支持可以使用该文件进行故障排除和进一步分析。
+
+.关于此任务
+++ ++
+
+[NOTE]
+====
+如果启用了 AutoSupport 功能，您也可以转到 *AutoSupport* 选项卡并选择 *发送 AutoSupport 派单* 来收集此数据。
+
+====
+一次只能运行一个集合操作。如果尝试启动其他操作，则会收到错误消息。
+
+[NOTE]
+====
+仅在技术支持人员指示时执行此操作。
+
+====
+.步骤
+. 选择菜单：Support[Support Center > Diagnostics] 选项卡。
+. 选择 *Collect Support Data*。
+. 单击 *Collect*。
++
+该文件保存在浏览器的"下载"文件夹中，名称为 `support-data.7z`。如果您的货架包含抽屉，则该货架的诊断数据将存档在名为 `tray-component-state-capture.7z`的单独压缩文件中。
+
+. 按照技术支持提供的说明将文件发送给他们。
+

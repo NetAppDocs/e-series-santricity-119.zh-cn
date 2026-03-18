@@ -1,0 +1,120 @@
+---
+permalink: sm-settings/view-audit-log-activity.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, view, audit, log, activity, 
+summary: 通过查看审核日志，具有 Security Admin 权限的用户可以监视用户操作、身份验证失败、无效登录尝试和用户会话生存期。 
+---
+= 在 SANtricity System Manager 中查看审核日志活动
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过查看审核日志，具有 Security Admin 权限的用户可以监视用户操作、身份验证失败、无效登录尝试和用户会话生存期。
+
+.开始之前
+必须使用包含 Security admin 权限的用户配置文件登录。否则，将不会显示 Access Management 功能。
+
+.步骤
+. 选择菜单：Settings[Access Management]。
+. 选择 **Audit Log** 选项卡。
++
+审核日志活动以表格格式显示，其中包括以下信息列：
+
++
+** *日期/时间* -- 存储阵列检测到事件的时间戳（格林威治标准时间）。
+** *Username* -- 与事件关联的用户名。对于存储阵列上的所有未经身份验证的操作，"N/A" 将显示为用户名。未经身份验证的操作可能由内部代理或某些其他机制触发。
+** *状态代码* -- 操作的 HTTP 状态代码（200、400 等）和与事件关联的描述性文本。
+** *访问的 URL* -- 完整 URL（包括主机）和查询字符串。
+** *Client IP Address* -- 与事件关联的客户端的 IP 地址。
+** *源* -- 与事件关联的日志记录源，可以是 System Manager、CLI、Web Services 或 Support Shell。
+** *描述* -- 有关事件的其他信息（如适用）。
+
+
+. 使用 Audit Log 页面上的选择来查看和管理事件。
++
+.选择详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 选择 | 说明 
+
+
+ a| 
+显示来自...的事件
+ a| 
+限制按日期范围显示的事件（过去 24 小时、过去 7 天、过去 30 天或自定义日期范围）。
+
+
+
+ a| 
+筛选器
+ a| 
+限制字段中输入的字符所显示的事件。对于完全匹配的单词，请使用引号(")，输入 `OR`可返回一个或多个单词，输入破折号(--)可省略单词。
+
+
+
+ a| 
+刷新
+ a| 
+选择 *Refresh* 以将页面更新为最新事件。
+
+
+
+ a| 
+查看/编辑设置
+ a| 
+选择 *View/Edit Settings* 以打开一个对话框，该对话框允许您指定要记录的完整日志策略和操作级别。
+
+
+
+ a| 
+删除事件
+ a| 
+选择 *Delete* 以打开一个对话框，用于从页面中删除旧事件。
+
+
+
+ a| 
+显示/隐藏列
+ a| 
+单击 *Show/Hide* 列图标 image:../media/sam-1140-ss-access-columns.gif["显示/隐藏列"] 以选择要在表中显示的其他列。其他列包括：
+
+** *方法* -- HTTP 方法（例如，POST、GET、DELETE 等）。
+** *CLI 命令已执行* -- 为 Secure CLI 请求执行的 CLI 命令（语法）。
+** *CLI 返回状态* -- CLI 状态代码或对来自客户端的输入文件的请求。
+** *SYMbol 过程* -- 执行的 SYMbol 过程。
+** *SSH 事件类型* -- Secure Shell (SSH) 事件类型，例如登录、注销和 login_fail。
+** *SSH 会话 PID* -- SSH 会话的进程 ID 编号。
+** *SSH 会话持续时间（秒）* -- 用户登录的秒数。
+** *身份验证类型* -- 类型可以包括本地用户、LDAP、SAML 和访问令牌。
+** *Authentication ID* -- 经过身份验证的会话的 ID。
+
+
+
+
+ a| 
+切换列筛选器
+ a| 
+单击 *Toggle* 图标 image:../media/sam-1140-ss-access-toggle.gif["切换"] 打开每列的筛选字段。在列字段中输入字符，以限制这些字符显示的事件。再次单击图标关闭筛选字段。
+
+
+
+ a| 
+撤消更改
+ a| 
+单击 *Undo* 图标 image:../media/sam-1140-ss-access-undo.gif["撤销"] 将表返回到默认配置。
+
+
+
+ a| 
+导出
+ a| 
+单击 *Export* 将表格数据保存为逗号分隔值 (CSV) 文件。
+
+|===
+====
+

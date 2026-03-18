@@ -1,0 +1,54 @@
+---
+permalink: um-manage/import-alert-settings.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, import, alert, settings 
+summary: 您可以将警报配置从一个存储阵列导入到其他存储阵列。当您需要在网络中配置多个阵列时，此批处理操作可节省时间。 
+---
+= 在 SANtricity Unified Manager 中导入警报设置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将警报配置从一个存储阵列导入到其他存储阵列。当您需要在网络中配置多个阵列时，此批处理操作可节省时间。
+
+.开始之前
+* 在 System Manager 中为要用作源的存储阵列配置警报（菜单：设置[警报]）。
+* 目标存储阵列的现有配置在 System Manager 中备份（菜单：Settings[System > Save Storage Array Configuration]）。
+
+
+.关于此任务
+您可以为导入操作选择电子邮件、SNMP 或 syslog 警报。导入的设置包括：
+
+* *电子邮件警报* -- 邮件服务器地址和警报收件人的电子邮件地址。
+* *Syslog 警报* -- Syslog 服务器地址和 UDP 端口。
+* *SNMP 警报* -- SNMP 服务器的社区名称和 IP 地址。
+
+
+.步骤
+. 在 Manage 页面中，单击 *Import Settings*。
++
+导入设置向导打开。
+
+. 在 Select Settings 对话框中，选择 *Email alerts*、*SNMP alerts* 或 *Syslog alerts*，然后单击 *Next*。
++
+此时将打开一个用于选择源阵列的对话框。
+
+. 在选择源对话框中，选择具有要导入的设置的数组，然后单击 *Next*。
+. 在"选择目标"对话框中，选择一个或多个阵列以接收新设置。
++
+[NOTE]
+====
+无法选择固件低于 8.50 的存储阵列。此外，如果 Unified Manager 无法与该阵列通信（例如，如果该阵列处于脱机状态，或者存在证书、密码或网络问题），则不会在此对话框中显示该阵列。
+
+====
+. 单击 *Finish*。
++
+操作页面显示导入操作的结果。如果操作失败，您可以单击其行以查看更多信息。
+
+
+
+.结果
+现在已将目标存储阵列配置为通过电子邮件、SNMP 或 syslog 向管理员发送警报。

@@ -1,0 +1,35 @@
+---
+permalink: sm-settings/enable-or-disable-legacy-management-interface.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, enable, disable, legacy, management, interface, 
+summary: '您可以启用或禁用旧式管理界面 (SYMbol)，这是存储阵列与管理客户端之间的通信方法。' 
+---
+= 在 SANtricity System Manager 中启用或禁用旧版管理界面
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以启用或禁用旧式管理界面 (SYMbol)，这是存储阵列与管理客户端之间的通信方法。
+
+.关于此任务
+默认情况下，旧版管理界面处于打开状态。如果禁用它，存储阵列和管理客户端将使用更安全的通信方法（通过 https 的 REST API）；但是，如果禁用它，某些工具和任务可能会受到影响。
+
+[NOTE]
+====
+对于 EF600 存储系统，默认情况下此功能处于禁用状态。
+
+====
+此设置会影响以下操作：
+
+* *On*（默认）-- 使用 CLI 和一些其他工具（例如 OCI 适配器）配置镜像所需的设置。
+* *Off* -- 在存储阵列和管理客户端之间的通信中强制保密以及访问外部工具的必要设置。配置 Directory Server (LDAP) 时的推荐设置。
+
+
+.步骤
+. 选择菜单：Settings[System]。
+. 向下滚动到 *Additional Settings*，然后单击 *Change Management Interface*。
+. 在对话框中，单击 *Yes* 以继续。
+

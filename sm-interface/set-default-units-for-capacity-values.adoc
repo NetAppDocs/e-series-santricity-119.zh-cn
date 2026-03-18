@@ -1,0 +1,44 @@
+---
+permalink: sm-interface/set-default-units-for-capacity-values.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, capacity values 
+summary: 'System Manager 可以以 gibibytes (GiB) 或 tebibytes (TiB) 显示容量值。' 
+---
+= 在 SANtricity System Manager 中设置容量值的默认单位
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SANtricity System Manager 可以以 gibibytes (GiB) 或 tebibytes (TiB) 显示容量值。
+
+首选项存储在浏览器的本地存储中，因此所有用户都可以拥有自己的设置。
+
+.步骤
+. 选择菜单：Preferences[Set preferences]。
+. 单击 *Gibibytes* 或 *Tebibytes* 的单选按钮，并确认要执行此操作。
++
+有关缩写和值，请参见下表。
+
++
+[cols="1a,1a"]
+|===
+| 缩写 | 值 
+
+
+ a| 
+GiB
+ a| 
+1,024^3^ 字节
+
+
+
+ a| 
+TiB
+ a| 
+1,024^4^ 字节
+
+|===
+

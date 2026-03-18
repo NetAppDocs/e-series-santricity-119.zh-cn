@@ -1,0 +1,115 @@
+---
+permalink: sm-settings/clear-storage-array-configuration.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, clear, storage, array, configuration, 
+summary: 当要从存储阵列中删除所有池、卷组、卷、主机定义和主机分配时，请使用清除配置操作。 
+---
+= 在 SANtricity System Manager 中清除存储阵列配置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+当要从存储阵列中删除所有池、卷组、卷、主机定义和主机分配时，请使用清除配置操作。
+
+.开始之前
+在清除存储阵列配置之前，请备份数据。
+
+.关于此任务
+有两个 Clear Storage Array Configuration 选项：
+
+* *Volume* -- 通常，您可以使用 Volume 选项将测试存储阵列重新配置为生产存储阵列。例如，您可以配置用于测试的存储阵列，然后在完成测试后，删除测试配置并为生产环境设置存储阵列。
+* *存储阵列* -- 通常，您可以使用存储阵列选项将存储阵列移动到其他部门或组。例如，您可能正在 Engineering 中使用存储阵列，而现在 Engineering 正在获取一个新的存储阵列，因此您希望将当前存储阵列移动到 Administration，以便重新配置它。
++
+Storage Array 选项会删除一些其他设置。
+
+
+
+[cols="1a,1a,1a"]
+|===
+|  | 卷 | 存储阵列 
+
+
+ a| 
+停用 ARVM
+ a| 
+X
+ a| 
+X
+
+
+
+ a| 
+删除池和卷组
+ a| 
+X
+ a| 
+X
+
+
+
+ a| 
+删除卷
+ a| 
+X
+ a| 
+X
+
+
+
+ a| 
+删除主机和主机集群
+ a| 
+X
+ a| 
+X
+
+
+
+ a| 
+删除主机分配
+ a| 
+X
+ a| 
+X
+
+
+
+ a| 
+删除存储阵列名称
+ a| 
+ a| 
+X
+
+
+
+ a| 
+将存储阵列缓存设置重置为默认值
+ a| 
+ a| 
+X
+
+|===
+[CAUTION]
+====
+*数据丢失风险* -- 此操作将从存储阵列中删除所有数据。（不执行安全擦除。）此操作启动后无法取消。仅在技术支持人员指示时执行此操作。
+
+====
+.步骤
+. 选择菜单：Settings[System]。
+. 选择 *Clear Storage Array Configuration* 。
+. 在下拉列表中，选择 *Volume* 或 *Storage Array*。
+. *可选：*如果要保存配置（而不是数据），请使用对话框中的链接。
+. 确认要执行此操作。
+
+
+.结果
+* 当前配置被删除，将销毁存储阵列上的所有现有数据。
+* 所有驱动器均未分配。
++
+
+NOTE: 存储阵列将在恢复模式下启动。使用存储阵列前必须清除恢复模式。有关详细信息，请参见 https://docs.netapp.com/us-en/e-series-santricity/sm-support/clear-recovery-mode.html["清除恢复模式"^]。
+
+

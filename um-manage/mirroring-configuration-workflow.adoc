@@ -1,0 +1,74 @@
+---
+permalink: um-manage/mirroring-configuration-workflow.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, mirroring, configuration, workflow 
+summary: 您可以在 Unified Manager 中配置异步或同步镜像，然后使用 System Manager 管理同步。 
+---
+= 镜像 SANtricity 配置工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 SANtricity Unified Manager 中配置异步或同步镜像，然后使用 SANtricity System Manager 管理同步。
+
+
+
+== 异步镜像工作流
+
+异步镜像涉及以下工作流程：
+
+. 在 Unified Manager 中执行初始配置：
++
+.. 选择本地存储阵列作为数据传输的源。
+.. 创建或选择现有镜像一致性组，该组是本地阵列上的主卷和远程阵列上的辅助卷的容器。主卷和辅助卷称为"镜像对"。如果是首次创建镜像一致性组，请指定要执行手动同步还是计划同步。
+.. 从本地存储阵列中选择一个主卷，然后确定其保留容量。保留容量是用于复制操作的物理分配容量。
+.. 选择远程存储阵列作为传输的目标、辅助卷，然后确定其保留容量。
+.. 开始从主卷到辅助卷的初始数据传输。根据卷的大小，此初始传输可能需要几个小时。
+
+
+. 检查初始同步的进度：
++
+.. 在 Unified Manager 中，为本地阵列启动 System Manager。
+.. 在 System Manager 中，查看镜像操作的状态。完成镜像后，镜像对的状态为"最佳"。
+
+
+. 或者，您可以在 System Manager 中重新安排或手动执行后续数据传输。仅将新的和更改的数据块从主卷传输到辅助卷。
++
+[NOTE]
+====
+由于异步复制是周期性的，因此系统可以整合更改的块并节省网络带宽。对写入吞吐量和写入延迟的影响最小。
+
+====
+
+
+
+
+== 同步镜像工作流
+
+同步镜像涉及以下工作流程：
+
+. 在 Unified Manager 中执行初始配置：
++
+.. 选择本地存储阵列作为数据传输的源。
+.. 从本地存储阵列中选择主卷。
+.. 选择远程存储阵列作为数据传输的目标，然后选择辅助卷。
+.. 选择同步和重新同步优先级。
+.. 开始从主卷到辅助卷的初始数据传输。根据卷的大小，此初始传输可能需要几个小时。
+
+
+. 检查初始同步的进度：
++
+.. 在 Unified Manager 中，为本地阵列启动 System Manager。
+.. 在 System Manager 中，查看镜像操作的状态。完成镜像后，镜像对的状态为"最佳"。这两个阵列试图通过正常操作保持同步。仅将新的和更改的块从主卷传输到辅助卷。
+
+
+. 或者，您可以在 System Manager 中更改同步设置。
++
+[NOTE]
+====
+由于同步复制是连续的，因此两个站点之间的复制链路必须提供足够的带宽容量。
+
+====
+

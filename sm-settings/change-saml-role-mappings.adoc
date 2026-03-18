@@ -1,0 +1,87 @@
+---
+permalink: sm-settings/change-saml-role-mappings.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, change, saml, role, mappings, 
+summary: 如果之前为访问管理配置了 SAML，则可以更改 IdP 组与存储阵列的预定义角色之间的角色映射。 
+---
+= 在 SANtricity System Manager 中更改 SAML 角色映射
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果之前为访问管理配置了 SAML，则可以更改 IdP 组与存储阵列的预定义角色之间的角色映射。
+
+.开始之前
+* 必须使用包含 Security admin 权限的用户配置文件登录。否则，将不会显示 Access Management 功能。
+* IdP 管理员在 IdP 系统中配置了用户属性和组成员身份。
+* 已配置并启用 SAML。
+
+
+.步骤
+. 选择菜单：Settings[Access Management]。
+. 选择 *SAML* 选项卡。
+. 选择 *Role Mapping*。
++
+此时将打开角色映射对话框。
+
+. 将 IdP 用户属性和组分配给预定义的角色。一个组可以有多个分配的角色。
++
+[CAUTION]
+====
+请小心，不要在启用 SAML 时删除权限，否则您将失去对 System Manager 的访问权限。
+
+====
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 设置 | 说明 
+
+
+ a| 
+*映射*
+
+
+
+ a| 
+用户属性
+ a| 
+为要映射的 SAML 组指定属性（例如"成员"）。
+
+
+
+ a| 
+属性值
+ a| 
+指定要映射的组的属性值。
+
+
+
+ a| 
+角色
+ a| 
+在字段中单击，然后选择要映射到属性的存储阵列的一个角色。您必须单独选择要包含到此组的每个角色。要登录到 System Manager，需要与其他角色一起使用 Monitor 角色。必须将 Security Admin 角色分配给至少一个组。映射的角色包括以下权限：
+
+** *Storage admin* -- 对存储对象（例如卷和磁盘池）的完全读/写访问权限，但不能访问安全配置。
+** *安全管理员* -- 访问 Access Management 中的安全配置、证书管理、审核日志管理，以及打开或关闭旧版管理界面 (SYMbol) 的能力。
+** *Support admin* -- 访问存储阵列上的所有硬件资源、故障数据、MEL 事件和控制器固件升级。无法访问存储对象或安全配置。
+** *Monitor* -- 对所有存储对象的只读访问，但无法访问安全配置。
+
+
+|===
+====
++
+
+NOTE: 所有用户（包括管理员）都需要 Monitor 角色。如果没有 Monitor 角色，System Manager 将无法为任何用户正常运行。
+
+. （可选）单击 *Add another mapping* 以输入更多组到角色的映射。
+. 单击 *Save*。
+
+
+.结果
+完成此任务后，将终止所有活动的用户会话。仅保留当前用户会话。

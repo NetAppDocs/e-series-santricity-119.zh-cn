@@ -1,0 +1,49 @@
+---
+permalink: um-certificates/access-management-with-directory-services-unified.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, access management, directory services, 
+summary: 管理员可以使用 LDAP（轻型目录访问协议）服务器和目录服务，例如 Microsoft 的 Active Directory。 
+---
+= 使用 SANtricity Unified Manager 中的目录服务进行访问管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+管理员可以使用 LDAP（轻型目录访问协议）服务器和目录服务，例如 Microsoft 的 Active Directory。
+
+
+
+== 配置工作流
+
+如果在网络中使用 LDAP 服务器和目录服务，则配置的工作原理如下：
+
+. 管理员使用包含安全管理员权限的用户配置文件登录到 Unified Manager。
++
+[NOTE]
+====
+ `admin` 用户可以完全访问系统中的所有功能。
+
+====
+. 管理员输入 LDAP 服务器的配置设置。设置包括域名、URL 和绑定帐户信息。
+. 如果 LDAP 服务器使用安全协议 (LDAPS)，管理员将上传证书颁发机构 (CA) 证书链，以便在 LDAP 服务器和安装 Web Services Proxy 的主机系统之间进行身份验证。
+. 建立服务器连接后，管理员会将用户组映射到本地用户角色。这些角色是预定义的，无法修改。
+. 管理员测试 LDAP 服务器和 Web Services Proxy 之间的连接。
+. 用户使用其分配的 LDAP/目录服务凭据登录到系统。
+
+
+
+
+== 管理
+
+使用目录服务进行身份验证时，管理员可以执行以下管理任务：
+
+* 添加目录服务器。
+* 编辑目录服务器设置。
+* 将 LDAP 用户映射到本地用户角色。
+* 删除目录服务器。
+* 更改密码。
+* 设置密码的最小长度。
+* 允许用户无需密码即可登录。
+

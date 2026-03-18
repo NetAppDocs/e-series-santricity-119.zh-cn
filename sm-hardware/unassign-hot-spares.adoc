@@ -1,0 +1,43 @@
+---
+permalink: sm-hardware/unassign-hot-spares.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, change, hot, spare, unassign, 
+summary: 您可以将热备盘更改回未分配的驱动器。 
+---
+= 在 SANtricity System Manager 中取消分配热备盘
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将热备盘更改回未分配的驱动器。
+
+.开始之前
+热备盘必须处于最佳、待机状态。
+
+.关于此任务
+您无法取消分配当前正在接管故障驱动器的热备盘。如果热备盘未处于最佳状态，请按照 Recovery Guru 程序更正任何问题，然后再尝试取消分配驱动器。
+
+.步骤
+. 选择 *Hardware*。
+. 如果图形显示控制器，请单击 *Drives* 选项卡。
++
+图形更改为显示驱动器而不是控制器。
+
+. 选择要取消分配的热备盘驱动器（以粉红色显示）。
++
+如果粉红色驱动器托架上有对角线，则热备盘当前正在使用中，无法取消分配。
+
++
+驱动器的上下文菜单打开。
+
+. 从驱动器的下拉列表中，选择 *Unassign hot spare*。
++
+该对话框显示受删除此热备盘影响的任何卷组，以及是否有任何其他热备盘正在保护它们。
+
+. 确认取消分配操作。
+
+
+.结果
+驱动器返回到未分配（以灰色显示）。

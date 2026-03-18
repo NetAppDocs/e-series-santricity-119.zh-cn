@@ -1,0 +1,69 @@
+---
+permalink: sm-hardware/configure-ntp-server-addresses.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, configure, ntp, server, addresses, network, time, protocol, 
+summary: '您可以配置到网络时间协议 (NTP) 服务器的连接，以便控制器定期查询 NTP 服务器以更新其内部时钟。' 
+---
+= 在 SANtricity System Manager 中配置 NTP 服务器地址
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以配置到网络时间协议 (NTP) 服务器的连接，以便控制器定期查询 NTP 服务器以更新其内部时钟。
+
+.开始之前
+* 必须在网络中安装和配置 NTP 服务器。
+* 您必须知道主 NTP 服务器和可选备份 NTP 服务器的地址。这些地址可以是完全限定的域名、IPv4 地址或 IPv6 地址。
+
+
+[NOTE]
+====
+如果为 NTP 服务器输入一个或多个域名，还必须配置 DNS 服务器以解析 NTP 服务器地址。仅需在配置了 NTP 并提供了域名的控制器上配置 DNS 服务器。
+
+====
+.关于此任务
+NTP 使存储阵列能够使用简单网络时间协议 (SNTP) 自动将控制器的时钟与外部主机同步。控制器定期查询配置的 NTP 服务器，然后使用结果更新其内部时钟。如果只有一个控制器启用了 NTP，则备用控制器会定期将其时钟与启用了 NTP 的控制器同步。如果两个控制器都未启用 NTP，则控制器定期彼此同步其时钟。
+
+[NOTE]
+====
+无需在两个控制器上配置 NTP；但是，这样做可以提高存储阵列在硬件或通信故障期间保持同步的能力。
+
+====
+.步骤
+. 选择 *Hardware*。
+. 如果图形显示驱动器，请单击 *Controllers & Components* 选项卡。
++
+图形会更改为显示控制器而不是驱动器。
+
+. 单击要配置的控制器。
++
+此时将显示控制器的上下文菜单。
+
+. 选择 *Configure NTP server*。
++
+配置网络时间协议 (NTP) 服务器对话框打开。
+
+. 选择 *I want to enable NTP on Controller* (*A* 或 *B*)。
++
+此时此对话框中将显示其他选择。
+
+. 从下列选项中选择一项：
++
+** *自动从 DHCP 服务器获取 NTP 服务器地址* -- 显示检测到的 NTP 服务器地址。
++
+[NOTE]
+====
+如果存储阵列设置为使用静态 NTP 地址，则不会显示任何 NTP 服务器。
+
+====
+** *手动指定 NTP 服务器地址* -- 输入主 NTP 服务器地址和备份 NTP 服务器地址。备份服务器是可选的。（这些地址字段在您选择单选按钮后出现。）服务器地址可以是完全限定域名、IPv4 地址或 IPv6 地址。
+
+
+. *可选：* 输入备份 NTP 服务器的服务器信息和身份验证凭据。
+. 单击 *Save*。
+
+
+.结果
+NTP 服务器配置显示在控制器设置的 *DNS / NTP* 选项卡中。

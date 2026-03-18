@@ -1,0 +1,39 @@
+---
+permalink: sm-storage/delete-snapshot-image.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, delete, snapshot, image 
+summary: 您可以删除快照映像以从快照组或快照一致性组中清理最旧的快照映像。 
+---
+= 在 SANtricity System Manager 中删除快照映像
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以删除快照映像以从快照组或快照一致性组中清理最旧的快照映像。
+
+.关于此任务
+您可以删除单个快照图像，也可以从具有相同创建时间戳的快照一致性组中删除快照图像。您还可以从快照组中删除快照图像。
+
+如果快照映像不是关联的基本卷或快照一致性组的最旧快照映像，则无法删除该快照映像。
+
+.步骤
+. 选择菜单：Storage[Snapshots]。
+. 单击 *Snapshot Images* 选项卡。
+. 选择要删除的快照映像，并确认要执行此操作。
++
+如果选择了快照一致性组的快照映像，请选择要删除的每个成员卷，并确认要执行此操作。
+
+. 单击 *Delete*。
+
+
+.结果
+System Manager 执行以下操作：
+
+* 从存储阵列中删除快照图像。
+* 释放保留容量，以便在快照组或快照一致性组内重用。
+* 禁用已删除快照映像存在的所有关联快照卷。
+* 从快照一致性组删除中，将与已删除快照映像关联的任何成员卷移动到 Stopped 状态。
+

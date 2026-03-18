@@ -1,0 +1,30 @@
+---
+permalink: sm-support/send-autosupport-dispatches.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, send, autosupport, dispatches 
+summary: System Manager 允许您向技术支持发送 AutoSupport 派单，而无需等待预定的派单。 
+---
+= 在 SANtricity System Manager 中发送 AutoSupport 派单
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SANtricity System Manager 允许您向技术支持发送 AutoSupport 派单，而无需等待预定的派单。
+
+.开始之前
+必须启用 AutoSupport 功能。您可以在 AutoSupport 页面上查看是否已启用此功能。
+
+.关于此任务
+此操作会收集支持数据并自动将其发送给技术支持，以便他们对问题进行故障排除。
+
+.步骤
+. 选择菜单：Support[Support Center > AutoSupport] 选项卡。
+. 选择 *Send AutoSupport Dispatch*。
++
+此时将显示"发送 AutoSupport 派单"对话框。
+
+. 选择 *发送* 以确认操作。
+

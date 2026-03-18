@@ -1,0 +1,16 @@
+---
+permalink: sm-storage/maximum-number-of-luns.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, maximum, luns 
+summary: '存储阵列具有可用于每个主机的逻辑单元号 (LUN) 的最大数量。' 
+---
+= 了解 SANtricity 软件中 LUN 的最大数量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+存储阵列具有可用于每个主机的逻辑单元号 (LUN) 的最大数量。
+
+最大数量取决于主机的操作系统。存储阵列跟踪使用的 LUN 数。如果尝试将卷分配给超出最大 LUN 数的主机，主机将无法访问该卷。

@@ -1,0 +1,168 @@
+---
+permalink: um-certificates/add-directory-server-unified.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, add, directory, server 
+summary: 要配置访问管理的身份验证，请在 LDAP 服务器和运行 SANtricity Unified Manager Web Services Proxy 的主机之间建立通信。然后，将 LDAP 用户组映射到本地用户角色。 
+---
+= 在 SANtricity Unified Manager 中添加目录服务器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要配置访问管理的身份验证，请在 LDAP 服务器和运行 SANtricity Unified Manager Web Services Proxy 的主机之间建立通信。然后，将 LDAP 用户组映射到本地用户角色。
+
+.开始之前
+* 必须使用包含 Security admin 权限的用户配置文件登录。否则，将不会显示 Access Management 功能。
+* 必须在您的目录服务中定义用户组。
+* LDAP 服务器凭据必须可用，包括域名、服务器 URL 以及可选的绑定帐户用户名和密码。
+* 对于使用安全协议的 LDAPS 服务器，必须在本地计算机上安装 LDAP 服务器的证书链。
+
+
+.关于此任务
+添加目录服务器分为两步。首先，输入域名和 URL。如果服务器使用安全协议，则如果 CA 证书由非标准签名机构签名，则还必须上传该证书以进行身份验证。如果具有绑定帐户的凭据，还可以输入用户帐户名和密码。接下来，将 LDAP 服务器的用户组映射到本地用户角色。
+
+.步骤
+. 选择 *Access Management*。
+. 在 *Directory Services* 选项卡中，选择 *Add Directory Server*。
++
+此时将打开添加目录服务器对话框。
+
+. 在*服务器设置*选项卡中，输入 LDAP 服务器的凭据。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 设置 | 说明 
+
+
+ a| 
+*配置设置*
+
+
+
+ a| 
+域
+ a| 
+输入 LDAP 服务器的域名。对于多个域，请在逗号分隔的列表中输入域。登录名（_username_@_domain_）中使用域名来指定要进行身份验证的目录服务器。
+
+
+
+ a| 
+服务器 URL
+ a| 
+以  `ldap[s]://*host*:*port*` 的格式输入用于访问 LDAP 服务器的 URL。
+
+
+
+ a| 
+上传证书（可选）
+ a| 
+
+NOTE: 仅当在上面的服务器 URL 字段中指定了 LDAPS 协议时，才会显示此字段。
+
+单击 *Browse* 并选择要上传的 CA 证书。这是用于对 LDAP 服务器进行身份验证的受信任证书或证书链。
+
+
+
+ a| 
+绑定帐户（可选）
+ a| 
+输入只读用户帐户，以便对 LDAP 服务器进行搜索查询并在组内进行搜索。以 LDAP 类型的格式输入帐户名称。例如，如果绑定用户名为 "bindacct"，则可以输入诸如  `CN=bindacct,CN=Users,DC=cpoc,DC=local` 之类的值。
+
+
+
+ a| 
+绑定密码（可选）
+ a| 
+
+NOTE: 输入绑定帐户时将显示此字段。
+
+输入绑定帐户的密码。
+
+
+
+ a| 
+添加前测试服务器连接
+ a| 
+如果要确保系统可以与您输入的 LDAP 服务器配置进行通信，请选中此复选框。单击对话框底部的*添加*后将进行测试。
+
+如果选中此复选框且测试失败，则不会添加配置。您必须解决此错误或取消选中此复选框才能跳过测试并添加配置。
+
+
+
+ a| 
+*权限设置*
+
+
+
+ a| 
+搜索基本 DN
+ a| 
+输入 LDAP 上下文以搜索用户，通常采用的形式为 `CN=Users, DC=cpoc, DC=local`。
+
+
+
+ a| 
+用户名属性
+ a| 
+输入绑定到用户 ID 进行身份验证的属性。例如： `sAMAccountName`。
+
+
+
+ a| 
+组属性
+ a| 
+输入用户的组属性列表，用于组到角色的映射。例如： `memberOf, managedObjects`。
+
+|===
+====
+. 单击 *Role Mapping* 选项卡。
+. 将 LDAP 组分配给预定义的角色。一个组可以有多个分配的角色。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 设置 | 说明 
+
+
+ a| 
+*映射*
+
+
+
+ a| 
+组 DN
+ a| 
+指定要映射的 LDAP 用户组的组标识名 (DN)。支持正则表达式。如果这些特殊正则表达式字符不属于正则表达式模式，则必须使用反斜杠 (\) 转义：\.[]{}()<>*+-=!?^$|
+
+
+
+ a| 
+角色
+ a| 
+单击该字段并选择要映射到组 DN 的本地用户角色之一。您必须单独选择要包含到此组的每个角色。要登录到 SANtricity Unified Manager，需要与其他角色一起使用 Monitor 角色。映射的角色包括以下权限：
+
+** *Storage admin* -- 对阵列上的存储对象具有完全读/写访问权限，但无法访问安全配置。
+** *安全管理员* -- 访问 Access Management 和 Certificate Management 中的安全配置。
+** *Support admin* -- 访问存储阵列、故障数据和 MEL 事件上的所有硬件资源。无法访问存储对象或安全配置。
+** *Monitor* -- 对所有存储对象的只读访问，但无法访问安全配置。
+
+
+|===
+====
++
+
+NOTE: 所有用户（包括管理员）都需要 Monitor 角色。
+
+. 如果需要，单击 *Add another mapping* 以输入更多组到角色的映射。
+. 完成映射后，单击 *Add*。
++
+系统执行验证，确保存储阵列和 LDAP 服务器可以通信。如果出现错误消息，请检查在对话框中输入的凭据，并在必要时重新输入信息。
+
+

@@ -1,0 +1,65 @@
+---
+permalink: sm-storage/rtv-how-remote-storage-works.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, remote, storage 
+summary: 远程存储功能允许您将数据从远程存储系统导入到本地 E 系列存储系统。当您希望以最短的停机时间（例如在设备升级期间）简化数据迁移时，此功能非常有用。 
+---
+= 远程存储在 SANtricity 软件中的工作原理
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+远程存储功能允许您将数据从远程存储系统导入到本地 E 系列存储系统。当您希望以最短的停机时间（例如在设备升级期间）简化数据迁移时，此功能非常有用。
+
+要配置远程存储功能，必须设置硬件，然后使用 System Manager 创建远程存储对象。此配置完成后，导入过程开始。
+
+
+
+== 硬件设置
+
+使用以下工作流程准备硬件连接。
+
+这些步骤在远程存储功能的用户指南中进一步描述，该指南可从 E 系列和 SANtricity 文档中心获得 https://docs.netapp.com/us-en/e-series/remote-storage-volumes/index.html["远程存储卷概述"^]，以及在 https://www.netapp.com/pdf.html?item=/media/28697-tr-4893-deploy.pdf["远程存储技术报告"^]中。
+
+
+NOTE: E4000 系统当前不支持 SANtricity Remote Storage Volumes。
+
+在本地 E 系列存储系统上：
+
+. 确保每个控制器都有到远程存储系统的 iSCSI 连接。通过此连接，本地 E 系列系统充当 iSCSI 启动程序，可以设置为远程系统上的主机。
+. 为导入操作创建目标卷。确保卷的容量等于或大于远程存储系统上的源卷，具有匹配的块大小，并且未映射。请参阅 link:create-volumes.html["创建卷"]。
+. 从 System Manager 界面收集本地 E 系列系统的 iSCSI 限定名称 (IQN)。IQN 稍后将用于将本地 E 系列系统设置为远程存储系统上的主机。在 System Manager 中，转到：menu:Settings[System > iSCSI settings > Target IQN]。
+
+
+在远程存储系统上：
+
+. 使用其 IQN 将本地 E 系列系统设置为远程系统上的主机。请务必设置相应的主机类型，如下所示：
++
+** 如果远程系统是 E 系列型号，请参见link:overview-hosts.html["主机和主机集群概述"]。使用"Factory Default"的主机类型。
+** 如果远程系统来自其他供应商，请根据可用选项选择适当的主机类型。
+
+
+. 停止所有 I/O，卸载任何文件系统，并删除对源卷的主机或应用程序的任何分配。
+. 将卷分配给新创建的本地 E 系列存储系统主机。
+. 对于所选的源卷，从远程存储系统中收集以下信息，以便可以创建导入：
++
+** iSCSI 限定名称 (IQN)
+** iSCSI IP 地址
+** 源卷的 LUN 编号
+
+
+
+
+
+
+== System Manager 设置
+
+使用以下工作流为导入创建远程存储对象：
+
+. 使用 System Manager 界面中的远程存储向导，将远程存储设备（数据导入的源）映射到 E 系列存储系统上的目标卷。当您选择*完成*时，导入过程开始。
+. 从"查看操作"对话框或"正在进行的操作"面板监视导入。如有必要，您也可以暂停和恢复流程。
+. 可选地，在导入完成时断开源卷和目标卷之间的连接，或保留连接以供将来导入。
+

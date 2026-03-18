@@ -1,0 +1,153 @@
+---
+permalink: um-certificates/edit-directory-server-settings-unified.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, edit, directory, server, settings, role, mappings 
+summary: 如果以前在 Access Management 中配置了目录服务器，则可以随时更改其设置。设置包括服务器连接信息和组到角色的映射。 
+---
+= 在 SANtricity Unified Manager 中编辑目录服务器设置和角色映射
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果以前在 Access Management 中配置了目录服务器，则可以随时更改其设置。设置包括服务器连接信息和组到角色的映射。
+
+.开始之前
+* 必须使用包含 Security admin 权限的用户配置文件登录。否则，将不会显示 Access Management 功能。
+* 必须定义目录服务器。
+
+
+.步骤
+. 选择 *Access Management*。
+. 选择 *Directory Services* 选项卡。
+. 如果定义了多个服务器，请从表中选择要编辑的服务器。
+. 选择 *View/Edit Settings*。
++
+此时将打开目录服务器设置对话框。
+
+. 在 *Server Settings* 选项卡中，更改所需的设置。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 设置 | 说明 
+
+
+ a| 
+*配置设置*
+
+
+
+ a| 
+域
+ a| 
+LDAP 服务器的域名。对于多个域，请以逗号分隔的列表输入域。域名用于登录（_username_@_domain_），以指定要对其进行身份验证的目录服务器。
+
+
+
+ a| 
+服务器 URL
+ a| 
+用于以  `ldap[s]://host:port` 形式访问 LDAP 服务器的 URL。
+
+
+
+ a| 
+绑定帐户（可选）
+ a| 
+只读用户帐户，用于针对 LDAP 服务器进行搜索查询以及在组内进行搜索。
+
+
+
+ a| 
+绑定密码（可选）
+ a| 
+bind 帐户的密码。（输入 bind 帐户时将显示此字段。）
+
+
+
+ a| 
+保存前测试服务器连接
+ a| 
+检查系统是否可以与 LDAP 服务器配置通信。测试在您单击*保存*后进行。如果选中此复选框且测试失败，则不会更改配置。您必须解决错误或清除复选框才能跳过测试并重新编辑配置。
+
+
+
+ a| 
+*权限设置*
+
+
+
+ a| 
+搜索基本 DN
+ a| 
+用于搜索用户的 LDAP 上下文，通常采用的形式为 `CN=Users, DC=cpoc, DC=local`。
+
+
+
+ a| 
+用户名属性
+ a| 
+绑定到用户 ID 进行身份验证的属性。例如：
+`sAMAccountName`。
+
+
+
+ a| 
+组属性
+ a| 
+用户的组属性列表，用于组到角色的映射。例如：
+`memberOf, managedObjects`。
+
+|===
+====
+. 在 *Role Mapping* 选项卡中，更改所需的映射。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 设置 | 说明 
+
+
+ a| 
+*映射*
+
+
+
+ a| 
+组 DN
+ a| 
+要映射的 LDAP 用户组的域名。支持正则表达式。如果这些特殊正则表达式字符不是正则表达式模式的一部分，则必须使用反斜杠（\）转义它们：
+
+\.[]{}()<>*+-=!?^$|
+
+
+
+ a| 
+角色
+ a| 
+要映射到组 DN 的角色。您必须单独选择要包含到此组的每个角色。要登录到 SANtricity Unified Manager，需要与其他角色一起使用监视器角色。这些角色包括：
+
+** *Storage admin* -- 对阵列上的存储对象具有完全读/写访问权限，但无法访问安全配置。
+** *安全管理员* -- 访问 Access Management 和 Certificate Management 中的安全配置。
+** *Support admin* -- 访问存储阵列、故障数据和 MEL 事件上的所有硬件资源。无法访问存储对象或安全配置。
+** *Monitor* -- 对所有存储对象的只读访问，但无法访问安全配置。
+
+
+|===
+====
++
+
+NOTE: 所有用户（包括管理员）都需要 Monitor 角色。
+
+. 如果需要，单击 *Add another mapping* 以输入更多组到角色的映射。
+. 单击 *Save*。
+
+
+.结果
+完成此任务后，将终止所有活动的用户会话。仅保留当前用户会话。

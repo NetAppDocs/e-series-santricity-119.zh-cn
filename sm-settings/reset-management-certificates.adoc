@@ -1,0 +1,38 @@
+---
+permalink: sm-settings/reset-management-certificates.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, reset, management, certificates, 
+summary: 您可以将控制器上的证书从使用 CA 签名的证书还原回出厂设置的自签名证书。 
+---
+= 在 SANtricity System Manager 中重置管理证书
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将控制器上的证书从使用 CA 签名的证书还原回出厂设置的自签名证书。
+
+.开始之前
+* 必须使用包含 Security admin 权限的用户配置文件登录。否则，不会显示证书功能。
+* 必须先导入 CA 签名的证书。
+
+
+.关于此任务
+Reset 函数从每个控制器中删除当前 CA 签名的证书文件。然后，控制器将恢复使用自签名证书。
+
+.步骤
+. 选择菜单：Settings[Certificates]。
+. 从 Array Management 选项卡中，选择 *Reset*。
++
+此时将打开确认重置管理证书对话框。
+
+. 在字段中键入 `reset`，然后单击*重置*。
++
+刷新浏览器后，浏览器可能会阻止对目标站点的访问，并报告该站点正在使用 HTTP Strict Transport Security。当您切换回自签名证书时会出现这种情况。要清除阻止访问目标的条件，您必须从浏览器中清除浏览数据。
+
+
+
+.结果
+控制器恢复使用自签名证书。因此，系统会提示用户手动接受其会话的自签名证书。

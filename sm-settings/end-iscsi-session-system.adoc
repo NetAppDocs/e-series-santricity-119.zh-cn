@@ -1,0 +1,32 @@
+---
+permalink: sm-settings/end-iscsi-session-system.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, end, iSCSI, session, 
+summary: 您可以结束不再需要的 iSCSI 会话。iSCSI 会话可以与异步镜像关系中的主机或远程存储阵列一起发生。 
+---
+= 在 SANtricity System Manager 中结束 iSCSI 会话
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以结束不再需要的 iSCSI 会话。iSCSI 会话可以与异步镜像关系中的主机或远程存储阵列一起发生。
+
+.关于此任务
+出于以下原因，您可能需要结束 iSCSI 会话：
+
+* *未经授权的访问* -- 如果 iSCSI 启动程序已登录且不应具有访问权限，则可以结束 iSCSI 会话以强制 iSCSI 启动程序离开存储阵列。iSCSI 启动程序可能已登录，因为无身份验证方法可用。
+* *系统停机* -- 如果您需要关闭存储阵列，并且发现 iSCSI 启动程序仍处于登录状态，则可以结束 iSCSI 会话以使 iSCSI 启动程序从存储阵列中注销。
+
+
+.步骤
+. 选择菜单：Settings[System]。
+. 选择 *View/End iSCSI Sessions*。
++
+此时将显示当前 iSCSI 会话的列表。
+
+. 选择要结束的会话。
+. 单击 *End Session*，并确认要执行此操作。
+

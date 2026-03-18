@@ -1,0 +1,14 @@
+---
+permalink: um-admin/index.html 
+sidebar: sidebar 
+keywords: santricity, unified, manager 7 
+summary: SANtricity Unified Manager 7 
+---
+= SANtricity Unified Manager 7
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SANtricity Unified Manager 是一个基于 Web 的界面，允许您在单个视图中管理多个存储阵列。

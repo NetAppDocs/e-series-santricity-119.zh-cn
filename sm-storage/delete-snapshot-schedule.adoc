@@ -1,0 +1,27 @@
+---
+permalink: sm-storage/delete-snapshot-schedule.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, delete, snapshot, schedule 
+summary: 如果不想再收集快照图像，则可以删除现有的快照计划。 
+---
+= 在 SANtricity System Manager 中删除快照计划
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果不想再收集快照图像，则可以删除现有的快照计划。
+
+.关于此任务
+删除快照计划时，不会随之删除关联的快照图像。如果您认为快照图像的集合可能会在某个时候恢复，则应暂停快照计划，而不是将其删除。
+
+.步骤
+. 选择菜单：Storage[Snapshots]。
+. 单击 *Schedules* 选项卡。
+. 选择要删除的快照计划，并确认此操作。
+
+
+.结果
+系统从基本卷或快照一致性组中删除所有计划属性。

@@ -1,0 +1,29 @@
+---
+permalink: um-manage/remove-storage-array.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, remove, storage, arrays, 
+summary: 如果不想再从 SANtricity Unified Manager 管理一个或多个存储阵列，则可以将其删除。 
+---
+= 从 SANtricity Unified Manager 中删除存储阵列
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果不想再从 SANtricity Unified Manager 管理一个或多个存储阵列，则可以将其删除。
+
+.关于此任务
+您无法访问删除的任何存储阵列。但是，您可以通过将浏览器直接指向其 IP 地址或主机名来建立与任何已删除的存储阵列的连接。
+
+删除存储阵列不会以任何方式影响存储阵列或其数据。如果不小心删除了存储阵列，可以再次添加它。
+
+.步骤
+. 选择 *Manage* 页面。
+. 选择要删除的一个或多个存储阵列。
+. 选择菜单：Uncommon Tasks[Remove storage array]。
++
+存储阵列已从 SANtricity Unified Manager 中的所有视图中删除。
+
+

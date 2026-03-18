@@ -1,0 +1,72 @@
+---
+permalink: sm-settings/save-storage-array-configuration.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, save, storage array, configuration, 
+summary: 您可以将存储阵列的配置信息保存在脚本文件中，以节省使用相同配置设置其他存储阵列的时间。 
+---
+= 在 SANtricity System Manager 中保存存储阵列配置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将存储阵列的配置信息保存在脚本文件中，以节省使用相同配置设置其他存储阵列的时间。
+
+.开始之前
+存储阵列不得进行任何更改其逻辑配置设置的操作。这些操作的示例包括创建或删除卷、下载控制器固件、分配或修改热备盘驱动器或向卷组添加容量（驱动器）。
+
+.关于此任务
+保存存储阵列配置将生成一个命令行界面 (CLI) 脚本，其中包含存储阵列设置、卷配置、主机配置或存储阵列的主机到卷分配。您可以使用此生成的 CLI 脚本将配置复制到具有完全相同硬件配置的另一个存储阵列。
+
+但是，不应使用此生成的 CLI 脚本进行灾难恢复。相反，要执行系统还原，请使用手动创建的配置数据库备份文件或联系技术支持以从最新的 Auto-Support 数据中获取此数据。
+
+此操作 _不_ 保存这些设置：
+
+* 电池的使用寿命
+* 控制器时间
+* 非易失性静态随机存取存储器 (NVSRAM) 设置
+* 任何高级功能
+* 存储阵列密码
+* 硬件组件的运行状态和状态
+* 卷组的运行状态（Optimal 除外）和状态
+* 复制服务，例如镜像和卷复制
+
+
+[CAUTION]
+====
+*应用程序错误的风险* -- 如果存储阵列正在进行将更改任何逻辑配置设置的操作，请不要使用此选项。这些操作的示例包括创建或删除卷、下载控制器固件、分配或修改热备盘驱动器或向卷组添加容量（驱动器）。
+
+====
+.步骤
+. 选择菜单：Settings[System]。
+. 选择 *Save Storage Array Configuration*。
+. 选择要保存的配置项：
++
+** 存储阵列设置
+** 卷配置
+** 主机配置
+** 主机到卷的分配
+
+
++
+[NOTE]
+====
+如果选择 *Host-to-volume assignments* 项目，则会默认选择 *Volume configuration* 项目和 *Host configuration* 项目。不同时保存 "Volume configuration" 和 "Host configuration"，则无法保存 "Host-to-volume assignments"。
+
+====
+. 单击 *Save*。
++
+此文件将以此名称保存在浏览器的 Downloads 文件夹中 `storage-array-configuration.cfg`。
+
+
+
+.完成后
+要将保存的存储阵列配置加载到另一个存储阵列，请使用带有  `-f` 选项的 SANtricity 命令行界面 (SMcli) 来应用  `.cfg` 文件。
+
+[NOTE]
+====
+您还可以使用 Unified Manager 界面将存储阵列配置加载到其他存储阵列（选择菜单：Manage[Import Settings]）。
+
+====

@@ -1,0 +1,24 @@
+---
+permalink: um-certificates/permissions-for-mapped-roles-unified.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, permissions, mapped, roles 
+summary: RBAC（基于角色的访问控制）功能包括具有映射到一个或多个角色的预定义用户。每个角色都包含访问 SANtricity Unified Manager 中任务的权限。 
+---
+= 映射角色的权限
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+RBAC（基于角色的访问控制）功能包括具有映射到一个或多个角色的预定义用户。每个角色都包含访问 SANtricity Unified Manager 中任务的权限。
+
+这些角色为用户提供对任务的访问权限，如下所示：
+
+* *Storage admin* -- 对阵列上的存储对象具有完全读/写访问权限，但无法访问安全配置。
+* *安全管理员* -- 访问 Access Management 和 Certificate Management 中的安全配置。
+* *Support admin* -- 访问存储阵列、故障数据和 MEL 事件上的所有硬件资源。无法访问存储对象或安全配置。
+* *Monitor* -- 对所有存储对象的只读访问，但无法访问安全配置。
+
+
+如果用户没有某个功能的权限，则该功能要么不可供选择，要么不显示在用户界面中。

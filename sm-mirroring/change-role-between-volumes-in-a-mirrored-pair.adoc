@@ -1,0 +1,39 @@
+---
+permalink: sm-mirroring/change-role-between-volumes-in-a-mirrored-pair.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, change, role, volumes, mirrored, pair, 
+summary: 您可以在参与同步镜像的镜像对中的两个卷之间执行角色反转，以用于管理目的或在本地存储阵列发生灾难时使用。 
+---
+= 在 SANtricity System Manager 中更改镜像对中卷之间的角色
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在参与同步镜像的镜像对中的两个卷之间执行角色反转。出于管理目的或在本地存储阵列发生灾难时，此任务可能是必要的。
+
+.关于此任务
+您可以将主卷降级为辅助卷，也可以将辅助卷升级为主卷。任何正在访问主卷的主机都具有对该卷的读/写访问权限。当主卷成为辅助卷时，只有由主控制器启动的远程写入才会写入到卷中。
+
+.步骤
+. 选择菜单：Storage[Synchronous Mirroring]。
+. 选择包含要更改角色的卷的镜像对，然后选择菜单：More[Change Role]。
++
+系统显示确认信息。
+
+. 确认您要更改卷的角色，然后选择 *Change Role*。
++
+[NOTE]
+====
+如果本地存储阵列无法与远程存储阵列通信，则当请求角色更改时，系统会显示"无法联系存储阵列"对话框，但无法联系远程存储阵列。单击 *Yes* 以强制更改角色。
+
+====
+
+
+.结果
+System Manager 执行以下操作：
+
+* 如果可以联系镜像对中的关联卷，则卷之间的角色会发生变化。System Manager 将镜像对中的辅助卷提升为主角色，或将镜像对中的主卷降级为辅助角色（取决于您的选择）。
+

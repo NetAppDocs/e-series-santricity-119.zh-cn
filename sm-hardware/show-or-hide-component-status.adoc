@@ -1,0 +1,32 @@
+---
+permalink: sm-hardware/show-or-hide-component-status.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, show, hide, component, status, 
+summary: 您可以显示驱动器、控制器、风扇和电源的状态描述。 
+---
+= 在 SANtricity System Manager 中显示或隐藏组件状态
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以显示驱动器、控制器、风扇和电源的状态描述。
+
+.步骤
+. 选择 *Hardware*。
+. 要查看后部或前部组件：
++
+** 如果要查看控制器和电源/风扇罐组件，但显示的是驱动器，请单击 *Controllers & Components* 选项卡。
+** 如果要查看驱动器，但显示的是控制器和电源/风扇罐组件，请单击 *Drives* 选项卡。
+
+
+. 要查看或隐藏弹出式状态描述：
++
+** 如果要查看状态图标的弹出式描述，请单击货架视图右上角的 *Show status icon details*（选中复选框）。
+** 要隐藏弹出式描述，请再次单击 *Show status icon details* （清除复选框）。
+
+
+. 如果要查看完整的状态详细信息，请在货架视图中选择组件，然后选择 *View settings*。
+. 如果要查看彩色组件的描述，请选择 *Legend*。
+

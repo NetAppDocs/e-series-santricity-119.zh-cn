@@ -1,0 +1,56 @@
+---
+permalink: sm-storage/consolidate-volume-group-free-capacity.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, consolidate, free capacity, volume group 
+summary: 使用 Consolidate Free Capacity 选项可合并选定卷组上的现有可用盘区。通过执行此操作，您可以从卷组中的最大可用容量创建其他卷。 
+---
+= 在 SANtricity System Manager 中整合卷组的可用容量
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用 Consolidate Free Capacity 选项可合并选定卷组上的现有可用盘区。通过执行此操作，您可以从卷组中的最大可用容量创建其他卷。
+
+.开始之前
+* 卷组必须至少包含一个可用容量区域。
+* 卷组中的所有卷必须联机且处于"最佳"状态。
+* 卷修改操作不得正在进行中，例如更改卷的段大小。
+
+
+.关于此任务
+操作开始后无法取消。在整合操作期间，您的数据仍可访问。
+
+您可以使用以下任一方法启动 Consolidate Free Capacity 对话框：
+
+* 当至少检测到一个卷组的一个可用容量区域时，"合并可用容量"建议将显示在通知区域的主页上。单击 *合并可用容量* 链接以启动对话框。
+* 您还可以从 Pools & Volume Groups 页面启动 Consolidate Free Capacity 对话框，如以下任务中所述。
+
+
+.有关可用容量区域的更多信息
+[%collapsible]
+====
+可用容量区域是删除卷或在卷创建过程中未使用所有可用容量而产生的可用容量。在具有一个或多个可用容量区域的卷组中创建卷时，卷的容量仅限于该卷组中最大的可用容量区域。例如，如果一个卷组总共有 15 GiB 的可用容量，并且最大的可用容量区域为 10 GiB，则可以创建的最大卷为 10 GiB。
+
+您可以整合卷组上的可用容量，以提高写入性能。随着时间的推移，随着主机写入、修改和删除文件，卷组的可用容量将变得碎片化。最终，可用容量将不会位于单个连续块中，而是分散在整个卷组中的小碎片中。这会导致进一步的文件碎片化，因为主机必须将新文件作为碎片写入，以适应可用簇的可用范围。
+
+通过整合所选卷组的可用容量，每当主机写入新文件时，您都会注意到文件系统性能的提高。合并过程还有助于防止将来新文件碎片化。
+
+====
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 选择要合并的具有可用容量的卷组，然后选择菜单：Uncommon Tasks[Consolidate volume group free capacity]。
++
+此时将显示合并可用容量对话框。
+
+. 输入  `consolidate` 以确认要执行此操作。
+. 单击 *Consolidate*。
++
+System Manager 开始将卷组的可用容量区域整合（碎片整理）为一个连续量，用于后续存储配置任务。
+
+
+
+.完成后
+选择菜单：Home[View Operations in Progress] 以查看 Consolidate Free Capacity 操作的进度。此操作可能很长，并可能影响系统性能。

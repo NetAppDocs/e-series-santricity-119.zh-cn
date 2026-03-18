@@ -1,0 +1,35 @@
+---
+permalink: sm-support/collect-i-o-path-statistics.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, collect, i/o path, statistics 
+summary: 您可以保存 I/O 路径统计文件并将其发送到技术支持进行分析。 
+---
+= 在 SANtricity System Manager 中收集 I/O 路径统计信息
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以保存 I/O 路径统计文件并将其发送到技术支持进行分析。
+
+.关于此任务
+技术支持使用 I/O 路径统计信息来帮助诊断性能问题。应用程序性能问题可能是由内存使用率、CPU 使用率、网络延迟、I/O 延迟或其他问题引起的。I/O 路径统计信息在支持数据收集期间自动收集，或者您可以手动收集它们。此外，如果您已打开 AutoSupport，则会自动收集 I/O 路径统计信息并发送给技术支持人员。
+
+在确认要收集 I/O 路径统计信息后，将重置 I/O 路径统计信息的计数器。即使您随后取消操作，计数器也会重置。当控制器重置（重新启动）时，计数器也会重置。
+
+[NOTE]
+====
+仅在技术支持人员指示时执行此操作。
+
+====
+.步骤
+. 选择菜单：Support[Support Center > Diagnostics] 选项卡。
+. 选择 *Collect I/O Path Statistics*。
+. 通过键入 `collect`确认您要执行此操作，然后单击 *Collect*。
++
+文件以文件名  `io-path-statistics.7z` 保存在浏览器的 Downloads 文件夹中。
+
+. 按照技术支持提供的说明将文件发送给他们。
+

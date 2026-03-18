@@ -1,0 +1,58 @@
+---
+permalink: sm-storage/rtv-remote-storage-volume-requirements.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, remote, storage, volume, requirements 
+summary: 用于导入的卷必须满足大小、状态和其他条件的要求。 
+---
+= 了解 SANtricity 软件中的远程存储卷要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+用于导入的卷必须满足大小、状态和其他条件的要求。
+
+
+
+== 远程存储卷
+
+导入的源卷称为"远程存储卷"。此卷必须符合以下标准：
+
+* 不能是另一个导入的一部分
+* 必须具有在线状态
+
+
+开始导入后，控制器固件会在后台创建一个远程存储卷。由于该后台进程，远程存储卷无法在 System Manager 中管理，只能用于导入操作。
+
+创建后，远程存储卷将被视为 E 系列系统上的任何其他标准卷，但以下情况除外：
+
+* 可以用作远程存储设备的代理。
+* 不能用作其他卷副本或快照的候选项。
+* 正在执行导入时，无法更改 Data Assurance 设置。
+* 无法映射到任何主机，因为它们是严格为导入操作保留的。
+
+
+每个远程存储卷仅与一个远程存储对象相关联；但是，一个远程存储对象可以与多个远程存储卷相关联。使用以下组合唯一标识远程存储卷：
+
+* 远程存储对象标识符
+* 远程存储设备 LUN 编号
+
+
+
+
+== 目标卷候选项
+
+目标卷是本地 E 系列系统上的目标卷。目标卷必须符合以下标准：
+
+* 必须为 RAID/DDP 卷。
+* 必须具有等于或大于远程存储卷的容量。
+* 块大小必须与远程存储卷大小相同。
+* 必须具有有效状态（最佳）。
+* 不能具有以下任何关系：卷副本、快照副本、异步或同步镜像。
+* 无法执行任何重新配置操作：Dynamic Volume Expansion、Dynamic Capacity Expansion、Dynamic Segment Size、Dynamic RAID Migration、Dynamic Capacity Reduction 或 Defragmentation。
+* 在导入开始之前无法映射到主机（但是，可以在导入完成后映射它）。
+* 无法启用闪存读取缓存 (FRC)。
+
+
+System Manager 会在导入远程存储向导中自动检查这些要求。仅显示满足所有要求的卷以进行目标卷选择。

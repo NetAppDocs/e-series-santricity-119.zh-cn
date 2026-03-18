@@ -1,0 +1,66 @@
+---
+permalink: sm-settings/faq-certificates.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您只是在寻找问题的快速答案，此常见问题可以为您提供帮助。 
+---
+= SANtricity System Manager 的 CA 签名证书和自签名证书常见问题解答
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您只是在寻找问题的快速答案，此常见问题可以为您提供帮助。
+
+
+
+== 为什么会出现"无法访问其他控制器"对话框？
+
+执行与 CA 证书相关的某些操作（例如，导入证书）时，可能会看到一个对话框，提示您接受第二个控制器的自签名证书。
+
+在具有两个控制器（双工配置）的存储阵列中，如果 SANtricity System Manager 无法与第二个控制器通信，或者如果您的浏览器在操作中的某个点无法接受证书，则有时会出现此对话框。
+
+如果打开此对话框，请单击 *Accept Self-Signed Certificate* 以继续。如果其他对话框提示您输入密码，请输入用于访问 System Manager 的管理员密码。
+
+如果此对话框再次出现，并且无法完成证书任务，请尝试以下过程之一：
+
+* 使用其他浏览器类型访问此控制器，接受证书并继续。
+* 访问第二个控制器 withSystem Manager，接受自签名证书，然后返回第一个控制器并继续。
+
+
+
+
+== 如何知道需要将哪些证书上传到 SANtricity System Manager 进行外部密钥管理？
+
+对于外部密钥管理，您可以导入两种类型的证书，以便在存储阵列和密钥管理服务器之间进行身份验证，从而使两个实体可以相互信任。
+
+客户端证书验证存储阵列的控制器，以便密钥管理服务器可以信任其 Key Management Interoperability Protocol (KMIP) 请求。
+
+要获取客户端证书，请使用 System Manager 完成存储阵列的 CSR。您还可以使用私钥和公钥对在外部生成 CSR。
+
+然后，您可以将 CSR 上传到密钥管理服务器并从中生成客户端证书。获得客户端证书后，将该文件复制到访问 System Manager 的主机。
+
+密钥管理服务器证书验证密钥管理服务器，以便存储阵列可以信任其 IP 地址。从密钥管理服务器检索服务器证书文件，然后将该文件复制到正在访问 System Manager 的主机。
+
+
+
+== 关于证书吊销检查，我需要了解哪些信息？
+
+SANtricity System Manager 允许您通过使用在线证书状态协议 (OCSP) 服务器来检查吊销的证书，而不是上传证书吊销列表 (CRL)。
+
+已吊销的证书不应再受信任。证书可能出于多种原因而被吊销；例如，如果 Certificate Authority (CA) 不正确地颁发了证书、私钥被泄露或被识别的实体不符合策略要求。
+
+在 System Manager 中建立到 OCSP 服务器的连接后，存储阵列在连接到 AutoSupport 服务器、外部密钥管理服务器 (EKMS)、基于 SSL 的轻型目录访问协议 (LDAPS) 服务器或 Syslog 服务器时执行吊销检查。存储阵列尝试验证这些服务器的证书，以确保它们未被吊销。然后，服务器返回该证书的 "good"、"revoked" 或 "unknown" 值。如果证书被吊销或阵列无法联系 OCSP 服务器，则连接被拒绝。
+
+[NOTE]
+====
+在 System Manager 或命令行界面 (CLI) 中指定 OCSP 响应程序地址将覆盖在证书文件中找到的 OCSP 地址。
+
+====
+
+
+== 将为哪些类型的服务器启用吊销检查？
+
+每当连接到 AutoSupport 服务器、外部密钥管理服务器 (EKMS)、基于 SSL 的轻型目录访问协议 (LDAPS) 服务器或 Syslog 服务器时，存储阵列都会执行吊销检查。

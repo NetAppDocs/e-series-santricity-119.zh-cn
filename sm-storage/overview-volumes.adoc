@@ -1,0 +1,55 @@
+---
+permalink: sm-storage/overview-volumes.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, volumes 
+summary: 您可以将卷创建为应用程序、数据库和文件系统存储数据的容器。创建卷时，还可以选择一个工作负载，为特定应用程序自定义存储阵列配置。 
+---
+= 了解 SANtricity System Manager 中的卷和工作负载
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将卷创建为应用程序、数据库和文件系统存储数据的容器。创建卷时，还可以选择一个工作负载，为特定应用程序自定义存储阵列配置。
+
+
+
+== 什么是卷和工作负载？
+
+_volume_ 是创建的逻辑组件，具有供主机访问的特定容量。尽管卷可能由多个驱动器组成，但对主机而言，卷显示为一个逻辑组件。定义卷后，您可以将其添加到工作负载中。_workload_ 是支持应用程序（如 SQL Server 或 Exchange）的存储对象，可用于优化该应用程序的存储。
+
+了解详情：
+
+* link:how-volumes-work.html["卷的工作原理"]
+* link:how-workloads-work.html["工作负载的工作原理"]
+* link:volume-terminology.html["卷术语"]
+* link:capacity-for-volumes.html["如何为卷分配容量"]
+* link:actions-you-can-perform-on-volumes.html["可以对卷执行的操作"]
+
+
+
+
+== 如何创建卷和工作负载？
+
+首先，您要创建一个工作负载。转到菜单：Storage[Volumes]，然后打开一个向导，引导您完成这些步骤。接下来，从池或卷组中的可用容量创建卷，然后分配创建的工作负载。
+
+了解详情：
+
+* link:workflow-for-creating-volumes.html["创建卷的工作流程"]
+* link:create-workloads.html["创建工作负载"]
+* link:create-volumes.html["创建卷"]
+* link:add-to-workload.html["将卷添加到工作负载"]
+
+
+
+
+== 相关信息
+
+详细了解与卷相关的概念：
+
+* link:data-integrity-and-data-security-for-volumes.html["卷的数据完整性和数据安全性"]
+* link:ssd-cache-and-volumes.html["SSD 缓存和卷"]
+* link:thin-volume-monitoring.html["精简卷监控"]
+

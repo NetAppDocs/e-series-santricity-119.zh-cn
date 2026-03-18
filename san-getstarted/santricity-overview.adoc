@@ -1,0 +1,158 @@
+---
+permalink: san-getstarted/santricity-overview.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, 
+summary: E 系列系统包括用于存储配置和其他任务的 SANtricity 软件。 
+---
+= 了解 SANtricity 软件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+E 系列系统包括用于存储配置和其他任务的 SANtricity 软件。
+
+本网站介绍如何使用以下 SANtricity 管理接口：
+
+* System Manager — 基于 Web 的界面，用于管理网络中的单个存储阵列。
+* Unified Manager -- 基于 Web 的界面，用于查看和管理网络中的所有存储阵列。
+
+
+
+NOTE: EF600/EF600C 和 EF300/EF300C 存储阵列不支持同步镜像或精简卷。
+
+
+
+== SANtricity System Manager
+
+System Manager 是嵌入在每个控制器上的基于 Web 的管理软件。要访问用户界面，请将浏览器指向控制器的 IP 地址。安装向导可帮助您开始系统配置。
+
+System Manager 提供各种管理功能，包括：
+
+|===
+
+
+ a| 
+image:../media/sam1130_icon_performance.gif["性能"] *性能*
+ a| 
+最多可查看 30 天的性能数据，包括 I/O 延迟、IOPS、CPU 利用率和吞吐量。
+
+
+
+ a| 
+image:../media/sam1130_icon_volumes.gif["存储"] *存储*
+ a| 
+使用池或卷组配置存储，并创建应用程序工作负载。
+
+
+
+ a| 
+image:../media/sam1130_icon_async_mirroring.gif["数据保护"] *数据保护*
+ a| 
+使用快照、卷复制和远程镜像执行备份和灾难恢复。
+
+
+
+ a| 
+image:../media/sam1130_icon_controllers.gif["硬件"] *硬件*
+ a| 
+检查组件状态并执行与这些组件相关的一些功能，例如分配热备用驱动器。
+
+
+
+ a| 
+image:../media/sam1130_icon_alerts.gif["警报"] *警报*
+ a| 
+通知管理员存储阵列上发生的重要事件。警报可以通过电子邮件、SNMP 陷阱和 syslog 发送。
+
+
+
+ a| 
+image:../media/sam1140_icon_active_directory.gif["访问管理"] *访问管理*
+ a| 
+配置用户身份验证，要求用户使用分配的凭据登录系统。
+
+
+
+ a| 
+image:../media/sam1130_icon_settings.gif["系统设置"] *系统设置*
+ a| 
+配置其他系统性能功能，例如 SSD 缓存和自动加载平衡。
+
+
+
+ a| 
+image:../media/sam1130_icon_support.gif["支持"] *支持*
+ a| 
+查看诊断数据、管理升级和配置 AutoSupport，以监控存储阵列的运行状况，并将自动调度发送给技术支持。
+
+|===
+
+
+== SANtricity Unified Manager
+
+Unified Manager 是基于 Web 的软件，用于管理整个域。从中央视图中，您可以查看所有较新 E 系列和 EF 系列阵列的状态，例如 E4000、E2800、EF280、EF300、E5700、EF570、EF600、EF300C 和 EF600C。您还可以在选定的存储阵列上执行批处理操作。
+
+Unified Manager 与 Web Services Proxy 一起安装在管理服务器上。若要访问 Unified Manager，请打开浏览器并输入指向安装 Web Services Proxy 的服务器的 URL。
+
+Unified Manager 提供多种管理功能，包括：
+
+|===
+
+
+ a| 
+image:../media/artboard_9.png["发现存储阵列"] *发现存储阵列*
+ a| 
+查找并添加要在组织网络中管理的存储阵列。然后，您可以从单个页面查看所有存储阵列的状态。
+
+
+
+ a| 
+image:../media/artboard_11.png["启动"] *启动*
+ a| 
+打开 System Manager 实例以对特定存储阵列执行单个管理操作。
+
+
+
+ a| 
+image:../media/sam1130_icon_system.gif["导入设置"] *导入设置*
+ a| 
+执行从一个存储阵列到多个阵列的批量导入，包括警报、AutoSupport 和目录服务的设置。
+
+
+
+ a| 
+image:../media/sam1130_icon_async_mirroring.gif["镜像"] *镜像*
+ a| 
+在两个存储阵列之间配置异步或同步镜像对。
+
+
+
+ a| 
+image:../media/artboard_10.png["管理组"] *管理组*
+ a| 
+将存储阵列组织成组，以便于管理。
+
+
+
+ a| 
+image:../media/sam1130_icon_upgrade_center.gif["升级中心"] *升级中心*
+ a| 
+在多个存储阵列上升级 SANtricity 操作系统软件。
+
+
+
+ a| 
+image:../media/sam1140_icon_certs.gif["证书"] *证书*
+ a| 
+创建证书签名请求 (CSR)、导入证书以及管理多个存储阵列的现有证书。
+
+
+
+ a| 
+image:../media/sam1140_icon_active_directory.gif["访问管理"] *访问管理*
+ a| 
+配置要求用户使用分配的凭据登录到 Unified Manager 的用户身份验证。
+
+|===

@@ -1,0 +1,32 @@
+---
+permalink: sm-settings/download-cli.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, download, command line interface, CLI, 
+summary: '从 System Manager 中，您可以下载命令行界面 (CLI) 包。' 
+---
+= 下载 SANtricity 命令行界面 (CLI)
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+从 SANtricity System Manager，您可以下载命令行界面 (CLI) 包。
+
+CLI 提供了一种基于文本的方法来配置和监控存储阵列。它通过 https 进行通信，并使用与外部安装的管理软件包中可用的 CLI 相同的语法。下载 CLI 无需密钥。
+
+.开始之前
+Java Runtime Environment (JRE) 8 及更高版本必须在计划运行 CLI 命令的管理系统上可用。
+
+.步骤
+. 选择菜单：Settings[System]。
+. 在 *附加组件* 下，选择 *命令行界面*。
++
+ZIP 包将下载到浏览器。
+
+. 将 ZIP 文件保存到计划在其中为存储阵列运行 CLI 命令的管理系统，然后提取该文件。
++
+现在，您可以从操作系统提示符运行 CLI 命令，例如 DOS C: 提示符。System Manager 用户界面右上角的"帮助"菜单提供了 CLI 命令参考。
+
+

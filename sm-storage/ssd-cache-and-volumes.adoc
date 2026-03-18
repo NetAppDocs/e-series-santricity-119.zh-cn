@@ -1,0 +1,39 @@
+---
+permalink: sm-storage/ssd-cache-and-volumes.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, ssd, cache, volumes 
+summary: '您可以将卷添加到 SSD Cache，以提高只读性能。SSD Cache 由一组固态磁盘 (SSD) 驱动器组成，您可以在存储阵列中将它们逻辑地分组在一起。' 
+---
+= 了解 SANtricity 软件中的 SSD 缓存和卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将卷添加到 SSD Cache，以提高只读性能。SSD Cache 由一组固态磁盘 (SSD) 驱动器组成，您可以在存储阵列中将它们逻辑地分组在一起。
+
+
+
+== 卷
+
+简单的卷 I/O 机制用于将数据移动到 SSD Cache 和从 SSD Cache 移动数据。在 SSD 上缓存和存储数据后，在 SSD Cache 上执行该数据的后续读取，从而无需访问 HDD 卷。
+
+SSD Cache 是与控制器的动态随机存取内存 (DRAM) 中的主缓存一起使用的辅助缓存。
+
+* 在主缓存中，数据在主机读取后存储在 DRAM 中。
+* 在 SSD 缓存中，数据从卷复制并存储在两个内部 RAID 卷上（每个控制器一个），这些卷在创建 SSD 缓存时自动创建。
+
+
+内部 RAID 卷用于内部缓存处理。这些卷不可访问或显示在用户界面中。但是，这两个卷确实计算在存储阵列中允许的卷总数中。
+
+[NOTE]
+====
+分配给使用控制器 SSD Cache 的任何卷都不符合自动负载平衡传输的条件。
+
+====
+
+
+== 驱动器安全功能
+
+要在也使用驱动器安全（已启用安全）的卷上使用 SSD Cache，卷的驱动器安全功能和 SSD Cache 必须匹配。如果不匹配，则卷将不会启用安全。

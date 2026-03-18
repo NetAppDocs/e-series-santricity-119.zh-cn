@@ -1,0 +1,49 @@
+---
+permalink: um-manage/import-autosupport-settings.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, import, autosupport, settings 
+summary: 您可以将 AutoSupport 配置从一个存储阵列导入到其他存储阵列。当您需要在网络中配置多个阵列时，此批处理操作可节省时间。 
+---
+= 在 SANtricity Unified Manager 中导入 AutoSupport 设置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将 AutoSupport 配置从一个存储阵列导入到其他存储阵列。当您需要在网络中配置多个阵列时，此批处理操作可节省时间。
+
+.开始之前
+* AutoSupport 在 System Manager 中为要用作源的存储阵列配置（菜单：支持[支持中心]）。
+* 目标存储阵列的现有配置在 System Manager 中备份（菜单：Settings[System > Save Storage Array Configuration]）。
+
+
+.关于此任务
+导入的设置包括单独的功能（基本 AutoSupport、AutoSupport OnDemand 和远程诊断）、维护窗口、交付方法和派遣计划。
+
+.步骤
+. 在 Manage 页面中，单击 *Import Settings*。
++
+导入设置向导打开。
+
+. 在选择设置对话框中，选择 *AutoSupport*，然后单击*下一步*。
++
+此时将打开一个用于选择源阵列的对话框。
+
+. 在选择源对话框中，选择具有要导入的设置的数组，然后单击 *Next*。
+. 在"选择目标"对话框中，选择一个或多个阵列以接收新设置。
++
+[NOTE]
+====
+无法选择固件低于 8.50 的存储阵列。此外，如果 Unified Manager 无法与该阵列通信（例如，如果该阵列处于脱机状态，或者存在证书、密码或网络问题），则不会在此对话框中显示该阵列。
+
+====
+. 单击 *Finish*。
++
+操作页面显示导入操作的结果。如果操作失败，您可以单击其行以查看更多信息。
+
+
+
+.结果
+现在使用与源阵列相同的 AutoSupport 设置来配置目标存储阵列。

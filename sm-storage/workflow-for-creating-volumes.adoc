@@ -1,0 +1,16 @@
+---
+permalink: sm-storage/workflow-for-creating-volumes.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, workflow, create, volumes 
+summary: 在 SANtricity System Manager 中，您可以按照以下步骤创建卷。 
+---
+= 如何在 SANtricity System Manager 中创建卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 SANtricity System Manager 中，您可以按照以下步骤创建卷。
+
+image::../media/sam1130-flw-volumes-create.gif[创建卷工作流程]

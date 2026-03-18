@@ -1,0 +1,48 @@
+---
+permalink: sm-storage/disable-snapshot-volume.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, disable, snapshot, volume 
+summary: 当您不再需要快照卷或想要暂时停止使用快照一致性组中的快照卷时，可以禁用快照卷或快照一致性组中的快照卷。 
+---
+= 在 SANtricity System Manager 中禁用快照卷
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+当您不再需要快照卷或想要暂时停止使用快照一致性组中的快照卷时，可以禁用快照卷或快照一致性组中的快照卷。
+
+.关于此任务
+如果满足以下条件之一，请使用禁用选项：
+
+* 您暂时已完成快照卷或快照一致性组快照卷。
+* 您打算稍后重新创建快照卷或快照一致性组快照卷（指定为读写），并希望保留相关的保留容量，因此无需再次创建它。
+* 您希望通过停止对读写快照卷的写入活动来提高存储阵列性能。
+
+
+如果快照卷或快照一致性组快照卷被指定为读写，则此选项还允许您停止对其关联的保留容量卷的任何进一步写入活动。如果决定重新创建快照卷或快照一致性组快照卷，则必须从相同的基本卷中选择快照映像。
+
+[NOTE]
+====
+如果快照卷或快照一致性组快照卷是联机复制关系的一部分，则无法在该卷上执行 Disable 选项。
+
+====
+.步骤
+. 选择菜单：Storage[Snapshots]。
+. 选择 *Snapshot Volumes* 选项卡。
++
+System Manager 会显示与存储阵列关联的所有快照卷。
+
+. 选择要禁用的快照卷，然后选择菜单：Uncommon Tasks[Disable]。
+. 确认您要执行此操作，然后单击 *Disable*。
+
+
+.结果
+* 快照卷与其基本卷保持关联。
+* 快照卷保留其全球通用名称 (WWN)。
+* 如果为读写，快照卷将保留其关联的预留容量。
+* 快照卷保留所有主机分配和访问权限。但是，读写请求失败。
+* 快照卷与其快照映像失去关联。
+

@@ -1,0 +1,38 @@
+---
+permalink: um-certificates/view-local-user-roles-unified.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, view, local, user, roles 
+summary: 从本地用户角色选项卡，您可以查看用户到默认角色的映射。这些映射是在 SANtricity Unified Manager 的 Web Services Proxy 中强制实施的 RBAC（基于角色的访问控制）的一部分。 
+---
+= 查看本地用户角色
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+从本地用户角色选项卡，您可以查看用户到默认角色的映射。这些映射是在 SANtricity Unified Manager 的 Web Services Proxy 中强制实施的 RBAC（基于角色的访问控制）的一部分。
+
+.开始之前
+必须使用包含 Security admin 权限的用户配置文件登录。否则，将不会显示 Access Management 功能。
+
+.关于此任务
+无法更改用户和映射。只能修改密码。
+
+.步骤
+. 选择 *Access Management*。
+. 选择 *Local User Roles* 选项卡。
++
+用户显示在表中：
+
++
+** *admin* -- 有权访问系统中所有功能的超级管理员。此用户包括所有角色。
+** *storage* -- 负责所有存储配置的管理员。此用户包括以下角色：Storage Admin、Support Admin 和 Monitor。
+** *security* -- 负责安全配置的用户，包括 Access Management 和 Certificate Management。此用户包括以下角色：Security Admin 和 Monitor。
+** *support* -- 负责硬件资源、故障数据和固件升级的用户。此用户包括以下角色：Support Admin 和 Monitor。
+** *monitor* -- 对系统具有只读访问权限的用户。此用户仅包括 Monitor 角色。
+** *rw*（读/写）-- 此用户包括以下角色：Storage Admin、Support Admin 和 Monitor。
+** *ro*（只读）-- 此用户仅包括 Monitor 角色。
+
+
+

@@ -1,0 +1,69 @@
+---
+permalink: sm-hardware/allow-remote-login.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, remote, login, 
+summary: 远程登录允许局域网以外的用户启动 SSH 会话并更改控制器上的设置。 
+---
+= 在 SANtricity System Manager 中配置远程登录 (SSH)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通过启用远程登录，您可以允许来自局域网外的用户启动 SSH 会话并访问控制器上的设置。
+
+对于 SANtricity 版本 11.74 及更高版本，您还可以通过要求用户输入 SSH 密钥和/或 SSH 密码来配置多因素授权 (MFA)。对于 SANtricity 版本 11.73 及更早版本，此功能_不_包括使用 SSH 密钥和密码进行多因素授权的选项。
+
+[CAUTION]
+====
+*安全风险* -- 出于安全原因，只有技术支持人员应使用远程登录功能。
+
+====
+.步骤
+. 选择 *Hardware*。
+. 如果图形显示驱动器，请单击 *Controllers & Components* 选项卡。
++
+图形会更改为显示控制器而不是驱动器。
+
+. 单击要为其配置远程登录的控制器。
++
+此时将显示控制器的上下文菜单。
+
+. 选择 *Configure remote login (SSH)*。（对于 SANtricity 版本 11.73 及更早版本，此菜单项为 *Change remote login*。）
++
+此时将打开对话框以启用远程登录。
+
+. 选中 *启用远程登录* 复选框。
++
+此设置为远程登录提供了三个授权选项：
+
++
+** *仅限密码*。对于此选项，您已完成操作，可以单击 *Save*。如果您有双工系统，则可以按照前面的步骤在第二个控制器上启用远程登录。
+** *SSH 密钥或密码*。对于此选项，请继续下一步。
+** *密码和 SSH 密钥*。对于此选项，选中 *Require authorized public key and password for remote login* 复选框，然后继续下一步。
+
+
+. 填写 *Authorized public key* 字段。此字段包含授权公钥列表，格式为 OpenSSH *authorized_keys* 文件。
++
+填写 *授权公钥* 字段时，请注意以下准则：
+
++
+** *Authorized public key* 字段适用于两个控制器，并且只需要在第一个控制器上配置。
+** *authorized_keys* 文件每行应仅包含一个密钥。以 # 开头的行和空行将被忽略。有关文件格式的详细信息，请参见 link:https://www.ssh.com/academy/ssh/authorized-keys-openssh["配置 OpenSSH 的授权密钥"^]。
+** *authorized_keys* 文件应与以下示例类似：
++
+[listing]
+----
+ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDJlG20rYTk4ok+xFjkPHYp/R0LfJqEYDLXA5AJ49w3DvAWLrUg+1CpNq76WSqmQBmoG9jgbcAB5ABGdswdeMQZHilJcu29iJ3OKKv6SlCulAj1tHymwtbdhPuipd2wIDAQAB
+----
+
+
+. 完成后，单击 *保存* 。
+. 对于双工系统，您可以按照上述步骤在第二个控制器上启用远程登录。如果您同时配置密码和 SSH 密钥的选项，请务必再次选中 *Require authorized public key and password for remote login* 复选框。
+. 技术支持完成故障排除后，您可以通过返回配置远程登录对话框并取消选中*启用远程登录*复选框来禁用远程登录。如果在第二个控制器上启用了远程登录，则会打开一个确认对话框，允许您同时禁用第二个控制器上的远程登录。
++
+禁用远程登录将终止任何当前的 SSH 会话，并拒绝任何新的登录请求。
+
+

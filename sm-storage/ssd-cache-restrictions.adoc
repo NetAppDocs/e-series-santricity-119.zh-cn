@@ -1,0 +1,35 @@
+---
+permalink: sm-storage/ssd-cache-restrictions.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, ssd, cache, restrictions 
+summary: 了解在您的存储阵列上使用 SSD Cache 时的限制。 
+---
+= 了解 SANtricity 软件中的 SSD 缓存限制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解在您的存储阵列上使用 SSD Cache 时的限制。
+
+
+
+== 限制
+
+* 分配给使用控制器 SSD Cache 的任何卷都不符合自动负载平衡传输的条件。
+* 目前，每个存储阵列仅支持一个 SSD Cache。
+* 存储阵列上的最大可用 SSD Cache 容量为 10 TB。
+* 快照映像不支持 SSD 缓存。
+* 如果导入或导出已启用或禁用 SSD Cache 的卷，则不会导入或导出缓存数据。
+* 如果不先删除 SSD Cache，则无法删除 SSD Cache 中的最后一个驱动器。
+
+
+
+
+== 驱动器安全的限制
+
+* 只有在创建 SSD Cache 时，才能在 SSD Cache 上启用安全性。您以后无法启用安全性，就像您可以在卷上启用安全性一样。
+* 如果将支持安全的驱动器与 SSD Cache 中不支持安全的驱动器混合使用，则无法为这些驱动器启用 Drive Security。
+* 已启用安全的卷必须具有已启用安全的 SSD Cache。
+

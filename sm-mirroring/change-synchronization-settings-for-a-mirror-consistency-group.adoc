@@ -1,0 +1,66 @@
+---
+permalink: sm-mirroring/change-synchronization-settings-for-a-mirror-consistency-group.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, change, synchronization, settings, mirror, consistency, group, 
+summary: 您可以更改本地存储阵列上的镜像一致性组在最初同步数据或在异步镜像操作期间重新同步数据时使用的同步设置和警告阈值。 
+---
+= 更改 SANtricity System Manager 中镜像一致性组的同步设置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以更改本地存储阵列上的镜像一致性组在最初同步数据或在异步镜像操作期间重新同步数据时使用的同步设置和警告阈值。
+
+.关于此任务
+更改同步设置会影响镜像一致性组中所有镜像对的同步操作。
+
+.步骤
+. 选择菜单：Storage[Asynchronous Mirroring]。
+. 选择 *Mirror Consistency Groups* 选项卡。
++
+将显示 Mirrored Consistency Group（镜像一致性组）表，并显示与存储阵列关联的所有镜像一致性组。
+
+. 选择要编辑的镜像一致性组，然后选择菜单：More[Edit Settings]。
++
+系统显示"编辑设置"对话框。
+
+. 根据需要编辑同步和警报设置，然后单击 *Save*。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 字段 | 说明 
+
+
+ a| 
+同步镜像对...
+ a| 
+指定是要手动还是自动同步远程存储阵列上的镜像对。
+
+** **手动** – 选择此选项可手动同步远程存储阵列上的镜像对。
+** **自动，每隔** – 选择此选项可通过指定从上一次更新开始到下一次更新开始的时间间隔，自动同步远程存储阵列上的镜像对。默认时间间隔为 10 分钟。
+
+
+
+
+ a| 
+提醒我...
+ a| 
+如果将同步方法设置为自动执行，请设置以下警报：
+
+** **同步** – 设置 System Manager 发送同步未完成警报的时间长度。
+** **远程恢复点** – 设置一个时间限制，在此时间限制之后，System Manager 将发送警报，指示远程存储阵列上的恢复点数据早于您定义的时间限制。定义从上一次更新结束起的时间限制。
+** **保留容量阈值** – 定义保留容量数量，当达到该数量时，System Manager 会发送警报，提示您接近保留容量阈值。按剩余容量的百分比定义阈值。
+
+
+|===
+====
+
+
+.结果
+System Manager 更改镜像一致性组中每个镜像对的同步设置。

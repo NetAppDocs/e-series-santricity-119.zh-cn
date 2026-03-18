@@ -1,0 +1,129 @@
+---
+permalink: sm-settings/faq-nvme-protocol.html 
+sidebar: sidebar 
+keywords:  
+summary: 如果您只是在寻找问题的快速答案，此常见问题可以为您提供帮助。 
+---
+= 适用于 SANtricity System Manager 的 NVMe 协议常见问题解答
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您只是在寻找问题的快速答案，此常见问题可以为您提供帮助。
+
+
+
+== 如何解释 NVMe over Fabrics 统计信息？
+
+View NVMe over Fabrics Statistics 对话框显示 NVMe 子系统和 RDMA 接口的统计信息。所有统计信息均为只读，无法设置。
+
+* *NVMe 子系统统计信息* -- 显示 NVMe 控制器及其队列的统计信息。NVMe 控制器提供主机与存储阵列中的命名空间之间的访问路径。您可以查看连接失败、重置和关闭等项目的 NVMe 子系统统计信息。有关这些统计信息的详细信息，请单击*查看表格标题的图例*。
+* *RDMA 接口统计* -- 提供 RDMA 接口上所有 NVMe over Fabrics 端口的统计信息，其中包括与每个交换机端口关联的性能统计信息和链路错误信息。此选项卡仅在 NVMe over Fabrics 端口可用时显示。有关统计信息的详细信息，请单击*查看表格标题的图例*。
+
+
+您可以将这些统计数据中的每一个查看为原始统计数据或基线统计数据。原始统计数据是自控制器启动以来收集的所有统计数据。基线统计数据是自您设置基线时间以来收集的时间点统计数据。
+
+
+
+== 我还需要执行哪些操作来配置或诊断基于 InfiniBand 的 NVMe？
+
+下表列出了可用于通过 InfiniBand 会话配置和管理 NVMe 的 SANtricity System Manager 功能。
+
+[NOTE]
+====
+仅当存储阵列的控制器包含 NVMe over InfiniBand 端口时，NVMe over InfiniBand 设置才可用。
+
+====
+[cols="35h,~"]
+|===
+| 操作 | 位置 
+
+
+ a| 
+通过 InfiniBand 端口配置 NVMe
+ a| 
+. 选择 *Hardware*。
+. 选择 *Controllers & Components* 选项卡。
+. 选择控制器。
+. 选择 *通过 InfiniBand 端口配置 NVMe*。
+
+
+或
+
+. 选择菜单：Settings[System]。
+. 向下滚动到 *NVMe over InfiniBand settings*，然后选择 *Configure NVMe over InfiniBand Ports*。
+
+
+
+
+ a| 
+查看 NVMe over InfiniBand 统计信息
+ a| 
+. 选择菜单：Settings[System]。
+. 向下滚动到 *NVMe over InfiniBand settings*，然后选择 *View NVMe over Fabrics Statistics*。
+
+
+|===
+
+
+== 我还需要执行哪些操作来配置或诊断基于 RoCE 的 NVMe？
+
+您可以从硬件和设置页面配置和管理 NVMe over RoCE。
+
+[NOTE]
+====
+仅当存储阵列的控制器包含 NVMe over RoCE 端口时，NVMe over RoCE 设置才可用。
+
+====
+[cols="35h,~"]
+|===
+| 操作 | 位置 
+
+
+ a| 
+通过 RoCE 端口配置 NVMe
+ a| 
+. 选择 *Hardware*。
+. 选择 *Controllers & Components* 选项卡。
+. 选择控制器。
+. 选择 *Configure NVMe over RoCE ports*。
+
+
+或
+
+. 选择菜单：Settings[System]。
+. 向下滚动到 *NVMe over RoCE settings*，然后选择 *Configure NVMe over RoCE Ports*。
+
+
+
+
+ a| 
+查看基于网络结构的 NVMe 统计信息
+ a| 
+. 选择菜单：Settings[System]。
+. 向下滚动到 *NVMe over RoCE 设置*，然后选择 *View NVMe over Fabrics Statistics*。
+
+
+|===
+
+
+== 为什么一个物理端口有两个 IP 地址？
+
+EF600 存储阵列可以包括两个 HIC -- 一个外部和一个内部。
+
+在此配置中，外部 HIC 连接到内部辅助 HIC。您可以从外部 HIC 访问的每个物理端口都具有来自内部 HIC 的关联虚拟端口。
+
+为了实现最大的 200Gb 性能，您必须为物理和虚拟端口分配唯一的 IP 地址，以便主机可以与每个端口建立连接。如果不为虚拟端口分配 IP 地址，则 HIC 将以大约一半的速度运行。
+
+
+
+== 为什么一个物理端口有两组参数？
+
+EF600 存储阵列可以包括两个 HIC -- 一个外部和一个内部。
+
+在此配置中，外部 HIC 连接到内部辅助 HIC。您可以从外部 HIC 访问的每个物理端口都具有来自内部 HIC 的关联虚拟端口。
+
+要实现最大 200Gb 性能，必须为物理端口和虚拟端口分配参数，以便主机可以建立与每个端口的连接。如果不为虚拟端口分配参数，则 HIC 将以大约一半的速度运行。

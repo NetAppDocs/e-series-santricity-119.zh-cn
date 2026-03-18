@@ -1,0 +1,59 @@
+---
+permalink: um-manage/considerations-for-discovering-arrays.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, considerations, discovering, arrays 
+summary: 在 Unified Manager 可以显示和管理存储资源之前，它必须发现要在组织网络中管理的存储阵列。您可以发现多个阵列，也可以发现单个阵列。 
+---
+= 了解如何在 SANtricity Unified Manager 中发现存储阵列
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SANtricity Unified Manager 必须先发现要在组织网络中管理的存储阵列，然后才能显示和管理存储资源。您可以发现多个阵列，也可以发现单个阵列。
+
+
+
+== 发现多个存储阵列
+
+如果选择发现多个阵列，则输入网络 IP 地址范围，然后 Unified Manager 会尝试单个连接到该范围内的每个 IP 地址。成功到达的任何存储阵列都会显示在"发现"页面上，并可能添加到您的管理域中。
+
+
+
+== 发现单个存储阵列
+
+如果选择发现单个阵列，则为存储阵列中的一个控制器输入单个 IP 地址，然后添加单个存储阵列。
+
+[NOTE]
+====
+Unified Manager 仅发现并显示分配给控制器的单个 IP 地址或范围内的 IP 地址。如果分配给这些控制器的备用控制器或 IP 地址超出此单个 IP 地址或 IP 地址范围，则 Unified Manager 将不会发现或显示它们。但是，添加存储阵列后，所有关联的 IP 地址都将被发现并显示在管理视图中。
+
+====
+
+
+== 用户凭据
+
+作为发现过程的一部分，必须为要添加的每个存储阵列提供管理员密码。
+
+
+
+== Web 服务证书
+
+作为发现过程的一部分，Unified Manager 会验证发现的存储阵列是否正在使用受信任来源的证书。Unified Manager 对它与浏览器建立的所有连接使用两种基于证书的身份验证：
+
+* *可信证书*
++
+对于由 Unified Manager 发现的阵列，可能需要安装证书颁发机构提供的其他受信任证书。
+
++
+使用 *Import* 按钮导入这些证书。如果您之前已连接到此阵列，则其证书链中的一个或两个控制器证书要么已过期，要么已吊销，要么缺少根证书或中间证书。在管理存储阵列之前，您必须替换过期或吊销的证书，或添加缺少的根证书或中间证书。
+
+* *自签名证书*
++
+也可以使用自签名证书。如果管理员尝试在不导入已签名证书的情况下发现阵列，则 Unified Manager 将显示一个错误对话框，允许管理员接受自签名证书。存储阵列的自签名证书将被标记为受信任，并且存储阵列将被添加到 Unified Manager。
+
++
+如果不信任与存储阵列的连接，请选择 *取消* 并验证存储阵列的安全证书策略，然后再将存储阵列添加到 Unified Manager。
+
+

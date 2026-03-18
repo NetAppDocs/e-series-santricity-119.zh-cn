@@ -1,0 +1,44 @@
+---
+permalink: sm-support/retrieve-recovery-support-files.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, retrieve, recovery, support files 
+summary: 技术支持可以使用恢复支持文件来解决问题。System Manager 会自动保存这些文件。 
+---
+= 在 SANtricity System Manager 中检索恢复支持文件
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+技术支持可以使用恢复支持文件来解决问题。SANtricity System Manager 会自动保存这些文件。
+
+.开始之前
+技术支持要求您向他们发送其他文件以进行故障排除。
+
+.关于此任务
+恢复支持文件包括以下类型的文件：
+
+* 支持数据文件
+* AutoSupport 历史记录
+* AutoSupport 日志
+* SAS/RLS 诊断文件
+* 恢复配置文件数据
+* 数据库捕获文件
+
+
+.步骤
+. 选择菜单：Support[Support Center > Diagnostics] 选项卡。
+. 选择 *Retrieve Recovery Support Files*。
++
+对话框会列出存储阵列收集的所有恢复支持文件。要查找特定文件，您可以对任何列进行排序或在 *Filter* 框中键入字符。
+
+. 选择一个文件，然后单击 *Download*。
++
+文件保存在浏览器的下载文件夹中。
+
+. 如果需要保存其他文件，请重复上一步。
+. 单击 *Close*。
+. 按照技术支持提供的说明将文件发送给他们。
+

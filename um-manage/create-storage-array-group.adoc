@@ -1,0 +1,43 @@
+---
+permalink: um-manage/create-storage-array-group.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, create, storage, array, group 
+summary: 您可以创建存储组，然后将存储阵列添加到组。存储组定义哪些驱动器提供构成卷的存储。 
+---
+= 在 SANtricity Unified Manager 中配置存储阵列组
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以创建存储组，然后将存储阵列添加到这些组中。
+
+配置组是一个两步过程。
+
+
+
+== 步骤 1：创建组
+
+您首先创建一个组。存储组定义了哪些驱动器提供组成卷的存储。
+
+.步骤
+. 在"管理"页面中，选择菜单：Manage Groups[Create storage array group]。
+. 在 *Name* 字段中，输入新组的名称。
+. 选择要添加到新组的存储阵列。
+. 单击 *Create*。
+
+
+
+
+== 步骤 2：将存储阵列添加到组
+
+您可以向用户创建的组添加一个或多个存储阵列。
+
+.步骤
+. 从主视图中，选择 *Manage*，然后选择要将存储阵列添加到的组。
+. 选择菜单：管理组 [Add storage arrays to group]。
+. 选择要添加到组的存储阵列。
+. 单击 *Add*。
+

@@ -1,0 +1,96 @@
+---
+permalink: sm-settings/use-ca-signed-certificates-for-authentication-with-a-key-management-server.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, ca-signed, certificates, authentication, key, management, server, 
+summary: 为了在密钥管理服务器和存储阵列控制器之间进行安全通信，必须配置相应的证书集。 
+---
+= 使用 CA 签名的证书在 SANtricity System Manager 中与密钥管理服务器进行身份验证
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+为了在密钥管理服务器和存储阵列控制器之间进行安全通信，必须配置相应的证书集。
+
+.开始之前
+必须使用包含 Security admin 权限的用户配置文件登录。否则，不会显示证书功能。
+
+.关于此任务
+控制器和密钥管理服务器之间的身份验证是一个两步过程。
+
+
+
+== 步骤 1：完成并提交 CSR 以通过密钥管理服务器进行身份验证
+
+您必须首先生成证书签名请求 (CSR) 文件，然后使用 CSR 从密钥管理服务器信任的证书颁发机构 (CA) 请求签名的客户端证书。您还可以使用下载的 CSR 文件从密钥管理服务器创建和下载客户端证书。客户端证书验证存储阵列的控制器，以便密钥管理服务器可以信任其 Key Management Interoperability Protocol (KMIP) 请求。
+
+
+NOTE: 通过私钥和公钥对从外部生成的 CSR 文件可以通过"创建外部安全密钥"对话框导入。有关导入外部生成的 CSR 文件的更多信息，请参见 https://docs.netapp.com/us-en/e-series-santricity/sm-settings/use-ca-signed-certificates-for-authentication-with-a-key-management-server.html#step-2-import-certificates-for-the-key-management-server["步骤 2：导入密钥管理服务器的证书"]。
+
+.步骤
+. 选择菜单：Settings[Certificates]。
+. 从密钥管理选项卡中，选择 *Complete CSR*。
+. 输入以下信息：
++
+** *通用名称* -- 标识客户端的名称。通常的做法是将通用名称中的内容与 KMS 服务器对客户端证书命名约定的要求相匹配。通用名称通常有助于 KMS 在握手过程中出示证书时识别客户端的证书。
+** *组织* -- 贵公司或组织的完整法定名称。包括后缀，例如 Inc. 或 Corp.。
+** *组织单位（可选）* -- 处理证书的组织部门。
+** *城市/地区* -- 您的组织所在的城市或地区。
+** *州/地区（可选）* -- 您的组织所在的州或地区。
+** *国家/地区 ISO 代码* -- 两位数的 ISO（国际标准化组织）代码，例如 US，即您的组织所在的位置。
+
+
+. 单击 *Download*。
++
+CSR 文件已保存到您的本地系统。
+
+. 从受密钥管理服务器信任的 CA 请求签名的客户端证书。
++
+
+NOTE: 密钥管理服务器通常具有直接生成签名证书的设施，因为它作为自己的 CA 运行。
+
+. 拥有客户端证书时，请转到 <<步骤 2：导入密钥管理服务器的证书>>。
+
+
+
+
+== 步骤 2：导入密钥管理服务器的证书
+
+下一步是导入证书，以便在存储阵列和密钥管理服务器之间进行身份验证。有两种类型的证书：客户端证书验证存储阵列的控制器，而密钥管理服务器证书验证服务器。必须同时加载控制器的客户端证书文件和密钥管理服务器的服务器证书文件。
+
+.开始之前
+* 您有一个已签名的客户端证书文件（请参阅 <<步骤 1：完成并提交 CSR 以通过密钥管理服务器进行身份验证>>），并且您已将该文件复制到访问 System Manager 的主机。客户端证书验证存储阵列的控制器，以便密钥管理服务器可以信任其 Key Management Interoperability Protocol (KMIP) 请求。
+* 您必须从密钥管理服务器检索证书文件，然后将该文件复制到您正在访问 System Manager 的主机。密钥管理服务器证书验证密钥管理服务器，因此存储阵列可以信任其 IP 地址。您可以为密钥管理服务器使用根证书、中间证书或服务器证书。
++
+[NOTE]
+====
+有关服务器证书的详细信息，请参阅密钥管理服务器的文档。
+
+====
+
+
+.步骤
+. 选择菜单：Settings[Certificates]。
+. 从密钥管理选项卡中，选择 *导入*。
++
+此时将打开一个用于导入证书文件的对话框。
+
+. 在*选择客户端证书*旁边，单击*浏览*按钮，为存储阵列的控制器选择客户端证书文件。
++
+文件名显示在对话框中。
+
+. 如果您使用私钥和公钥对在外部生成证书文件，请单击 *Select private key file* 旁边的 *Browse* 按钮，为存储阵列的控制器选择证书文件。
++
+文件名显示在对话框中。
+
+. 在*选择密钥管理服务器的服务器证书*旁边，单击*浏览*按钮为密钥管理服务器选择服务器证书文件。您可以为密钥管理服务器选择根证书、中间证书或服务器证书。
++
+文件名显示在对话框中。
+
+. 单击 *Import*。
++
+文件已上传并验证。
+
+

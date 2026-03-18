@@ -1,0 +1,41 @@
+---
+permalink: um-certificates/delete-trusted-certificates-unified.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, delete, trusted, certificates 
+summary: 您可以删除一个或多个不再需要的证书，例如过期的证书。 
+---
+= 在 SANtricity Unified Manager 中删除可信证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以删除一个或多个不再需要的证书，例如过期的证书。
+
+.开始之前
+请先导入新证书，然后再删除旧证书。
+
+[CAUTION]
+====
+请注意，删除根证书或中间证书可能会影响多个存储阵列，因为这些阵列可以共享相同的证书文件。
+
+====
+.步骤
+. 选择 *Certificate Management*。
+. 选择 *Trusted* 选项卡。
+. 在表中选择一个或多个证书，然后单击 *删除*。
++
+[NOTE]
+====
+*Delete* 功能不适用于预安装的证书。
+
+====
++
+确认删除受信任证书对话框打开。
+
+. 确认删除，然后单击 *Delete*。
++
+证书已从表中删除。
+
+

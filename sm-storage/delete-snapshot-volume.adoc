@@ -1,0 +1,37 @@
+---
+permalink: sm-storage/delete-snapshot-volume.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, delete, snapshot, volume 
+summary: 您可以删除不再需要用于备份或软件应用程序测试目的的快照卷或快照一致性组快照卷。 
+---
+= 在 SANtricity System Manager 中删除快照卷
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以删除不再需要用于备份或软件应用程序测试目的的快照卷或快照一致性组快照卷。
+
+还可以指定是删除与 `read-write`快照卷关联的快照保留容量卷，还是将快照保留容量卷保留为未分配的卷。
+
+.关于此任务
+删除基本卷会自动删除任何关联的快照卷或一致性组快照卷。您无法删除处于 *In Progress* 状态的卷副本中的快照卷。
+
+.步骤
+. 选择菜单：Storage[Snapshots]。
+. 选择 *Snapshot Volumes* 选项卡。
++
+System Manager 会显示与存储阵列关联的所有快照卷。
+
+. 选择要删除的快照卷，然后选择菜单：Uncommon Tasks[Delete]。
+. 确认您要执行此操作，然后单击 *Delete*。
+
+
+.结果
+System Manager 执行以下操作：
+
+* 删除所有成员快照卷（对于快照一致性组快照卷）。
+* 删除所有关联的主机分配。
+

@@ -1,0 +1,35 @@
+---
+permalink: sm-support/enable-autosupport-maintenance-window.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, enable, autosupport, ASUP, maintenance window 
+summary: 启用 AutoSupport 维护窗口以禁止在错误事件时自动创建票证。在正常操作模式下，如果出现问题，存储阵列使用 AutoSupport 打开支持案例。 
+---
+= 在 SANtricity System Manager 中启用 AutoSupport 维护窗口
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+启用 AutoSupport 维护窗口以禁止在错误事件时自动创建票证。在正常操作模式下，如果出现问题，存储阵列使用 AutoSupport 打开支持案例。
+
+.步骤
+. 选择菜单：Support[Support Center > AutoSupport] 选项卡。
+. 选择 *启用 AutoSupport 维护窗口*。
+. 输入电子邮件地址以接收已处理维护窗口请求的确认。
++
+根据您的配置，最多可以输入五个电子邮件地址。如果要添加多个地址，请选择 *Add another email* 以打开其他字段。
+
+. 指定启用维护窗口的持续时间（以小时为单位）。
++
+支持的最长持续时间为 72 小时。
+
+. 单击 *Yes*。
++
+在指定的持续时间窗口内，错误事件的 AutoSupport 自动票证创建功能被暂时禁止。
+
+
+
+.完成后
+在 AutoSupport 服务器处理存储阵列的请求之前，维护窗口不会开始。请等待收到确认电子邮件后再对存储阵列执行任何维护活动。

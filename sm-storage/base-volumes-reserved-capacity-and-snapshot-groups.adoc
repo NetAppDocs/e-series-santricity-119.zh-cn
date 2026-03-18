@@ -1,0 +1,48 @@
+---
+permalink: sm-storage/base-volumes-reserved-capacity-and-snapshot-groups.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, base volumes, reserved capacity, snapshot groups 
+summary: 快照功能利用基本卷、保留容量和快照组。 
+---
+= 了解 SANtricity System Manager 中的基础卷、预留容量和快照组
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+快照功能利用基本卷、保留容量和快照组。
+
+
+
+== 基础卷
+
+_基本卷_是用作快照映像源的卷。基本卷可以是厚卷或精简卷，并且可以位于池或卷组中。
+
+要拍摄基本卷的快照，您可以随时创建即时映像，也可以通过定义快照的常规计划来自动执行此过程。
+
+下图显示了快照对象和基本卷之间的关系。
+
+image::../media/sam1130-dwg-snapshots-images-overview.gif[快照对象和基本卷]
+
+^1^ 基本卷；^2^ 组中的快照对象（映像和预留容量）；^3^ 为快照组预留容量。
+
+
+
+== 预留容量和快照组
+
+System Manager 将快照映像组织到_快照组_中。当 System Manager 建立快照组时，它会自动创建关联的_预留容量_来保存该组的快照映像，并跟踪对其他快照的后续更改。
+
+如果基本卷位于卷组中，则保留容量可以位于池或卷组中。如果基本卷位于池中，则保留容量必须位于与基本卷相同的池中。
+
+快照组无需用户操作，但您可以随时调整快照组上的保留容量。此外，当满足以下条件时，可能会提示您创建保留容量：
+
+* 每当您拍摄尚未具有快照组的基本卷的快照时，System Manager 都会自动创建快照组。此操作还为用于存储后续快照映像的基本卷创建保留容量。
+* 每当您为基本卷创建快照计划时，System Manager 都会自动创建快照组。
+
+
+
+
+== 自动删除
+
+使用快照时，使用默认选项启用自动删除。当快照组达到 32 个图像的快照组限制时，自动删除会自动删除最旧的快照图像。如果关闭自动删除，则最终会超出快照组限制，您必须采取手动操作来配置快照组设置和管理保留容量。

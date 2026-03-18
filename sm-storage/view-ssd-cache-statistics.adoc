@@ -1,0 +1,86 @@
+---
+permalink: sm-storage/view-ssd-cache-statistics.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, view, ssd cache, statistics 
+summary: 您可以查看 SSD Cache 的统计信息，例如读取、写入、缓存命中、缓存分配百分比和缓存利用率百分比。 
+---
+= 在 SANtricity System Manager 中查看 SSD 缓存统计信息
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看 SSD Cache 的统计信息，例如读取、写入、缓存命中、缓存分配百分比和缓存利用率百分比。
+
+标称统计数据是详细统计数据的子集，显示在"查看 SSD 缓存统计数据"对话框中。仅当将所有 SSD 统计信息导出到  `.csv` 文件时，才能查看 SSD 缓存的详细统计信息。
+
+在查看和解释统计数据时，请记住，某些解释是通过查看统计数据的组合得出的。
+
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 选择要查看其统计信息的 SSD Cache，然后单击菜单：更多[查看 SSD Cache 统计信息]。
++
+此时将显示 View SSD Cache Statistics（查看 SSD 缓存统计信息）对话框，并显示选定 SSD 缓存的标称统计信息。
+
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 设置 | 说明 
+
+
+ a| 
+读取
+ a| 
+显示从启用 SSD Cache 的卷中读取的主机总数。读取与写入比率越大，缓存的操作就越好。
+
+
+
+ a| 
+写入
+ a| 
+对启用了 SSD Cache 的卷的主机写入总数。读取与写入的比率越大，缓存的操作就越好。
+
+
+
+ a| 
+缓存命中数
+ a| 
+显示缓存命中次数。
+
+
+
+ a| 
+缓存命中率 %
+ a| 
+显示缓存命中的百分比。此数字源自 Cache Hits /（读取 + 写入）。要进行有效的 SSD Cache 操作，缓存命中率应大于 50%。
+
+
+
+ a| 
+缓存分配 %
+ a| 
+显示已分配的 SSD Cache 存储百分比，以此控制器可用的 SSD Cache 存储百分比表示，并从已分配字节数/可用字节数得出。
+
+
+
+ a| 
+缓存利用率 %
+ a| 
+显示包含来自已启用卷的数据的 SSD Cache 存储百分比，以分配的 SSD Cache 存储百分比表示。此金额表示 SSD Cache 的使用率或密度。从分配的字节/可用字节派生。
+
+
+
+ a| 
+全部导出
+ a| 
+将所有 SSD Cache 统计信息导出为 CSV 格式。导出的文件包含 SSD Cache 的所有可用统计信息（标称和详细）。
+
+|===
+====
+. 单击 *Cancel* 以关闭此对话框。
+

@@ -1,0 +1,55 @@
+---
+permalink: sm-storage/overview-hosts.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, hosts 
+summary: 您可以配置主机和主机群集，它们定义了存储阵列和数据服务器之间的连接。 
+---
+= 了解 SANtricity 软件中的主机和主机集群
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以配置主机和主机群集，它们定义了存储阵列和数据服务器之间的连接。
+
+
+
+== 什么是主机和主机集群？
+
+_host_ 是向存储阵列上的卷发送 I/O 的服务器。_host cluster_ 是一组主机，您可以创建这些主机来将相同的卷分配给多个主机。
+
+了解详情：
+
+* link:host-terminology.html["主机术语"]
+* link:access-volumes.html["访问卷"]
+* link:maximum-number-of-luns.html["LUN 的最大数量"]
+
+
+
+
+== 如何配置主机和主机群集？
+
+要定义主机连接，您可以转到菜单：Storage[Hosts] 手动配置主机。如果您希望两个或多个主机共享对同一卷集的访问权限，则可以定义一个群集并将该卷分配给该群集。
+
+了解详情：
+
+* link:manual-host-creation.html["手动创建主机"]
+* link:how-volumes-are-assigned-to-hosts-and-host-clusters.html["如何将卷分配给主机和主机群集"]
+* link:workflow-for-creating-hosts-and-assigning-volumes.html["主机创建和卷分配的工作流程"]
+* link:create-host-manually.html["手动创建主机"]
+* link:create-host-cluster.html["创建主机集群"]
+* link:assign-volumes.html["将卷分配给主机"]
+
+
+
+
+== 相关信息
+
+了解更多与主机相关的任务：
+
+* link:../sm-settings/set-automatic-load-balancing.html["设置自动负载平衡"]
+* link:../sm-settings/set-host-connectivity-reporting.html["设置主机连接报告"]
+* link:../sm-settings/change-default-host-type.html["更改默认主机类型"]
+

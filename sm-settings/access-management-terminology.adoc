@@ -1,0 +1,96 @@
+---
+permalink: sm-settings/access-management-terminology.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, access management, terms 
+summary: 了解 Access Management 条款如何适用于您的存储阵列。 
+---
+= 了解 SANtricity 软件中的访问管理术语
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解 Access Management 条款如何适用于您的存储阵列。
+
+[cols="25h,~"]
+|===
+| 术语 | 说明 
+
+
+ a| 
+访问令牌
+ a| 
+访问令牌用于使用 REST API 或命令行界面 (CLI) 代替用户名和密码进行身份验证。令牌与特定用户（包括 LDAP 用户）相关联，并包括一组权限和过期时间。
+
+
+
+ a| 
+Active Directory
+ a| 
+Active Directory (AD) 是一种 Microsoft 目录服务，它将 LDAP 用于 Windows 域网络。
+
+
+
+ a| 
+绑定
+ a| 
+绑定操作用于向目录服务器验证客户端。绑定通常需要帐户和密码凭据，但有些服务器允许匿名绑定操作。
+
+
+
+ a| 
+CA
+ a| 
+证书颁发机构 (CA) 是颁发电子文档（称为数字证书）以实现 Internet 安全的受信任实体。这些证书可以识别网站所有者，从而实现客户端和服务器之间的安全连接。
+
+
+
+ a| 
+证书
+ a| 
+出于安全目的，证书可识别站点的所有者，从而防止攻击者模拟站点。证书包含有关站点所有者的信息以及对此信息进行认证（签名）的受信任实体的身份。
+
+
+
+ a| 
+IdP
+ a| 
+身份提供程序 (IdP) 是用于向用户请求凭据并确定该用户是否已成功通过身份验证的外部系统。可以将 IdP 配置为提供多因素身份验证并使用任何用户数据库，例如 Active Directory。您的安全团队负责维护 IdP。
+
+
+
+ a| 
+LDAP
+ a| 
+轻型目录访问协议（LDAP）是一种用于访问和维护分布式目录信息服务的应用程序协议。此协议允许许多不同的应用程序和服务连接到 LDAP 服务器以验证用户。
+
+
+
+ a| 
+RBAC
+ a| 
+基于角色的访问控制 (RBAC) 是一种根据单个用户的角色来调节对计算机或网络资源的访问的方法。RBAC 控件在存储阵列上实施，并包括预定义角色。
+
+
+
+ a| 
+SAML
+ a| 
+Security Assertion Markup Language (SAML) 是用于两个实体之间的身份验证和授权的基于 XML 的标准。SAML 允许多因素身份验证，其中用户必须提供两个或多个项目来证明其身份（例如密码和指纹）。存储阵列的嵌入式 SAML 功能符合 SAML2.0 的身份断言、身份验证和授权。
+
+
+
+ a| 
+SP
+ a| 
+服务提供商 (SP) 是控制用户身份验证和访问的系统。使用 SAML 配置访问管理时，存储阵列充当向身份提供程序请求身份验证的服务提供程序。
+
+
+
+ a| 
+SSO
+ a| 
+单点登录 (SSO) 是一种身份验证服务，允许一组登录凭据访问多个应用程序。
+
+|===

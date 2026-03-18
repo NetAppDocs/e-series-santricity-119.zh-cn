@@ -1,0 +1,47 @@
+---
+permalink: sm-settings/add-on-feature-terminology.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, add-on, feature, terms 
+summary: 了解附加功能条款如何适用于您的存储阵列。 
+---
+= 了解 SANtricity 软件中的附加功能术语
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解附加功能条款如何适用于您的存储阵列。
+
+[cols="25h,~"]
+|===
+| 术语 | 说明 
+
+
+ a| 
+功能启用标识符
+ a| 
+功能启用标识符是标识特定存储阵列的唯一字符串。此标识符可确保在获取高级功能时，它仅与该特定存储阵列相关联。此字符串显示在"系统"页面上的"附加组件"下。
+
+
+
+ a| 
+功能密钥文件
+ a| 
+功能密钥文件是您收到的用于解锁和启用高级功能或功能包的文件。
+
+
+
+ a| 
+功能包
+ a| 
+功能包是更改存储阵列属性的捆绑包（例如，将协议从 Fibre Channel 更改为 iSCSI）。功能包需要特殊密钥才能启用。
+
+
+
+ a| 
+高级功能
+ a| 
+高级功能是需要密钥才能启用的额外选项。它不包含在 System Manager 的标准配置中。
+
+|===

@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: early-versions.html 
+keywords: early versions, e-series, hardware, santricity, os 
+summary: 早期版本的文档 
+---
+= 早期版本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+请查看以下链接，获取 E 系列硬件和 SANtricity 软件早期版本的文档。这些链接会将您带到其他文档网站。
+
+
+
+== 早期版本的硬件文档
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2484026["安装 E2712、E2724、E5612、E5624 控制器驱动器托盘和 DE1600 和 DE5600 扩展驱动器托盘"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2484072["安装 E2760 和 E5660 控制器驱动器托盘和 DE6600 扩展驱动器托盘"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2484108["安装 EF560 闪存阵列和 DE5600 闪存扩展托盘"^]
+* https://mysupport.netapp.com/info/web/ECMP11392380.html["安装较旧的系统"^]
+* https://mysupport.netapp.com/info/web/ECMP11751516.html["维护旧系统"^]
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1394872["向 E2600 和 E2700 添加第二个控制器"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2353447["更改或添加主机协议"^]
+* https://mysupport.netapp.com/ecm/ecm_download_file/ECMP1656638["从交流电转换为直流电"^]
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2589397["控制器升级指南 - 传统控制器型号"^]
+
+
+
+
+== 早期版本的软件文档
+
+
+
+=== SANtricity 11.8 版本
+
+* https://docs.netapp.com/us-en/e-series-santricity-118/index.html["System Manager 帮助"^]
+* https://docs.netapp.com/us-en/e-series-santricity-118/index.html["Unified Manager 帮助"^]
+
+
+
+
+=== SANtricity 11.7 版本
+
+* https://docs.netapp.com/us-en/e-series-santricity-117/index.html["System Manager 帮助"^]
+* https://docs.netapp.com/us-en/e-series-santricity-117/index.html["Unified Manager 帮助"^]
+
+
+
+
+=== SANtricity 11.6 版本
+
+* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["System Manager 帮助"^]
+* https://docs.netapp.com/us-en/e-series-santricity-116/index.html["Unified Manager 帮助"^]
+
+
+
+
+=== SANtricity 11.5 版本
+
+* https://docs.netapp.com/us-en/e-series-santricity-115/index.html["System Manager 帮助"^]
+
+
+
+
+=== SANtricity 11.4 版本
+
+* https://mysupport.netapp.com/ecm/ecm_get_file/ECMLP2862590["AMW (E2700、E5600/EF560) 帮助"^]
+* https://mysupport.netapp.com/ecm/ecm_get_file/ECMLP2862588["EMW (E2700、E5600/EF560) 帮助"^]
+

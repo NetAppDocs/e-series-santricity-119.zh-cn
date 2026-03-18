@@ -1,0 +1,44 @@
+---
+permalink: sm-storage/overview-remote-storage.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, remote, storage 
+summary: 如果您有 Remote Storage 功能，则可以从远程存储系统导入数据。 
+---
+= 了解 SANtricity System Manager 中的远程存储功能
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您具有 Remote Storage 功能，则可以将数据从远程存储系统导入到存储阵列。
+
+
+
+== 什么是远程存储功能？
+
+_远程存储_功能允许您将数据从远程存储系统导入到本地 E 系列存储系统。远程系统可以是另一个 E 系列系统或来自另一个供应商的系统。当您希望以最短的停机时间（例如在设备升级期间）简化数据迁移时，此功能非常有用。
+
+
+NOTE: 要使用远程存储，必须在子模型 ID (SMID) 中启用此功能。
+
+了解详情：
+
+* link:rtv-how-remote-storage-works.html["远程存储的工作原理"]
+* link:rtv-terminology.html["远程存储术语"]
+* link:rtv-remote-storage-requirements.html["远程存储要求"]
+* link:rtv-remote-storage-volume-requirements.html["远程存储卷要求"]
+
+
+
+
+== 如何使用此功能导入数据？
+
+使用远程存储向导，可以将远程存储设备（数据导入的源）映射到 E 系列系统上的目标卷。此向导可从菜单中获得：Storage[Remote storage]。
+
+了解详情：
+
+* link:rtv-import-remote-storage.html["导入远程存储"]
+* link:rtv-manage-progress-of-remote-volume-import.html["管理数据导入的进度"]
+

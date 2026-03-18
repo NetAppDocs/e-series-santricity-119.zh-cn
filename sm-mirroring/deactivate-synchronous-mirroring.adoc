@@ -1,0 +1,32 @@
+---
+permalink: sm-mirroring/deactivate-synchronous-mirroring.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, deactivate, synchronous, mirroring, adapter, host, bus, 
+summary: '您可以停用存储阵列上的同步镜像功能，以重新建立主机总线适配器 (HBA) 主机端口 4 的正常使用，该端口保留用于镜像数据传输。' 
+---
+= 在 SANtricity System Manager 中停用同步镜像
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以停用存储阵列上的同步镜像功能，以重新建立主机总线适配器 (HBA) 主机端口 4 的正常使用，该端口保留用于镜像数据传输。
+
+.开始之前
+您必须已删除所有同步镜像关系。验证是否已从存储阵列中删除所有镜像对。
+
+.步骤
+. 选择菜单：Storage[Synchronous Mirroring]。
+. 选择菜单：Uncommon Tasks[Deactivate]。
++
+系统显示确认信息。
+
+. 选择 *是* 确认。
+
+
+.结果
+* 控制器的 HBA 主机端口 4 专用于同步镜像通信，现在可以接受主机读取和写入请求。
+* 存储阵列上的保留容量卷将被删除。
+

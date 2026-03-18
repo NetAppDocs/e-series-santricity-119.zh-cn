@@ -1,0 +1,114 @@
+---
+permalink: sm-storage/change-the-reserved-capacity-settings-for-a-snapshot-group.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, reserved capacity, settings, snapshot, group 
+summary: 您可以更改 Snapshot 组的设置以更改其名称、自动删除设置、允许的最大 Snapshot 映像数、System Manager 发送保留容量警报通知的百分比点或保留容量达到其最大定义百分比时要使用的策略。 
+---
+= 在 SANtricity System Manager 中更改快照组的预留容量设置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以更改快照组的设置以更改其名称、自动删除设置、允许的最大快照映像数、SANtricity System Manager 发送保留容量警报通知的百分比点或保留容量达到其最大定义百分比时要使用的策略。
+
+在创建 Snapshot 组期间，将创建保留容量以存储组中包含的所有 Snapshot 映像的数据。
+
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 单击 *Reserved Capacity* 选项卡。
+. 选择要编辑的 snapshot 组，然后单击*查看/编辑设置*。
++
+此时将显示 Snapshot 组设置对话框。
+
+. 根据需要更改 Snapshot 组的设置。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 设置 | 说明 
+
+
+ a| 
+*Snapshot 组设置*
+
+
+
+ a| 
+名称
+ a| 
+快照组的名称。需要指定快照组的名称。
+
+
+
+ a| 
+自动删除
+ a| 
+将组中的快照图像总数保持在或低于用户定义的最大值的设置。启用此选项时，System Manager 会在创建新快照时自动删除组中最旧的快照图像，以符合组允许的最大快照图像数。
+
+
+
+ a| 
+Snapshot 图像限制
+ a| 
+一个可配置的值，指定 Snapshot 组允许的最大 Snapshot 映像数。
+
+
+
+ a| 
+Snapshot 计划
+ a| 
+如果是，则设置自动创建 Snapshot 的计划。
+
+
+
+ a| 
+*保留容量设置*
+
+
+
+ a| 
+在...时提醒我
+ a| 
+使用微调框可调整 System Manager 在 Snapshot 组保留容量接近满时发送警报通知的百分比点。
+
+当 Snapshot 组的保留容量超过指定阈值时，System Manager 会发送警报，允许您有时间增加保留容量或删除不必要的对象。
+
+
+
+ a| 
+完全保留容量的政策
+ a| 
+您可以从以下策略中选择一项：
+
+** *清除最旧的 snapshot 映像* -- System Manager 会自动清除 snapshot 组中最旧的 snapshot 映像，从而释放 snapshot 映像保留容量，以便在组内重复使用。
+** *拒绝对基本卷的写入* -- 当保留容量达到其最大定义百分比时，System Manager 会拒绝对触发保留容量访问的基本卷的任何 I/O 写入请求。
+
+
+
+
+ a| 
+*关联对象*
+
+
+
+ a| 
+基础卷
+ a| 
+用于组的基本卷的名称。基本卷是创建 Snapshot 映像的源。它可以是厚卷或精简卷，通常分配给主机。基本卷可以驻留在卷组或磁盘池中。
+
+
+
+ a| 
+Snapshot 图像
+ a| 
+从此组创建的映像数。快照映像是在特定时间点捕获的卷数据的逻辑副本。像还原点一样，快照映像允许您回滚到已知的良好数据集。虽然主机可以访问快照映像，但不能直接读取或写入。
+
+|===
+====
+. 单击 *保存* 以将更改应用于快照组设置。
+

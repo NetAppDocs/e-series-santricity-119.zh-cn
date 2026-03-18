@@ -1,0 +1,35 @@
+---
+permalink: sm-settings/remove-community-name-for-snmp-traps.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, remove, communities, snmpv2c, traps, 
+summary: 您可以删除 SNMPv2c 陷阱的社区名称。 
+---
+= 在 SANtricity System Manager 中删除 SNMPv2c 陷阱的社区
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以删除 SNMPv2c 陷阱的社区名称。
+
+.步骤
+. 选择菜单：Settings[Alerts]。
+. 选择 *SNMP* 选项卡。
++
+陷阱目的地和社区名称显示在 *Alerts* 页面上。
+
+. 选择 *Configure Communities* 。
++
+此时将打开"配置社区"对话框。
+
+. 选择要删除的社区名称，然后单击最右侧的 *Remove* (X) 图标。
++
+如果陷阱目标与此团体名称关联，Confirm Remove Community 对话框将显示受影响的陷阱目标地址。
+
+. 确认操作，然后单击 *Remove*。
+
+
+.结果
+社区名称及其关联的陷阱目标将从警报页面中删除。

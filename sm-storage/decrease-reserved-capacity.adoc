@@ -1,0 +1,47 @@
+---
+permalink: sm-storage/decrease-reserved-capacity.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, decrease, reserved, capacity 
+summary: '您可以使用"减少容量"选项来减少以下存储对象的保留容量：快照组、快照卷和一致性组成员卷。您只能按用于增加保留容量的数量来减少保留容量。' 
+---
+= 降低 SANtricity System Manager 中的预留容量
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用"减少容量"选项来减少以下存储对象的保留容量：快照组、快照卷和一致性组成员卷。您只能按用于增加保留容量的数量来减少保留容量。
+
+.开始之前
+* 存储对象必须包含多个保留容量卷。
+* 存储对象不得为镜像对卷。
+* 如果存储对象是快照卷，则它必须是已禁用的快照卷。
+* 如果存储对象是快照组，则它不得包含任何关联的快照映像。
+
+
+.关于此任务
+查看以下指南：
+
+* 您只能按照与添加时相反的顺序删除保留容量卷。
+* 无法减少只读快照卷的保留容量，因为它没有任何关联的保留容量。仅读写快照卷需要保留容量。
+
+
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 单击 *Reserved Capacity* 选项卡。
+. 选择要降低其预留容量的存储对象，然后单击 *降低容量*。
++
+此时将显示减少保留容量对话框。
+
+. 选择要减少预留容量的容量大小，然后单击 *Decrease*。
+
+
+.结果
+System Manager 执行以下操作：
+
+* 更新存储对象的容量。
+* 显示存储对象的新更新保留容量。
+* 当您降低快照卷的容量时，System Manager 会自动将快照卷转换为"已禁用"状态。已禁用意味着快照卷当前未与快照映像关联，因此无法分配给主机进行 I/O。
+

@@ -1,0 +1,14 @@
+---
+permalink: sm-support/take-recovery-action-on-storage-array-status.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, take, recovery, action, storage, array, status 
+summary: 您可以通过查看不可读扇区日志、重新启用驱动器端口和清除恢复模式来对当前存储阵列的状态执行操作。 
+---
+= 在 SANtricity System Manager 中对存储阵列状态执行恢复操作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过查看不可读扇区日志、重新启用驱动器端口和清除恢复模式来对当前存储阵列的状态执行操作。

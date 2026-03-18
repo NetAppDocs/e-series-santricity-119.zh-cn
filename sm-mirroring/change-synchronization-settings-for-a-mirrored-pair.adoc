@@ -1,0 +1,57 @@
+---
+permalink: sm-mirroring/change-synchronization-settings-for-a-mirrored-pair.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, change, synchronization, settings, mirrored, pair, 
+summary: 您可以更改镜像对在通信中断后用于完成重新同步操作的同步优先级和重新同步策略。 
+---
+= 更改 SANtricity System Manager 中镜像对的同步设置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以更改镜像对在通信中断后用于完成重新同步操作的同步优先级和重新同步策略。
+
+.关于此任务
+只能在包含主卷的存储阵列上编辑镜像对的同步设置。
+
+.步骤
+. 选择菜单：Storage[Synchronous Mirroring]。
+. 选择要编辑的镜像对，然后选择菜单：More[Edit settings]。
++
+系统显示查看/编辑设置对话框。
+
+. 使用滑动条编辑同步优先级。
++
+与服务 I/O 请求相比，同步优先级确定通信中断后有多少系统资源用于完成重新同步操作。
+
++
+.有关同步速率的详细信息
+[%collapsible]
+====
+有五个同步优先级：
+
+** 最低
+** 低
+** 中
+** 高
+** 最高
+
+
+====
++
+如果将同步优先级设置为最低等级，则会优先处理 I/O 活动，而重新同步操作则需要更长的时间。如果将同步优先级设置为最高等级，则会优先处理重新同步操作，而存储阵列的 I/O 活动可能受到影响。
+
+. 根据需要编辑重新同步策略。
++
+您可以手动或自动重新同步远程存储阵列上的镜像对。
+
++
+** *Manual*（推荐选项）-- 选择此选项可要求在通信恢复到镜像对后手动恢复同步。此选项为恢复数据提供了最佳机会。
+** *自动* -- 选择此选项可在通信恢复到镜像对后自动开始重新同步。
+
+
+. 选择 *Save*。
+

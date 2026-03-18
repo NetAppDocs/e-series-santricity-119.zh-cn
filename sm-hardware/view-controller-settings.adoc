@@ -1,0 +1,94 @@
+---
+permalink: sm-hardware/view-controller-settings.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, view, controller, settings 
+summary: 您可以查看有关控制器的信息，例如主机接口、驱动器接口和管理端口的状态。 
+---
+= 在 SANtricity System Manager 中查看控制器设置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看有关控制器的信息，例如主机接口、驱动器接口和管理端口的状态。
+
+.步骤
+. 选择 *Hardware*。
+. 如果图形显示驱动器，请单击 *Controllers & Components* 选项卡。
++
+图形会更改为显示控制器而不是驱动器。
+
+. 请执行以下操作之一以显示控制器设置：
++
+** 单击控制器以显示上下文菜单，然后选择 *View settings*。
+** 选择控制器图标（*Shelf* 下拉列表旁边）。对于双工配置，请从对话框中选择 *Controller A* 或 *Controller B*，然后单击*下一步*。
++
+此时将打开 Controller Settings 对话框。
+
+
+
+. 选择选项卡以在属性设置之间移动。
++
+有些选项卡的右上角有 *Show more settings* 的链接。
+
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 选项卡 | 说明 
+
+
+ a| 
+基础
+ a| 
+显示控制器状态、型号名称、替换部件号、当前固件版本和非易失性静态随机存取存储器 (NVSRAM) 版本。
+
+
+
+ a| 
+缓存
+ a| 
+显示控制器的缓存设置，包括数据缓存、处理器缓存和缓存备份设备。缓存备份设备用于在控制器断电时备份缓存中的数据。状态可以是 Optimal、Failed、Removed、Unknown、Write Protected 或 Incompatible。
+
+
+
+ a| 
+主机接口
+ a| 
+显示主机接口信息和每个端口的链路状态。主机接口是控制器和主机之间的连接，例如 Fibre Channel 或 iSCSI。
+
+
+NOTE: 主机接口卡 (HIC) 位置位于基板或插槽（托架）中。"基板"表示 HIC 端口内置于控制器中。"插槽"端口位于可选 HIC 上。
+
+
+
+ a| 
+驱动器接口
+ a| 
+显示驱动器接口信息和每个端口的链路状态。驱动器接口是控制器与驱动器（例如 SAS）之间的连接。
+
+
+
+ a| 
+管理端口
+ a| 
+显示管理端口详细信息，例如用于访问控制器的主机名以及是否已启用远程登录。管理端口连接控制器和管理客户端，这是安装浏览器以访问 System Manager 的地方。
+
+
+
+ a| 
+DNS / NTP 服务器
+ a| 
+如果已在 System Manager 中配置 DNS 服务器和 NTP 服务器，则显示这些服务器的寻址方法和 IP 地址。
+
+域名系统 (DNS) 是连接到互联网或专用网络的设备的命名系统。DNS 服务器维护域名目录并将其转换为互联网协议 (IP) 地址。
+
+网络时间协议 (NTP) 是一种用于数据网络中计算机系统之间时钟同步的网络协议。
+
+|===
+====
+. 单击 *Close*。
+

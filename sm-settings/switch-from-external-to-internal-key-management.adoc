@@ -1,0 +1,50 @@
+---
+permalink: sm-settings/switch-from-external-to-internal-key-management.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, switch, external, internal, key, management, 
+summary: 您可以将 Drive Security 的管理方法从外部密钥服务器更改为存储阵列使用的内部方法。先前为外部密钥管理定义的安全密钥然后用于内部密钥管理。 
+---
+= 在 SANtricity System Manager 中从外部密钥管理切换到内部密钥管理
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将 Drive Security 的管理方法从外部密钥服务器更改为存储阵列使用的内部方法。先前为外部密钥管理定义的安全密钥然后用于内部密钥管理。
+
+.关于此任务
+在此任务中，您将禁用外部密钥管理，并将新的备份副本下载到本地主机。现有密钥仍用于 Drive Security，但将在存储阵列中进行内部管理。
+
+.步骤
+. 选择菜单：Settings[System]。
+. 在 *Security key management* 下，选择 *Disable External Key Management*。
++
+此时将打开禁用外部密钥管理对话框。
+
+. 在 *Define a pass phrase/Re-enter pass phrase* 中，输入并确认密钥备份的密码短语。该值可以包含 8 到 32 个字符，并且必须包含以下每个字符：
++
+** 大写字母（一个或多个）。请注意，密码短语区分大小写。
+** 一个数字（一个或多个）。
+** 非字母数字字符，例如 !、*、@（一个或多个）。
+
+
++
+[CAUTION]
+====
+_请务必记录您的条目以供以后使用_。如果需要从存储阵列中移动启用安全的驱动器，则必须知道标识符和密码短语才能解锁驱动器数据。
+
+====
+. 单击 *Disable*。
++
+备份密钥已下载到本地主机。
+
+. 记录您的密钥标识符、密码以及下载的密钥文件的位置，然后单击 *Close*。
+
+
+.结果
+驱动器安全性现在通过存储阵列进行内部管理。
+
+.完成后
+您应该验证安全密钥，以确保密钥文件未损坏。

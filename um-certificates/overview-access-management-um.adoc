@@ -1,0 +1,46 @@
+---
+permalink: um-certificates/overview-access-management-um.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, access management, authentication 
+summary: 访问管理是在 SANtricity Unified Manager 中配置用户身份验证的方法。 
+---
+= 了解 SANtricity Unified Manager 访问管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+访问管理是在 SANtricity Unified Manager 中配置用户身份验证的方法。
+
+
+
+== 有哪些可用的身份验证方法？
+
+以下身份验证方法可用：
+
+* *本地用户角色* -- 身份验证通过 RBAC（基于角色的访问控制）功能进行管理。本地用户角色包括预定义的用户配置文件和具有特定访问权限的角色。
+* *目录服务* -- 身份验证通过 LDAP（轻型目录访问协议）服务器和目录服务（例如 Microsoft 的 Active Directory）进行管理。
+* *SAML* -- 身份验证通过使用 SAML 2.0 的身份提供程序 (IdP) 进行管理。
+
+
+了解详情：
+
+* link:how-access-management-works-unified.html["访问管理的工作原理"]
+* link:access-management-terminology-unified.html["访问管理术语"]
+* link:permissions-for-mapped-roles-unified.html["映射角色的权限"]
+* link:access-management-with-saml.html["SAML"]
+
+
+
+
+== 如何配置 Access Management？
+
+SANtricity 软件已预配置为使用本地用户角色。如果要使用 LDAP，可以在"访问管理"页面下进行配置。
+
+了解详情：
+
+* link:access-management-with-local-user-roles-unified.html["使用本地用户角色进行访问管理"]
+* link:access-management-with-directory-services-unified.html["使用目录服务进行访问管理"]
+* link:configure-saml.html["配置 SAML"]
+

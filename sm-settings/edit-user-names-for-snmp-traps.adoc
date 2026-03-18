@@ -1,0 +1,39 @@
+---
+permalink: sm-settings/edit-user-names-for-snmp-traps.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, edit, user, settings, snmpv3, traps, 
+summary: 您可以编辑 SNMPv3 陷阱的用户定义。 
+---
+= 在 SANtricity System Manager 中编辑 SNMPv3 陷阱的用户设置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以编辑 SNMPv3 陷阱的用户定义。
+
+.开始之前
+必须为 SNMPv3 陷阱创建用户。
+
+.步骤
+. 选择菜单：Settings[Alerts]。
+. 选择 *SNMP* 选项卡。
++
+陷阱目标和用户名显示在表中。
+
+. 要编辑用户定义，请在表中选择用户，然后单击 *Configure Users*。
+. 在对话框中，单击 *View/Edit Settings*。
+. 编辑以下信息：
++
+** *用户名* -- 更改标识用户的名称，最长可达 31 个字符。
+** *引擎 ID* -- 选择引擎 ID，该引擎 ID 用于为消息生成身份验证和加密密钥，并且在管理域中必须是唯一的。在大多数情况下，您应该选择 *Local*。如果您有非标准配置，请选择 *Custom*；另一个字段出现，您必须以十六进制字符串的形式输入权威引擎 ID，偶数个字符的长度在 10 到 32 个字符之间。
+** *身份验证凭据* -- 选择身份验证协议，以确保用户的身份。接下来，输入身份验证密码，这是设置或更改身份验证协议时所需的密码。密码长度必须介于 8 到 128 个字符之间。
+** *隐私凭据* -- 选择用于加密消息内容的隐私协议。接下来，输入隐私密码，设置或更改隐私协议时需要此密码。密码长度必须介于 8 到 128 个字符之间。
+
+
+
+
+.结果
+警报页面的 SNMP 选项卡显示更新的设置。

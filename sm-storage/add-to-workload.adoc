@@ -1,0 +1,46 @@
+---
+permalink: sm-storage/add-to-workload.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, add workload, volume 
+summary: 您可以向现有或新工作负载添加一个或多个当前未与工作负载关联的卷。 
+---
+= 向 SANtricity System Manager 中的工作负载添加卷
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以向现有或新工作负载添加一个或多个当前未与工作负载关联的卷。
+
+.关于此任务
+如果卷是使用命令行界面 (CLI) 创建的，或者已从其他存储阵列迁移（导入/导出），则不与工作负载关联。
+
+.步骤
+. 选择菜单：Storage[Volumes]。
+. 选择 *Applications & Workloads* 选项卡。
++
+此时将显示 Applications & Workloads 视图。
+
+. 选择 *Add to Workload*。
++
+此时将显示"选择工作负载"对话框。
+
+. 请执行以下操作之一：
++
+** *向现有工作负载添加卷* -- 选择此选项可向现有工作负载添加卷。
++
+使用下拉列表选择工作负载。工作负载的关联应用程序类型将分配给您添加到此工作负载的卷。
+
+** *向新工作负载添加卷* -- 选择此选项可为应用程序类型定义新工作负载，并向新工作负载添加卷。
+
+
+. 选择 *Next* 继续添加到工作负载序列。
++
+此时将显示"选择卷"对话框。
+
+. 选择要添加到工作负载的卷。
+. 查看要添加到所选工作负载的卷。
+. 对工作负载配置感到满意后，单击 *完成*。
+

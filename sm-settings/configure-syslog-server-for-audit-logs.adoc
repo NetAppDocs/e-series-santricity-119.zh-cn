@@ -1,0 +1,53 @@
+---
+permalink: sm-settings/configure-syslog-server-for-audit-logs.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, configure, syslog, server, audit, logs, 
+summary: 如果要将审核日志存档到外部 syslog 服务器，则可以配置该服务器与存储阵列之间的通信。建立连接后，审核日志将自动保存到 syslog 服务器。 
+---
+= 在 SANtricity System Manager 中为审核日志配置 syslog 服务器
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果要将审核日志存档到外部 syslog 服务器，则可以配置该服务器与存储阵列之间的通信。建立连接后，审核日志将自动保存到 syslog 服务器。
+
+.开始之前
+* 必须使用包含 Security admin 权限的用户配置文件登录。否则，将不会显示 Access Management 功能。
+* syslog 服务器地址、协议和端口号必须可用。服务器地址可以是完全限定的域名、IPv4 地址或 IPv6 地址。
+* 如果您的服务器使用安全协议（例如 TLS），则必须在本地系统上提供证书颁发机构 (CA) 证书。CA 证书用于识别网站所有者，以确保服务器和客户端之间的安全连接。
+
+
+.步骤
+. 选择菜单：Settings[Access Management]。
+. 在 Audit Log（审计日志）选项卡中，选择 *Configure Syslog Servers*。
++
+此时将打开配置 Syslog 服务器对话框。
+
+. 单击 *Add*。
++
+此时将打开添加 Syslog 服务器对话框。
+
+. 输入服务器的信息，然后单击 *Add*。
++
+** *服务器地址* -- 输入完全限定的域名、IPv4 地址或 IPv6 地址。
+** *协议* -- 从下拉列表中选择一个协议（例如，TLS、UDP 或 TCP）。
+** *上传证书（可选）* -- 如果您选择了 TLS 协议但尚未上传已签名的 CA 证书，请单击*浏览*以上传证书文件。没有受信任的证书，审核日志不会存档到 syslog 服务器。
++
+[NOTE]
+====
+如果证书稍后变得无效，则 TLS 握手将失败。因此，将错误消息发布到审核日志，并且不再将消息发送到 syslog 服务器。要解决此问题，必须修复 syslog 服务器上的证书，然后转到菜单：Settings[Audit Log > Configure Syslog Servers > Test All]。
+
+====
+** *Port* -- 输入 syslog 接收器的端口号。单击 *Add* 后，Configure Syslog Servers 对话框打开，并在页面上显示您配置的 syslog 服务器。
+
+
+. 要测试服务器与存储阵列的连接，请选择 *Test All*。
+
+
+.结果
+配置后，所有新的审核日志都将发送到 syslog 服务器。不会传输以前的日志。要进一步配置警报的 syslog 设置，请参见 https://docs.netapp.com/us-en/e-series-santricity/sm-settings/configure-syslog-server-for-alerts.html["为警报配置 syslog 服务器"]。
+
+ NOTE: If multiple syslog servers are configured, all configured syslog servers will receive an audit log.

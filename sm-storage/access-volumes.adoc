@@ -1,0 +1,29 @@
+---
+permalink: sm-storage/access-volumes.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, access volumes 
+summary: '访问卷是存储阵列上出厂配置的卷，用于通过主机 I/O 连接与存储阵列和主机进行通信。访问卷需要一个逻辑单元号 (LUN)。' 
+---
+= 在 SANtricity System Manager 中访问卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+访问卷是存储阵列上出厂配置的卷，用于通过主机 I/O 连接与存储阵列和主机进行通信。访问卷需要一个逻辑单元号 (LUN)。
+
+访问卷用于以下实例：
+
+* *带内管理* -- 访问卷用于带内连接以管理存储阵列。仅当您使用命令行界面 (CLI) 管理存储阵列时，才能执行此操作。
++
+[NOTE]
+====
+使用 Access 卷的带内管理不适用于 E4000、EF600/EF600C 或 EF300/EF300C 存储系统。
+
+====
+
+
+首次将卷分配给主机时会自动创建访问卷。例如，如果您将 Volume_1 和 Volume_2 分配给主机，当您查看该分配的结果时，您会看到三个卷（Volume_1、Volume_2 和 Access）。
+
+如果您没有使用 CLI 自动创建主机或在带内管理存储阵列，则不需要访问卷，并且可以通过删除访问卷来释放 LUN。此操作将删除卷到 LUN 的分配以及到主机的所有带内管理连接。

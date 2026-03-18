@@ -1,0 +1,36 @@
+---
+permalink: sm-storage/enable-security.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, enable, security, pool, volume group 
+summary: 可以为池或卷组启用驱动器安全，以防止对池或卷组中包含的驱动器上的数据进行未经授权的访问。只有通过配置了安全密钥的控制器才能对驱动器进行读取和写入访问。 
+---
+= 在 SANtricity System Manager 中为池或卷组启用安全性
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+可以为池或卷组启用驱动器安全，以防止对池或卷组中包含的驱动器上的数据进行未经授权的访问。只有通过配置了安全密钥的控制器才能对驱动器进行读取和写入访问。
+
+.开始之前
+* 必须启用驱动器安全功能。
+* 必须创建安全密钥。
+* 该池或卷组必须处于 Optimal 状态。
+* 池或卷组中的所有驱动器都必须是具有安全功能的驱动器。
+
+
+.关于此任务
+如果要使用 Drive Security，请选择具有安全功能的池或卷组。池或卷组可以同时包含具有安全功能和不具有安全功能的驱动器，但所有驱动器都必须具有安全功能才能使用其加密功能。
+
+启用安全后，只能通过删除池或卷组，然后擦除驱动器来将其删除。
+
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 选择要启用安全性的池或卷组，然后单击菜单：More[Enable security]。
++
+此时将显示"确认启用安全"对话框。
+
+. 确认您要为所选池或卷组启用安全性，然后单击 *Enable*。
+

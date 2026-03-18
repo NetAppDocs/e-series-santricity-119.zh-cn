@@ -1,0 +1,35 @@
+---
+permalink: sm-storage/change-controller-ownership-of-a-volume.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, controller ownership, volume 
+summary: 您可以更改卷的首选控制器所有权，以便主机应用程序的 I/O 通过新路径进行定向。 
+---
+= 更改 SANtricity System Manager 中卷的控制器所有权
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以更改卷的首选控制器所有权，以便主机应用程序的 I/O 通过新路径进行定向。
+
+.开始之前
+如果不使用多路径驱动程序，则必须关闭当前正在使用该卷的所有主机应用程序。此操作可防止 I/O 路径更改时出现应用程序错误。
+
+.关于此任务
+您可以更改池或卷组中一个或多个卷的控制器所有权。
+
+.步骤
+. 选择菜单：Storage[Volumes]。
+. 选择任何卷，然后选择菜单：更多[更改所有权]。
++
+此时将显示更改卷所有权对话框。此对话框中将显示存储阵列上的所有卷。
+
+. 使用 *Preferred Owner* 下拉列表更改要更改的每个卷的首选控制器，并确认要执行此操作。
+
+
+.结果
+* System Manager 更改卷的控制器所有权。卷的 I/O 现在通过此 I/O 路径定向。
+* 在多路径驱动程序重新配置以识别新路径之前，卷可能不会使用新 I/O 路径。此操作通常需要不到五分钟的时间。
+

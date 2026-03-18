@@ -1,0 +1,37 @@
+---
+permalink: sm-settings/configure-login-banner.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, configure, login, banner, 
+summary: 您可以创建登录横幅，该横幅在用户在 SANtricity System Manager 中建立会话之前向用户显示。横幅可以包括建议通知和同意消息。 
+---
+= 在 SANtricity System Manager 中配置登录横幅
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以创建登录横幅，该横幅在用户在 SANtricity System Manager 中建立会话之前向用户显示。横幅可以包括建议通知和同意消息。
+
+.关于此任务
+创建横幅时，它会显示在对话框中的登录屏幕之前。
+
+.步骤
+. 选择菜单：Settings[System]。
+. 在常规部分下，选择 *Configure Login Banner* 。
++
+此时将打开 Configure Login Banner 对话框。
+
+. 输入要在登录横幅中显示的文本。
++
+[NOTE]
+====
+不要使用 HTML 或其他标记标签进行格式化。
+
+====
+. 单击 *Save*。
+
+
+.结果
+下次用户登录到 System Manager 时，该文本将在对话框中打开。用户必须点击*确定*才能继续到登录屏幕。

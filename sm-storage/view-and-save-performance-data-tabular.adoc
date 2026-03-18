@@ -1,0 +1,37 @@
+---
+permalink: sm-storage/view-and-save-performance-data-tabular.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, view, save, tabular, performance, 
+summary: 您可以以表格格式查看和保存性能图表数据。这使您可以过滤要显示的数据。 
+---
+= 在 SANtricity System Manager 中查看和保存表格性能数据
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以以表格格式查看和保存性能图表数据。这使您可以过滤要显示的数据。
+
+.步骤
+. 从任何性能数据图表中，单击 *Launch table view*。
++
+此时将显示一个表格，其中列出了选定对象的所有性能数据。
+
+. 根据需要使用对象选择下拉列表和过滤器。
+. 单击 *Show/Hide Columns* 按钮以选择要包含在表中的列。
++
+您可以单击每个复选框来选择或取消选择一个项目。
+
+. 选择屏幕底部的 *Export*，将表格视图保存为逗号分隔值 (CSV) 文件。
++
+此时将显示"导出表"对话框，指示要导出的行数和导出的文件格式（逗号分隔值或 CSV 格式）。
+
+. 单击 *Export* 以继续下载，或单击 *Cancel*。
++
+根据您的浏览器设置，系统会保存文件，或者提示您选择文件的名称和位置。
+
++
+默认文件名格式为  `performanceStatistics-yyyy-mm-dd_hh-mm-ss.csv`，其中包括导出文件的日期和时间。
+
+

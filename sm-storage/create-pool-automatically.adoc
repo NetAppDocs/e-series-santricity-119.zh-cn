@@ -1,0 +1,63 @@
+---
+permalink: sm-storage/create-pool-automatically.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, create, pool, automatically 
+summary: 当 System Manager 检测到存储阵列中未分配的驱动器时，系统会自动启动池创建。您可以使用自动池创建将存储阵列中所有未分配的驱动器轻松配置到一个池中，并将驱动器添加到现有池中。 
+---
+= 在 SANtricity System Manager 中自动创建池
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+当 SANtricity System Manager 检测到存储阵列中未分配的驱动器时，系统会自动启动池创建。您可以使用自动池创建将存储阵列中所有未分配的驱动器轻松配置到一个池中，并将驱动器添加到现有池中。
+
+.开始之前
+当以下条件之一成立时，可以启动 Pool Auto-Configuration 对话框：
+
+* 至少检测到一个未分配的驱动器，该驱动器可以添加到具有相似驱动器类型的现有池中。
+* 检测到十一（11）个或更多未分配的驱动器，可用于创建新池（如果由于驱动器类型不同而无法将其添加到现有池）。
+
+
+.关于此任务
+请注意以下几点：
+
+* 将驱动器添加到存储阵列时，System Manager 会自动检测驱动器，并提示您根据驱动器类型和当前配置创建单个池或多个池。
+* 如果之前定义了池，则 System Manager 会自动提示您选择将兼容驱动器添加到现有池。将新驱动器添加到现有池时，System Manager 会自动将数据重新分配到新容量中，该容量现在包括您添加的新驱动器。
+* 配置 EF600 或 EF300 存储阵列时，确保每个控制器可以访问前 12 个插槽中的数量相等的驱动器，以及最后 12 个插槽中的数量相等的驱动器。此配置有助于控制器更有效地使用驱动器端 PCIe 总线。
+
+
+您可以使用以下任一方法启动 Pool Auto-Configuration 对话框：
+
+* 检测到未分配的容量时，池自动配置建议将显示在通知区域的主页上。单击 *View Pool Auto-Configuration* 以启动此对话框。
+* 您还可以从 Pools and Volume Groups 页面启动 Pool Auto-Configuration 对话框，如以下任务中所述。
+
+
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 选择菜单：更多 [Launch pool auto-configuration]。
++
+结果表列出了新的池、添加了驱动器的现有池，或两者兼而有之。默认情况下，新池使用序列号命名。
+
++
+System Manager 执行以下任务：
+
++
+** 如果有足够数量的驱动器具有相同的驱动器类型（HDD 或 SSD）并具有相似的容量，则创建单个池。
+** 如果未分配的容量由不同的驱动器类型组成，则创建多个池。
+** 如果已在存储阵列中定义了池，则将驱动器添加到现有池中，并将相同驱动器类型的新驱动器添加到池中。
+** 将相同驱动器类型的驱动器添加到现有池中，如果新驱动器具有不同的驱动器类型，则使用其他驱动器类型创建不同的池。
+
+
+. 要更改新池的名称，请单击 *Edit* 图标（铅笔）。
+. 要查看池的其他特征，请将光标悬停或触摸 *Details* 图标（页面）。
++
+此时将显示有关驱动器类型、安全功能、Data Assurance (DA) 功能、货架丢失保护和抽屉丢失保护的信息。
+
++
+对于 EF600 和 EF300 存储阵列，还会显示资源调配和卷块大小的设置。
+
+. 单击 *Accept*。
+

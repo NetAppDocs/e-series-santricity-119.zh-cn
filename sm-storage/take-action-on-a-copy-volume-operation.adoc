@@ -1,0 +1,68 @@
+---
+permalink: sm-storage/take-action-on-a-copy-volume-operation.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, copy, volume, 
+summary: 您可以查看正在执行的 Copy Volume 操作以及停止、更改优先级、重新拷贝或清除 Copy Volume 操作。 
+---
+= 在 SANtricity System Manager 中对复制卷操作执行操作
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看正在执行的 Copy Volume 操作以及停止、更改优先级、重新拷贝或清除 Copy Volume 操作。
+
+.步骤
+. 选择菜单：Home[View Operations in Progress]。
++
+此时将显示"正在进行的操作"对话框。
+
+. 找到要对其执行操作的 Copy Volume 操作，然后单击 *Actions* 列中的链接以执行以下操作之一。
++
+阅读对话框中提供的所有警告文本，特别是在停止操作时。
+
++
+[cols="25h,~"]
+|===
+| 操作 | 说明 
+
+
+ a| 
+停止
+ a| 
+当操作处于"进行中"、"待定"或"失败"状态时，可以停止 Copy Volume 操作。
+
+当 Copy Volume 停止时，所有映射的主机都具有对源卷的写入权限。如果将数据写入源卷，则目标卷上的数据将不再与源卷上的数据匹配。
+
+
+
+ a| 
+更改优先级
+ a| 
+您可以在操作状态为"正在进行"时更改 Copy Volume 操作的优先级，以选择 Copy Volume 操作完成的速率。
+
+
+
+ a| 
+重新复制
+ a| 
+停止拷贝卷操作并希望重新启动时，或拷贝卷操作失败或停止时，可以重新拷贝卷。拷贝卷操作从头开始。
+
+重新复制操作会覆盖目标卷上的现有数据，并会使与目标卷关联的所有快照卷（如果有）出现故障。
+
+
+
+ a| 
+清除
+ a| 
+您可以在操作处于"正在进行"、"待定"或"失败"状态时删除 Copy Volume 操作。
+
+[NOTE]
+====
+请确保在选择 *Clear* 之前要执行此操作。没有确认对话框。
+
+====
+|===
+

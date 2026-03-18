@@ -1,0 +1,114 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: whats new, new features, SANtricity 11.90 
+summary: SANtricity 操作系统中的新功能。 
+---
+= SANtricity OS 11.90 中的新增功能
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+下表介绍了 SANtricity System Manager 11.9 中的新功能。
+
+
+
+== 版本 11.90R5 中的新增功能
+
+此版本仅包含缺陷修复，不包含新功能。有关此版本中更改的更多信息，请参见 E-Series SANtricity 操作系统 11.90R5 README。
+
+
+
+== 版本 11.90R4 中的新增功能
+
+此版本仅包含小的更改，没有新功能。有关此版本中更改的更多信息，请参见 E-Series SANtricity 操作系统 11.90R4 README。
+
+
+
+== 版本 11.90R3 中的新增功能
+
+[cols="35h,~"]
+|===
+| 新功能 | 说明 
+
+
+ a| 
+SANtricity 操作系统支持 IOM12C 和 DCM3
+ a| 
+现在，控制器固件 11.90R3 或更高版本可支持 IOM12C 和 DCM3 SAS-3 盘架。IOM12C 和 DCM3 盘架是 IOM12B 和 DCM2 盘架的替代品。
+
+|===
+
+
+== 版本 11.90R2 中的新增功能
+
+此版本仅包含小的更改，没有新功能。有关此版本中更改的更多信息，请参见  https://library.netapp.com/ecm/ecm_download_file/ECMLP3334464["E-Series 11.90 发行说明"^]。
+
+
+
+== 版本 11.90R1 中的新增功能
+
+[cols="35h,~"]
+|===
+| 新功能 | 说明 
+
+
+ a| 
+全新存储系统型号 – EF300C 和 EF600C
+ a| 
+此版本引入了 EF300C 和 EF600C 全闪存 NVMe 存储系统。EF300C 和 EF600C 是现有 EF300 和 EF600 存储系统的大容量闪存版本。EF300C 和 EF600C 支持 30TB 或 60TB 大小的大容量 NVMe SSD 驱动器。EF300C/EF600C 仅与动态磁盘池兼容，不支持传统 RAID。
+
+
+
+ a| 
+EF4000 上支持 12Gb SAS 接口
+ a| 
+E4000 控制器现在支持 12Gb SAS 主机接口卡。
+
+|===
+
+
+== 版本 11.90 中的新增功能
+
+[cols="35h,~"]
+|===
+| 新功能 | 说明 
+
+
+ a| 
+新存储系统型号 – E4000
+ a| 
+此版本引入了 E4000 低成本存储系统。E4000 每个控制器支持 12 和 60 个驱动器和一个主机接口卡 (HIC)。对于初始版本，支持的主机接口卡包括 iSCSI 和光纤通道。可在 Unified Manager 中查看和管理 E4000 存储系统和其他 E-Series 存储系统。
+
+
+
+ a| 
+动态磁盘池容量增加
+ a| 
+当池中每个单独驱动器的容量大于 23 TB 时，Dynamic Disk Pools (DDP) 的容量将增加到 12 PB。如果单个驱动器容量小于 23 TB，则 DDP 容量为 6 PB。
+
+
+
+ a| 
+默认媒体扫描设置已增加
+ a| 
+默认媒体扫描速率已提高到 120 天。
+
+
+
+ a| 
+外部密钥管理现已接受私钥
+ a| 
+现在可以通过 System Manager 导入通过私钥和公钥对从外部生成的证书签名请求 (CSR) 文件。
+
+
+
+ a| 
+登录锁定功能现在可用于 Web Services
+ a| 
+现在，仅可通过 REST API 配置的新登录锁定设置可用于嵌入式和代理 Web 服务。
+
+|===

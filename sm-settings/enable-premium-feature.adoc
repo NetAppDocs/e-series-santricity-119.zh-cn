@@ -1,0 +1,41 @@
+---
+permalink: sm-settings/enable-premium-feature.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, enable, premium, feature, 
+summary: 高级功能是需要密钥才能启用的额外选项。 
+---
+= 在 SANtricity System Manager 中启用高级功能
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+高级功能是需要密钥才能启用的额外选项。
+
+.开始之前
+* 您已获得功能密钥。如果需要，请联系技术支持以获得密钥。
+* 您已将密钥文件加载到管理客户端（具有用于访问 System Manager 的浏览器的系统）。
+
+
+.关于此任务
+此任务介绍如何使用 System Manager 启用高级功能。
+
+[NOTE]
+====
+如果要禁用高级功能，必须在命令行界面 (CLI) 中使用 Disable Storage Array Feature 命令(`disable storageArray) (featurePack | feature=featureAttributeList`。
+
+====
+.步骤
+. 选择菜单：Settings[System]。
+. 在 *附加组件* 下，选择 *启用高级功能* 。
++
+此时将打开启用高级功能对话框。
+
+. 单击 *Browse*，然后选择密钥文件。
++
+文件名显示在对话框中。
+
+. 单击 *启用*。
+

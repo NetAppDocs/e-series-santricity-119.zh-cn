@@ -1,0 +1,28 @@
+---
+permalink: um-certificates/view-certificates-unified.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, view certificates 
+summary: 您可以查看证书的摘要信息，包括使用证书的组织、颁发证书的机构、有效期和指纹（唯一标识符）。 
+---
+= 查看证书
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看证书的摘要信息，包括使用证书的组织、颁发证书的机构、有效期和指纹（唯一标识符）。
+
+.开始之前
+必须使用包含 Security admin 权限的用户配置文件登录。否则，不会显示证书功能。
+
+.步骤
+. 选择 *Certificate Management*。
+. 选择以下选项卡之一：
++
+** *Management* -- 显示托管 Web Services Proxy 的系统的证书。管理证书可以自签名或由证书颁发机构 (CA) 批准。它允许安全访问 Unified Manager。
+** *受信任* -- 显示 Unified Manager 可以访问的存储阵列和其他远程服务器（如 LDAP 服务器）的证书。证书可以从证书颁发机构 (CA) 颁发，也可以进行自签名。
+
+
+. 要查看有关证书的更多信息，请选择其行，选择该行末尾的省略号，然后单击 *View* 或 *Export*。
+

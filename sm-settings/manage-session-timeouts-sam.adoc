@@ -1,0 +1,42 @@
+---
+permalink: sm-settings/manage-session-timeouts-sam.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, manage, session, timeouts, 
+summary: 您可以在 SANtricity System Manager 中配置超时，以便在指定时间后断开用户的非活动会话。 
+---
+= 在 SANtricity System Manager 中管理会话超时
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 SANtricity System Manager 中配置超时，以便在指定时间后断开用户的非活动会话。
+
+.关于此任务
+默认情况下，System Manager 的会话超时为 30 分钟。您可以调整该时间，也可以完全禁用会话超时。
+
+[NOTE]
+====
+如果使用嵌入在阵列中的安全断言标记语言 (SAML) 功能配置访问管理，则当用户的 SSO 会话达到最大限制时，可能会发生会话超时。这可能在 System Manager 会话超时之前发生。
+
+====
+.步骤
+. 选择菜单：Settings[System]。
+. 在常规部分下，选择*启用/禁用会话超时*。
++
+此时将打开启用/禁用会话超时对话框。
+
+. 使用微调器控件以分钟为单位增加或减少时间。
++
+您可以为 System Manager 设置的最小超时时间为 15 分钟。
+
++
+[NOTE]
+====
+要禁用会话超时，请取消选中 *Set the length of time...* 复选框。
+
+====
+. 单击 *Save*。
+

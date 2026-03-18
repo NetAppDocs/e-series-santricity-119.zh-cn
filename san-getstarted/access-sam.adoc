@@ -1,0 +1,59 @@
+---
+permalink: san-getstarted/access-sam.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, access System Manager 
+summary: 要访问 System Manager 用户界面，请将浏览器指向控制器的 IP 地址。安装向导可帮助您开始系统配置。 
+---
+= 访问 SANtricity System Manager
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要访问 SANtricity System Manager 用户界面，请将浏览器指向控制器的 IP 地址。安装向导可帮助您开始系统配置。
+
+.开始之前
+* 按照快速配置指南中的说明安装和配置硬件：
++
+** https://docs.netapp.com/us-en/e-series/config-linux/index.html["Linux Express 配置"^]
+** https://docs.netapp.com/us-en/e-series/config-vmware/index.html["VMware Express 配置"^]
+** https://docs.netapp.com/us-en/e-series/config-windows/index.html["Windows Express 配置"^]
+
+
+* 配置满足以下要求的管理站：
++
+** 连接到 1 Gbps 或更快的网络。
+** 连接到与存储管理端口相同的子网。
+** 用作单独的工作站，而不是用于数据管理的主机（I/O 附加）。
+** 设置为带外管理，其中存储管理站通过到控制器的 Ethernet 连接向存储系统发送命令。
+** 请使用受支持的浏览器进行设置。请参阅link:supported-browsers-os.html["支持的浏览器和操作系统"]。
+
+
+
+
+.步骤
+. 在浏览器中输入以下 URL： `+https://<IPAddress>+`
++
+`IPAddress` 是其中一个存储阵列控制器的地址。
+
++
+首次在尚未配置的阵列上打开 System Manager 时，将显示 Set Administrator Password 提示。
+
+. 在设置管理员密码和确认密码字段中输入管理员角色的 System Manager 密码，然后单击*设置密码*。
++
+Setup 向导在首次登录时启动。
+
+. 使用设置向导执行以下任务：
++
+** *验证硬件（控制器和驱动器）* -- 验证存储阵列中的控制器和驱动器的数量。为数组分配一个名称。
+** *验证主机和操作系统* -- 验证存储阵列可以访问的主机和操作系统类型。
+** *接受池* -- 接受快速安装方法的建议池配置。池是一组逻辑驱动器。
+** *配置警报* -- 允许 System Manager 在存储阵列出现问题时自动接收通知。
+** *启用 AutoSupport* -- 自动监控存储阵列的运行状况，并将派单发送给技术支持。
+
+
+
+
+有关 Setup Wizard 的更多信息，请参见 link:../sm-interface/setup-wizard-overview.html["设置向导概述"]。

@@ -1,0 +1,60 @@
+---
+permalink: um-certificates/how-access-management-works-unified.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, authentication, users, roles, access management 
+summary: 使用访问管理在 SANtricity Unified Manager 中建立用户身份验证。 
+---
+= 访问管理在 SANtricity Unified Manager 中的工作原理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用访问管理在 SANtricity Unified Manager 中建立用户身份验证。
+
+
+
+== 配置工作流
+
+访问管理配置的工作原理如下：
+
+. 管理员使用包含安全管理员权限的用户配置文件登录到 Unified Manager。
++
+[NOTE]
+====
+首次登录时，用户名 `admin`会自动显示且无法更改。 `admin`用户可以完全访问系统中的所有功能。首次登录时必须设置密码。
+
+====
+. 管理员导航到用户界面中的访问管理，其中包括预配置的本地用户角色。这些角色是 RBAC（基于角色的访问控制）功能的实现。
+. 管理员配置以下一种或多种身份验证方法：
++
+** *本地用户角色* -- 身份验证通过 RBAC 功能进行管理。本地用户角色包括具有特定访问权限的预定义用户和角色。管理员可以将这些本地用户角色用作单一的身份验证方法，也可以将其与目录服务结合使用。除了为用户设置密码外，无需进行其他配置。
+** *目录服务* -- 身份验证通过 LDAP（轻型目录访问协议）服务器和目录服务（例如 Microsoft 的 Active Directory）进行管理。管理员连接到 LDAP 服务器，然后将 LDAP 用户映射到本地用户角色。
+** *SAML* -- 身份验证通过身份提供程序 (IdP) 使用安全断言标记语言 (SAML) 2.0 进行管理。管理员在 IdP 系统和存储阵列之间建立通信，然后将 IdP 用户映射到嵌入在存储阵列中的本地用户角色。
+
+
+. 管理员为用户提供 Unified Manager 的登录凭据。
+. 用户通过输入其凭据登录到系统。在登录过程中，系统会执行以下后台任务：
++
+** 根据用户帐户对用户名和密码进行身份验证。
+** 根据分配的角色确定用户的权限。
+** 为用户提供对用户界面中功能的访问权限。
+** 在顶部横幅中显示用户名。
+
+
+
+
+
+
+== Unified Manager 中可用的功能
+
+对功能的访问取决于用户分配的角色，包括以下内容：
+
+* *Storage admin* -- 对阵列上的存储对象具有完全读/写访问权限，但无法访问安全配置。
+* *安全管理员* -- 访问 Access Management 和 Certificate Management 中的安全配置。
+* *Support admin* -- 访问存储阵列、故障数据和 MEL 事件上的所有硬件资源。无法访问存储对象或安全配置。
+* *Monitor* -- 对所有存储对象的只读访问，但无法访问安全配置。
+
+
+不可用的功能要么变为灰色，要么不显示在用户界面中。

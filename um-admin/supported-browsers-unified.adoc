@@ -1,0 +1,54 @@
+---
+permalink: um-admin/supported-browsers-unified.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, supported, browsers 
+summary: SANtricity Unified Manager 可通过多种类型的浏览器进行访问。 
+---
+= SANtricity Unified Manager 支持的浏览器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SANtricity Unified Manager 可通过多种类型的浏览器进行访问。
+
+支持以下浏览器和版本。
+
+[cols="1a,1a"]
+|===
+| 浏览器 | 最低版本 
+
+
+ a| 
+Google Chrome
+ a| 
+89
+
+
+
+ a| 
+Mozilla Firefox
+ a| 
+80
+
+
+
+ a| 
+Safari
+ a| 
+14
+
+
+
+ a| 
+Microsoft Edge
+ a| 
+90
+
+|===
+[NOTE]
+====
+必须安装 Web Services Proxy，并且浏览器可以使用该代理。
+
+====

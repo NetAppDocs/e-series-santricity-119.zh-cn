@@ -1,0 +1,24 @@
+---
+permalink: sm-storage/turn-on-locator-lights-in-a-pool-volume-group-or-ssd-cache.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, lights, LEDs 
+summary: 您可以定位驱动器以物理标识包含选定池、卷组或 SSD Cache 的所有驱动器。所选池、卷组或 SSD Cache 中的每个驱动器上的 LED 指示灯都会亮起。 
+---
+= 在 SANtricity System Manager 中打开池、卷组或 SSD Cache 中的定位器指示灯
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以定位驱动器以物理标识包含选定池、卷组或 SSD Cache 的所有驱动器。所选池、卷组或 SSD Cache 中的每个驱动器上的 LED 指示灯都会亮起。
+
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 选择要查找的池、卷组或 SSD Cache，然后单击菜单：更多[打开定位器指示灯]。
++
+此时将显示一个对话框，指示包含所选池、卷组或 SSD Cache 的驱动器上的指示灯已打开。
+
+. 成功定位驱动器后，单击 *关闭*。
+

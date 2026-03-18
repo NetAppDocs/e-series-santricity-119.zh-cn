@@ -1,0 +1,37 @@
+---
+permalink: sm-support/retrieve-trace-buffers.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, retrieve, trace, buffers 
+summary: 您可以从控制器检索跟踪缓冲区，并将文件发送到技术支持进行分析。 
+---
+= 在 SANtricity System Manager 中检索跟踪缓冲区
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以从控制器检索跟踪缓冲区，并将文件发送到技术支持进行分析。
+
+.关于此任务
+固件使用跟踪缓冲区来记录处理，特别是可能对调试有用的异常条件。您可以在不中断存储阵列操作的情况下检索跟踪缓冲区，并且对性能的影响最小。
+
+[NOTE]
+====
+仅在技术支持人员指示时执行此操作。
+
+====
+.步骤
+. 选择菜单：Support[Support Center > Diagnostics] 选项卡。
+. 选择 *Retrieve Trace Buffers*。
+. 选中要检索跟踪缓冲区的每个控制器旁边的复选框。
++
+您可以选择一个或两个控制器。如果复选框右侧的控制器状态消息为 Failed 或 Disabled，则禁用该复选框。
+
+. 单击 *Yes*。
++
+文件以文件名  `trace-buffers.7z` 保存在浏览器的"下载"文件夹中。
+
+. 按照技术支持提供的说明将文件发送给他们。
+

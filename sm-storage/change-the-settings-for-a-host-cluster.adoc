@@ -1,0 +1,50 @@
+---
+permalink: sm-storage/change-the-settings-for-a-host-cluster.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, settings, host, cluster 
+summary: 您可以更改主机集群名称，或在主机集群中添加或删除主机。 
+---
+= 在 SANtricity System Manager 中更改主机集群的设置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以更改主机集群名称，或在主机集群中添加或删除主机。
+
+.步骤
+. 选择菜单：Storage[Hosts]。
+. 选择要编辑的主机群集，然后单击 *View/Edit Settings*。
++
+此时将显示一个对话框，其中显示当前主机群集设置。
+
+. 根据需要更改主机集群的设置。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 设置 | 说明 
+
+
+ a| 
+名称
+ a| 
+您可以指定用户提供的主机集群名称。必须为集群指定名称。
+
+
+
+ a| 
+关联主机
+ a| 
+要添加主机，请单击 *Associated Hosts* 框，然后从下拉列表中选择主机名。您不能手动输入主机名。
+
+要删除主机，请单击主机名旁边的 *X*。
+
+|===
+====
+. 单击 *Save*。
+

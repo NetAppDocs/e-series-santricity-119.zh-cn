@@ -1,0 +1,31 @@
+---
+permalink: sm-support/view-software-and-firmware-inventory.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, view, software, firmware, inventory 
+summary: 软件和固件清单列出了存储阵列中每个组件的固件版本。 
+---
+= 在 SANtricity System Manager 中查看软件和固件清单
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+软件和固件清单列出了存储阵列中每个组件的固件版本。
+
+.关于此任务
+存储阵列由许多组件组成，其中可能包括控制器、驱动器、抽屉和输入/输出模块 (IOM)。这些组件中的每一个都包含固件。某些版本的固件依赖于其他版本的固件。要捕获有关存储阵列中所有固件版本的信息，请查看软件和固件清单。技术支持可以分析软件和固件清单，以检测任何固件不匹配。
+
+.步骤
+. 选择菜单：Support[Support Center > Support Resources] 选项卡。
+. 向下滚动到 *Launch detailed storage array information*，然后选择 *Software and Firmware Inventory*。
++
+软件和固件清单报告将显示在屏幕上。
+
+. 要保存软件和固件清单，请单击 *Save* 。
++
+文件以文件名  `firmware-inventory.txt` 保存在浏览器的"下载"文件夹中。
+
+. 按照技术支持提供的说明将文件发送给他们。
+

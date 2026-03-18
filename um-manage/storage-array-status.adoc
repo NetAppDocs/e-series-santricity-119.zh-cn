@@ -1,0 +1,72 @@
+---
+permalink: um-manage/storage-array-status.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, storage, array, status, communication, 
+summary: Unified Manager 显示已发现的每个存储阵列的状态。 
+---
+= 在 SANtricity Unified Manager 中查看存储阵列状态
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SANtricity Unified Manager 显示已发现的每个存储阵列的状态。
+
+转到 *Manage - All* 页面。从此页面，您可以查看 Web Services Proxy 与该存储阵列之间的连接状态。
+
+下表描述了状态指标。
+
+[cols="25h,~"]
+|===
+| 状态 | 表示 
+
+
+ a| 
+最佳
+ a| 
+存储阵列处于最佳状态。没有证书问题，密码有效。
+
+
+
+ a| 
+密码无效
+ a| 
+提供的存储阵列密码无效。
+
+
+
+ a| 
+不受信任的证书
+ a| 
+与存储阵列的一个或多个连接不受信任，因为 HTTPS 证书是自签名的并且尚未导入，或者证书是 CA 签名的并且尚未导入根和中间 CA 证书。
+
+
+
+ a| 
+需要注意
+ a| 
+存储阵列存在问题，需要您进行干预才能纠正。
+
+
+
+ a| 
+锁定
+ a| 
+存储数组处于锁定状态。
+
+
+
+ a| 
+未知
+ a| 
+从未联系过存储阵列。当 Web Services Proxy 正在启动但尚未与存储阵列联系，或者存储阵列处于脱机状态并且自 Web Services Proxy 启动后从未联系过时，可能会发生这种情况。
+
+
+
+ a| 
+脱机
+ a| 
+Web Services Proxy 以前已与存储阵列联系，但现在已失去与该阵列的所有连接。
+
+|===

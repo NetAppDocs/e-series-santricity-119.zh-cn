@@ -1,0 +1,30 @@
+---
+permalink: sm-hardware/turn-on-drive-locator-light.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, turn, drive, locator, light, LEDs 
+summary: 从 Hardware 页面，您可以打开定位器指示灯，以查找存储阵列中驱动器的物理位置。 
+---
+= 在 SANtricity System Manager 中打开驱动器定位灯
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+从 Hardware 页面，您可以打开定位器指示灯，以查找存储阵列中驱动器的物理位置。
+
+.关于此任务
+您可以找到 Hardware 页面上显示的单个驱动器或多个驱动器。
+
+.步骤
+. 选择 *Hardware*。
+. 要查找一个或多个驱动器，请执行以下操作之一：
++
+** *单个驱动器* -- 从货架图形中，找到要在阵列中实际定位的驱动器。（如果图形显示控制器，请单击 *驱动器* 选项卡。）单击驱动器以显示其上下文菜单，然后选择 *打开定位灯*。
++
+驱动器的定位指示灯亮起。实际定位驱动器后，返回对话框并选择 *关闭*。
+
+** *多个驱动器* -- 在筛选器字段中，从左侧下拉列表中选择物理驱动器类型，从右侧下拉列表中选择逻辑驱动器类型。符合条件的驱动器数量显示在字段的最右侧。接下来，您可以单击 *打开定位灯* 或从上下文菜单中选择 *查找所有已过滤的驱动器*。物理定位驱动器后，返回对话框并选择 *关闭*。
+
+
+

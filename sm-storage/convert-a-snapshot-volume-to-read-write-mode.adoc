@@ -1,0 +1,68 @@
+---
+permalink: sm-storage/convert-a-snapshot-volume-to-read-write-mode.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, convert, snapshot, volume, read-write mode 
+summary: 如果需要，可以将只读快照卷或快照一致性组快照卷转换为读写模式。 
+---
+= 在 SANtricity System Manager 中将快照卷转换为读写模式
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果需要，可以将只读快照卷或快照一致性组快照卷转换为读写模式。
+
+转换为可读写访问的快照卷包含其自己的保留容量。此容量用于保存主机应用程序对基本卷所做的任何后续修改，而不影响引用的快照映像。
+
+.步骤
+. 选择菜单：Storage[Snapshots]。
+. 选择 *Snapshot Volumes* 选项卡。
++
+此时会显示 Snapshot Volumes 表，并显示与存储阵列关联的所有快照卷。
+
+. 选择要转换的只读快照卷，然后单击 *Convert to Read/Write*。
++
+此时将显示转换为读/写对话框，并激活 *Reserve Capacity* 步骤。Volume Candidate 表仅显示支持指定保留容量的候选项。
+
+. 要为读写快照卷分配保留容量，请执行以下操作之一：
++
+** *接受默认设置* -- 使用此推荐选项为具有默认设置的快照卷分配保留容量。
+** *分配您自己的预留容量设置以满足您的数据存储需求* -- 使用以下指南分配预留容量。
++
+*** 保留容量的默认设置为基本卷容量的 40%，通常此容量就足够了。
+*** 所需的容量因 I/O 写入卷的频率和大小而异。
+
+
+
+
+. 选择 *Next* 以查看或编辑设置。
++
+此时将显示"编辑设置"对话框。
+
+. 根据需要接受或指定快照卷的设置，然后选择 *完成* 以转换快照卷。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 设置 | 说明 
+
+
+ a| 
+*保留容量设置*
+
+
+
+ a| 
+在...时提醒我
+ a| 
+使用微调框可调整系统在快照组的保留容量接近满时发送警报通知的百分比点。
+
+当快照卷的保留容量超过指定阈值时，系统会发送警报，让您有时间增加保留容量或删除不必要的对象。
+
+|===
+====
+

@@ -1,0 +1,42 @@
+---
+permalink: sm-storage/rtv-modify-connection-settings-for-remote-storage.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, modify, connection, settings, remote, storage 
+summary: 您可以通过 View/Edit Settings 选项编辑、添加或删除任何远程存储配置的连接设置。 
+---
+= 在 SANtricity System Manager 中修改远程存储的连接设置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以通过 View/Edit Settings 选项编辑、添加或删除任何远程存储配置的连接设置。
+
+.关于此任务
+更改连接属性将影响正在进行的导入。为避免中断，请仅在导入未运行时更改连接属性。
+
+.步骤
+. 选择菜单：Storage[Remote storage]。
+. 从列表中，选择要修改的远程存储对象。
+. 单击 *View/Edit Settings*。
++
+此时将显示远程存储设置对话框。
+
+. 单击 *Connection Properties* 选项卡。
++
+此时将显示远程存储导入的已配置 IP 地址和端口设置。
+
+. 请执行以下操作之一：
++
+** *编辑* -- 单击远程存储对象对应行项目旁边的 *编辑*。在字段中输入修改后的 IP 地址和/或端口信息。
+** *Add* -- 单击 *Add*，然后在提供的字段中输入新的 IP 地址和端口信息。单击 *Add* 以确认，然后新连接将显示在远程存储对象列表中。
+** *删除* -- 从列表中选择所需的连接，然后单击 *删除*。通过在提供的字段中键入 `delete`来确认操作，然后单击 *删除*。连接将从远程存储对象列表中删除。
+
+
+. 单击 *Save*。
++
+修改后的连接设置将应用于远程存储对象。
+
+

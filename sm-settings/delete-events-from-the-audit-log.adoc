@@ -1,0 +1,37 @@
+---
+permalink: sm-settings/delete-events-from-the-audit-log.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, delete, events, audit, log, 
+summary: 您可以清除旧事件的审核日志，这使得对事件的搜索更易于管理。删除时，您可以选择将旧事件保存为 CSV（逗号分隔值）文件。 
+---
+= 从 SANtricity System Manager 中删除审核日志中的事件
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以清除旧事件的审核日志，这使得对事件的搜索更易于管理。删除时，您可以选择将旧事件保存为 CSV（逗号分隔值）文件。
+
+.开始之前
+必须使用包含 Security admin 权限的用户配置文件登录。否则，将不会显示 Access Management 功能。
+
+.步骤
+. 选择菜单：Settings[Access Management]。
+. 选择 *Audit Log* 选项卡。
+. 选择 *Delete*。
++
+此时将打开删除审核日志对话框。
+
+. 选择或输入要删除的最早事件数。
+. 如果要将已删除的事件导出到 CSV 文件（推荐），请选中此复选框。在下一步中单击*删除*时，系统将提示您输入文件名和位置。否则，如果不想将事件保存到 CSV 文件，请单击该复选框以取消选中该复选框。
+. 单击 *Delete*。
++
+此时将打开一个确认对话框。
+
+. 在字段中键入  `delete`，然后单击*删除*。
++
+最早的事件将从 Audit Log 页面中删除。
+
+

@@ -1,0 +1,30 @@
+---
+permalink: sm-mirroring/view-unsynchronized-data-amount-between-mirror-consistency-groups.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, view, unsynchronized, data, mirror, consistency, groups, 
+summary: 您可以查看本地存储阵列和远程存储阵列上的镜像一致性组之间的非同步数据量。当镜像一致性组处于未同步状态时，不会发生镜像活动。 
+---
+= 在 SANtricity System Manager 中查看镜像一致性组之间的未同步数据量
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看本地存储阵列和远程存储阵列上的镜像一致性组之间的非同步数据量。当镜像一致性组处于未同步状态时，不会发生镜像活动。
+
+.关于此任务
+当选定的镜像一致性组包含镜像对且同步当前未在进行时，您可以执行此任务。
+
+.步骤
+. 选择菜单：Storage[Asynchronous Mirroring]。
+. 选择 *Mirror Consistency Groups* 选项卡。
++
+将显示 Mirror Consistency Group（镜像一致性组）表，并显示与存储阵列关联的所有镜像一致性组。
+
+. 单击菜单：More[查看未同步的数据量]。
++
+如果存在未同步的数据，则表格值会反映这一点。数据量列以 MiB 为单位列出未同步的数据量。
+
+

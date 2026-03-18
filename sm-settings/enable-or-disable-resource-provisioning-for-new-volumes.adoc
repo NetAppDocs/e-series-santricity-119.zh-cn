@@ -1,0 +1,44 @@
+---
+permalink: sm-settings/enable-or-disable-resource-provisioning-for-new-volumes.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, enable, disable, resource, provisioning, 
+summary: 如果您以前禁用了资源调配的默认功能，则可以转到设置，并为您创建的任何新的 SSD 卷组或池重新启用它。您也可以再次禁用此设置。 
+---
+= 在 SANtricity System Manager 中为新卷组或池启用或禁用资源配置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果以前禁用了资源调配的默认功能，则可以为创建的任何新 SSD 卷组或池重新启用它。您也可以再次禁用此设置。
+
+资源调配是 EF300 和 EF600 存储阵列中提供的一项功能，它允许卷立即投入使用，而无需后台初始化过程。分配给卷的所有驱动器块都将被取消分配（未映射），这可以提高 SSD 的磨损寿命并提高最大写入性能。
+
+
+NOTE: 默认情况下，将在驱动器支持 DULBE 的系统上启用资源调配。
+
+.开始之前
+* 您必须具有 EF300 或 EF600 存储阵列。
+* 您必须具有 SSD 卷组或池，其中所有驱动器都支持 NVMe Deallocated 或 Unwritten Logical Block Error Enable (DULBE) 错误恢复功能。
++
+
+NOTE: 目前 EF300C 或 EF600C 存储阵列不支持 DULBE。
+
+
+
+.关于此任务
+为新卷组或池重新启用资源调配时，只会影响新创建的卷组和池。启用资源调配的任何现有卷组和池将保持不变。
+
+.步骤
+. 选择菜单：Settings[System]。
+. 向下滚动到 *Additional Settings*，然后单击 *Enable/Disable Resource-Provisioned Volumes*。
++
+设置描述指示当前是启用还是禁用资源配置。
+
+. 在对话框中，确认此操作。
+
+
+.结果
+启用或禁用资源调配仅影响您创建的新 SSD 池或卷组。现有池或卷组保持不变。

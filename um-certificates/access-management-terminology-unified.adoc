@@ -1,0 +1,82 @@
+---
+permalink: um-certificates/access-management-terminology-unified.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, access management, terminology 
+summary: 了解 Access Management 条款如何适用于 SANtricity Unified Manager。 
+---
+= 了解 SANtricity Unified Manager 访问管理术语
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解 Access Management 条款如何适用于 SANtricity Unified Manager。
+
+[cols="25h,~"]
+|===
+| 术语 | 说明 
+
+
+ a| 
+Active Directory
+ a| 
+Active Directory (AD) 是一种 Microsoft 目录服务，它将 LDAP 用于 Windows 域网络。
+
+
+
+ a| 
+绑定
+ a| 
+绑定操作用于向目录服务器验证客户端。绑定通常需要帐户和密码凭据，但有些服务器允许匿名绑定操作。
+
+
+
+ a| 
+CA
+ a| 
+证书颁发机构 (CA) 是颁发电子文档（称为数字证书）以实现 Internet 安全的受信任实体。这些证书可以识别网站所有者，从而实现客户端和服务器之间的安全连接。
+
+
+
+ a| 
+证书
+ a| 
+出于安全目的，证书可识别站点的所有者，从而防止攻击者模拟站点。证书包含有关站点所有者的信息以及对此信息进行认证（签名）的受信任实体的身份。
+
+
+
+ a| 
+LDAP
+ a| 
+轻型目录访问协议（LDAP）是一种用于访问和维护分布式目录信息服务的应用程序协议。此协议允许许多不同的应用程序和服务连接到 LDAP 服务器以验证用户。
+
+
+
+ a| 
+RBAC
+ a| 
+基于角色的访问控制 (RBAC) 是一种基于单个用户的角色来调节对计算机或网络资源的访问的方法。Unified Manager 包括预定义的角色。
+
+
+
+ a| 
+SAML
+ a| 
+Security Assertion Markup Language (SAML) 是用于两个实体之间的身份验证和授权的基于 XML 的标准。SAML 允许多因素身份验证，其中用户必须提供两个或多个项目来证明其身份（例如密码和指纹）。存储阵列的嵌入式 SAML 功能符合 SAML2.0 的身份断言、身份验证和授权。
+
+
+
+ a| 
+SSO
+ a| 
+单点登录 (SSO) 是一种身份验证服务，允许一组登录凭据访问多个应用程序。
+
+
+
+ a| 
+Web Services Proxy
+ a| 
+Web Services Proxy 通过标准 HTTPS 机制提供访问，允许管理员为存储阵列配置管理服务。代理可以安装在 Windows 或 Linux 主机上。Unified Manager 界面可与 Web Services Proxy 一起使用。
+
+|===

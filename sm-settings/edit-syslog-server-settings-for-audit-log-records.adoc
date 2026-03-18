@@ -1,0 +1,41 @@
+---
+permalink: sm-settings/edit-syslog-server-settings-for-audit-log-records.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, edit, syslog, server, settings, audit, log, records, 
+summary: '您可以更改用于存档审核日志的 syslog 服务器的设置，还可以上传服务器的新证书颁发机构 (CA) 证书。' 
+---
+= 在 SANtricity System Manager 中编辑审核日志记录的系统日志服务器设置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以更改用于存档审核日志的 syslog 服务器的设置，还可以上传服务器的新证书颁发机构 (CA) 证书。
+
+.开始之前
+* 必须使用包含 Security admin 权限的用户配置文件登录。否则，将不会显示 Access Management 功能。
+* syslog 服务器地址、协议和端口号必须可用。服务器地址可以是完全限定的域名、IPv4 地址或 IPv6 地址。
+* 如果要上传新的 CA 证书，则证书必须在本地系统上可用。
+
+
+.步骤
+. 选择菜单：Settings[Access Management]。
+. 在 Audit Log（审计日志）选项卡中，选择 *Configure Syslog Servers*。
++
+配置的 syslog 服务器显示在页面上。
+
+. 要编辑服务器信息，请选择服务器名称右侧的 *Edit*（铅笔）图标，然后在以下字段中进行所需的更改：
++
+** *服务器地址* -- 输入完全限定域名、IPv4 地址或 IPv6 地址。
+** *协议* -- 从下拉列表中选择一个协议（例如，TLS、UDP 或 TCP）。
+** *端口* -- 输入 syslog 接收器的端口号。
+
+
+. 如果您将协议更改为安全 TLS 协议（从 UDP 或 TCP），请单击*导入受信任的证书*以上传 CA 证书。
+. 要测试与存储阵列的新连接，请选择 *Test All*。
+
+
+.结果
+配置完成后，所有新的审核日志都将发送到 syslog 服务器。不会传输以前的日志。

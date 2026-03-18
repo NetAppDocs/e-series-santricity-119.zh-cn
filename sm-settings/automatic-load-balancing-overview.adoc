@@ -1,0 +1,95 @@
+---
+permalink: sm-settings/automatic-load-balancing-overview.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, automatic, load, balancing, 
+summary: 自动负载平衡通过对负载随时间的变化做出动态反应，并自动调整卷控制器所有权，在工作负载跨控制器转移时纠正任何负载不平衡问题，从而改善 I/O 资源管理。 
+---
+= 了解 SANtricity 软件中的自动负载平衡
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+自动负载平衡通过对负载随时间的变化做出动态反应，并自动调整卷控制器所有权，在工作负载跨控制器转移时纠正任何负载不平衡问题，从而改善 I/O 资源管理。
+
+每个控制器的工作负载都会被持续监控，并且在安装在主机上的多路径驱动程序的协助下，可以在必要时自动实现平衡。当工作负载在控制器之间自动重新平衡时，存储管理员将免除手动调整卷控制器所有权的负担，以适应存储阵列上的负载变化。
+
+启用自动负载平衡后，它执行以下功能：
+
+* 自动监控和平衡控制器资源利用率。
+* 在需要时自动调整卷控制器所有权，从而优化主机和存储阵列之间的 I/O 带宽。
+
+
+
+
+== 启用和禁用 Automatic Load Balancing
+
+所有存储阵列上的自动负载平衡默认处于启用状态。
+
+您可能希望在存储阵列上禁用 Automatic Load Balancing，原因如下：
+
+* 您不希望自动更改特定卷的控制器所有权以平衡工作负载。
+* 您正在高度调节的环境中运行，其中有目的地设置负载分布，以实现控制器之间的特定分布。
+
+
+
+
+== 支持自动负载平衡功能的主机类型
+
+即使在存储阵列级别启用了自动负载平衡，您为主机或主机群集选择的主机类型也会对该功能的运行方式产生直接影响。
+
+在跨控制器平衡存储阵列的工作负载时，Automatic Load Balancing 功能会尝试移动两个控制器都可访问且仅映射到能够支持 Automatic Load Balancing 功能的主机或主机群集的卷。
+
+此行为可防止主机由于负载平衡过程而失去对卷的访问权限；但是，映射到不支持 Automatic Load Balancing 的主机的卷的存在会影响存储阵列平衡工作负载的能力。为了实现 Automatic Load Balancing 以平衡工作负载，多路径驱动程序必须支持 TPGS，并且下表中必须包含主机类型。
+
+[NOTE]
+====
+要将主机集群视为能够 Automatic Load Balancing，该组中的所有主机必须能够支持 Automatic Load Balancing。
+
+====
+[cols="1a,1a"]
+|===
+| 支持自动负载平衡的主机类型 | 使用此多路径驱动程序 
+
+
+ a| 
+Windows 或 Windows 集群
+ a| 
+MPIO 与 NetApp E 系列 DSM
+
+
+
+ a| 
+Linux DM-MP（内核 3.10 或更高版本）
+ a| 
+带有 `scsi_dh_alua`设备处理程序的 DM-MP
+
+
+
+ a| 
+VMware
+ a| 
+带有 `VMW_SATP_ALUA Storage Array Type`插件的本机多路径插件 (NMP)
+
+|===
+[NOTE]
+====
+除少数例外情况外，不支持 Automatic Load Balancing 的主机类型可继续正常运行，无论该功能是否已启用。一个例外是，如果系统有故障转移，存储阵列会在数据路径返回时将未映射或未分配的卷移回拥有的控制器。映射或分配给非 Automatic Load Balancing 主机的任何卷都不会移动。
+
+====
+有关特定多路径驱动程序、操作系统级别和控制器驱动器托盘支持的兼容性信息，请参见 https://mysupport.netapp.com/matrix["互操作性表工具"^]。
+
+
+
+== 验证操作系统与 Automatic Load Balancing 功能的兼容性
+
+在设置新的（或迁移现有）系统之前，验证操作系统与 Automatic Load Balancing 功能的兼容性。
+
+. 转到  https://mysupport.netapp.com/matrix["互操作性表工具"^] 以查找您的解决方案并验证支持。
++
+如果您的系统运行的是 Red Hat Enterprise Linux 6 或 SUSE Linux Enterprise Server 11，请联系技术支持。
+
+. 更新并配置  `/etc/multipath.conf file`。
+. 确保为适用的供应商和产品同时将 `retain_attached_device_handler`和 `detect_prio`设置为 `yes`，或使用默认设置。
+

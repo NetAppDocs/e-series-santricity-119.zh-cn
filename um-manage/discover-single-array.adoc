@@ -1,0 +1,57 @@
+---
+permalink: um-manage/discover-single-array.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, discover, single, array 
+summary: '使用"添加/发现单个存储阵列"选项可手动发现单个存储阵列并将其添加到组织的网络中。' 
+---
+= 在 SANtricity Unified Manager 中发现单个阵列
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用"添加/发现单个存储阵列"选项可手动发现单个存储阵列并将其添加到组织的网络中。
+
+.开始之前
+* 必须正确设置和配置存储阵列。
+* 必须使用 System Manager 的访问管理磁贴设置存储阵列密码。
+
+
+.步骤
+. 在 Manage 页面中，选择 *Add/Discover*。
++
+此时将显示"添加/发现"对话框。
+
+. 选择 *Discover a single storage array* 单选按钮。
+. 输入存储阵列中一个控制器的 IP 地址，然后单击 *Start Discovery*。
++
+Unified Manager 连接到指定的存储阵列可能需要几分钟时间。
+
++
+[NOTE]
+====
+当到指定控制器的 IP 地址的连接失败时，将显示 Storage Array Not Accessible（存储阵列不可访问）消息。
+
+====
+. 如果出现提示，请解析任何自签名证书。
++
+作为发现过程的一部分，系统验证发现的存储阵列是否正在使用受信任来源的证书。如果它找不到存储阵列的数字证书，则会提示您通过添加安全异常来解析未由公认的证书颁发机构 (CA) 签名的证书。
+
+. 如果出现提示，请解决任何不受信任的证书。
++
+当存储阵列尝试与 Unified Manager 建立安全连接，但连接无法确认为安全时，会发生不受信任的证书。通过导入由受信任的第三方颁发的证书颁发机构 (CA) 证书来解决不受信任的证书。
+
+. 单击 *Next*。
+. *可选：* 将发现的存储阵列关联到组：从下拉列表中，选择要与存储阵列关联的所需组。
++
+默认情况下，"All" 组处于选中状态。
+
+. 输入要添加到管理域的存储阵列的管理员密码，然后单击 *OK*。
+
+
+.完成后
+存储阵列将添加到 Unified Manager 中，如果指定，它也将添加到您选择的组中。
+
+如果启用了自动支持数据收集，则会自动为您添加的存储阵列收集支持数据。

@@ -1,0 +1,60 @@
+---
+permalink: sm-hardware/configure-dns-server-addresses.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, configure, dns, server, addresses, 
+summary: '域名系统 (DNS) 用于解析控制器和网络时间协议 (NTP) 服务器的完全限定域名。存储阵列上的管理端口可以同时支持 IPv4 或 IPv6 协议。' 
+---
+= 在 SANtricity System Manager 中配置 DNS 服务器地址
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+域名系统 (DNS) 用于解析控制器和网络时间协议 (NTP) 服务器的完全限定域名。存储阵列上的管理端口可以同时支持 IPv4 或 IPv6 协议。
+
+.开始之前
+* 必须在网络中安装和配置 DNS 服务器。
+* 您知道主 DNS 服务器和可选备份 DNS 服务器的地址。这些地址可以是 IPv4 地址或 IPv6 地址。
+
+
+.关于此任务
+此过程描述了如何指定主 DNS 服务器地址和备份 DNS 服务器地址。可以选择将备份 DNS 服务器配置为在主 DNS 服务器出现故障时使用。
+
+[NOTE]
+====
+如果您已使用动态主机配置协议 (DHCP) 配置了存储阵列的管理端口，并且有一个或多个与 DHCP 设置相关联的 DNS 或 NTP 服务器，则无需手动配置 DNS 或 NTP。在这种情况下，存储阵列应已自动获取 DNS/NTP 服务器地址。但是，您仍应按照以下说明打开对话框，并确保检测到正确的地址。
+
+====
+.步骤
+. 选择 *Hardware*。
+. 如果图形显示驱动器，请单击 *Controllers & Components* 选项卡。
++
+图形会更改为显示控制器而不是驱动器。
+
+. 选择要配置的控制器。
++
+此时将显示控制器的上下文菜单。
+
+. 选择 *Configure DNS server*。
++
+配置域名系统 (DNS) 服务器对话框打开。
+
+. 从下列选项中选择一项：
++
+** *自动从 DHCP 服务器获取 DNS 服务器地址* -- 显示检测到的 DNS 服务器地址。
++
+[NOTE]
+====
+如果存储阵列设置为使用静态 DNS 地址，则不会显示 DNS 服务器。
+
+====
+** *手动指定 DNS 服务器地址* -- 输入主 DNS 服务器地址和备份 DNS 服务器地址。备份服务器是可选的。（这些地址字段在您选择单选按钮后显示。）这些地址可以是 IPv4 地址或 IPv6 地址。
+
+
+. 单击 *Save*。
+. 对另一个控制器重复这些步骤。
+
+
+.结果
+DNS 配置显示在控制器设置的 *DNS / NTP* 选项卡中。

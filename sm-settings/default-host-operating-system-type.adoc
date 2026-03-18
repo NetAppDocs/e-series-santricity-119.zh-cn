@@ -1,0 +1,29 @@
+---
+permalink: sm-settings/default-host-operating-system-type.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, default, host, operating, system, 
+summary: 初始连接主机时，存储阵列使用默认主机类型。它定义了访问卷时存储阵列中的控制器如何与主机的操作系统配合使用。 
+---
+= 了解 SANtricity 软件中的默认主机操作系统类型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+初始连接主机时，存储阵列使用默认主机类型。它定义了访问卷时存储阵列中的控制器如何与主机的操作系统配合使用。
+
+如果需要相对于连接到存储阵列的主机更改存储阵列的运行方式，则可以更改主机类型。通常，在将主机连接到存储阵列之前或连接其他主机时，都会更改默认主机类型。
+
+请记住以下准则：
+
+* 如果计划连接到存储阵列的所有主机都具有相同的操作系统（同构主机环境），请更改主机类型以匹配操作系统。
+* 如果您计划连接到存储阵列的主机具有不同的操作系统（异构主机环境），请更改主机类型以匹配大多数主机的操作系统。
++
+例如，如果要将八个不同的主机连接到存储阵列，并且其中六个主机正在运行 Windows 操作系统，则必须选择 Windows 作为默认主机操作系统类型。
+
+* 如果大多数连接的主机混合使用不同的操作系统，请将主机类型更改为 Factory Default。
++
+例如，如果要将八台不同的主机连接到存储阵列，其中两台主机运行的是 Windows 操作系统，三台主机运行的是 VMware 操作系统，另外三台主机运行的是 Linux 操作系统，则必须选择 Factory Default 作为默认主机操作系统类型。
+
+

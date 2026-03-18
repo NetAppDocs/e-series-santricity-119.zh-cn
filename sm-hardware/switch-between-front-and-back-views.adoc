@@ -1,0 +1,30 @@
+---
+permalink: sm-hardware/switch-between-front-and-back-views.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, switch, front, back, views, shelves 
+summary: 硬件页面可以显示货架的前视图或后视图。 
+---
+= 在 SANtricity System Manager 中显示正面和背面视图
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+硬件页面可以显示货架的前视图或后视图。
+
+.关于此任务
+后视图显示控制器/IOM 和电源风扇罐。前视图显示驱动器。
+
+.步骤
+. 选择 *Hardware*。
+. 如果图形显示驱动器，请单击 *Controllers & Components* 选项卡。
++
+图形会更改为显示控制器而不是驱动器。
+
+. 如果图形显示控制器，请单击 *Drives* 选项卡。
++
+图形更改为显示驱动器而不是控制器。
+
+. 您也可以选择位于页面底部的 *Show all front* 或 *Show all back*。
+

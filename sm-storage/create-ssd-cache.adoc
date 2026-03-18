@@ -1,0 +1,103 @@
+---
+permalink: sm-storage/create-ssd-cache.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, create, ssd, cache 
+summary: '您可以使用 SSD Cache 功能将最常访问的数据（"热"数据）缓存到延迟较低的固态硬盘（SSD）上，从而动态提升系统性能。SSD Cache 仅用于主机读取。' 
+---
+= 在 SANtricity System Manager 中创建 SSD 缓存
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 SSD Cache 功能将最常访问的数据（"热"数据）缓存到延迟较低的固态硬盘（SSD）上，从而动态提高系统性能。SSD Cache 仅用于主机读取。
+
+.开始之前
+您的存储阵列必须包含一些 SSD 驱动器。
+
+.关于此任务
+创建新的 SSD Cache 时，您可以使用单个驱动器或多个驱动器。由于读缓存位于存储阵列中，因此在使用存储阵列的所有应用程序之间共享缓存。您选择要缓存的卷，然后缓存是自动和动态的。
+
+创建新 SSD 缓存时，请遵循以下准则。
+
+* 只有在创建 SSD Cache 时，您才可以启用安全性，而不是以后。
+* 每个存储阵列仅支持一个 SSD 缓存。
+* 如果只有一个卷启用了 SSD 缓存，则整个 SSD 缓存将分配给拥有该卷的控制器。
+* 存储阵列上的最大可用 SSD Cache 容量取决于控制器的主缓存容量。
+* 快照映像不支持 SSD 缓存。
+* 如果导入或导出已启用或禁用 SSD Cache 的卷，则不会导入或导出缓存数据。
+* 分配给使用控制器 SSD Cache 的任何卷都不符合自动负载平衡传输的条件。
+* 如果关联的卷已启用安全，请创建一个启用安全的 SSD Cache。
+
+
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 单击菜单：创建 [SSD Cache]。
++
+此时将显示创建 SSD 缓存对话框。
+
+. 输入 SSD Cache 的名称。
+. 根据以下特征选择要使用的 SSD Cache 候选项。
++
+[cols="25h,~"]
+|===
+| 特征 | 用途 
+
+
+ a| 
+容量
+ a| 
+以 GiB 为单位显示可用容量。为应用程序的存储需求选择容量。
+
+SSD Cache 的最大容量取决于控制器的主缓存容量。如果分配给 SSD Cache 的容量超过最大值，则任何额外容量都无法使用。
+
+SSD Cache 容量计入您的总分配容量。
+
+
+
+ a| 
+驱动器总数
+ a| 
+显示此 SSD 缓存可用的驱动器数量。选择具有所需驱动器数量的 SSD 候选。
+
+
+
+ a| 
+支持安全功能
+ a| 
+指示 SSD Cache 候选项是否完全由支持安全的驱动器组成，这些驱动器可以是全磁盘加密 (FDE) 驱动器或联邦信息处理标准 (FIPS) 驱动器。
+
+如果要创建启用安全的 SSD Cache，请在支持安全的列中查找 *Yes - FDE* 或 *Yes - FIPS*。
+
+
+
+ a| 
+启用安全？
+ a| 
+提供使用具有安全功能的驱动器启用驱动器安全功能的选项。如果要创建启用安全的 SSD Cache，请选中启用安全复选框。
+
+[NOTE]
+====
+一旦启用，就不能禁用安全性。您只能在创建 SSD Cache 时启用 SSD Cache 的安全性，而不能稍后启用。
+
+====
+
+
+ a| 
+支持 DA
+ a| 
+指示此 SSD Cache 候选项是否可用 Data Assurance (DA)。Data Assurance (DA) 检查并更正数据通过控制器传输到驱动器时可能发生的错误。
+
+如果要使用 DA，请选择支持 DA 的 SSD Cache 候选项。此选项仅在已启用 DA 功能时可用。
+
+SSD Cache 可以包含支持 DA 和不支持 DA 的驱动器，但所有驱动器都必须支持 DA 才能使用 DA。
+
+|===
+. 将 SSD Cache 与要为其实施 SSD 读缓存的卷关联。要立即在兼容卷上启用 SSD Cache，请选中*在映射到主机的现有兼容卷上启用 SSD Cache*复选框。
++
+如果卷共享相同的驱动器安全和 DA 功能，则它们是兼容的。
+
+. 单击 *Create*。
+

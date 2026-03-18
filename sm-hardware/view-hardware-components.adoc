@@ -1,0 +1,71 @@
+---
+permalink: sm-hardware/view-hardware-components.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, view, hardware, components, filtering, 
+summary: 硬件页面提供排序和过滤功能，可以更轻松地查找组件。 
+---
+= 在 SANtricity System Manager 中查看硬件组件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+硬件页面提供排序和过滤功能，可以更轻松地查找组件。
+
+.步骤
+. 选择 *Hardware*。
+. 使用下表中描述的函数查看硬件组件。
+
+
+[cols="25h,~"]
+|===
+| 功能 | 说明 
+
+
+ a| 
+驱动器、控制器和组件视图
+ a| 
+要在正面和背面货架视图之间切换，请从最右侧选择 *Drives* 或 *Controllers & Components*（显示的链接取决于当前视图）。*Drives* 视图显示驱动器和任何空驱动器托架。*Controllers & Components* 视图显示控制器以及任何 IOM (ESM) 模块、电源/风扇罐或空控制器托架。在页面底部，您还可以选择 *Show all drives*。
+
+
+
+ a| 
+驱动器视图筛选器
+ a| 
+如果存储阵列包含具有不同类型物理和逻辑属性的驱动器，则 *Hardware* 页面包括驱动器视图筛选器。这些筛选字段通过限制页面上显示的驱动器类型，帮助您快速定位特定驱动器。在 *Show drives that are...* 下，单击左侧的筛选字段（默认情况下，显示 *Any drive type*）以查看物理属性（例如，容量和速度）的下拉列表。单击右侧的筛选器字段（默认情况下，显示 *Anywhere in the storage array*）以查看逻辑属性（例如，卷组分配）的下拉列表。您可以同时或单独使用这些筛选条件。
+
+[NOTE]
+====
+如果存储阵列包含的驱动器都具有相同的物理属性，则不会显示左侧的 *Any drive type* 字段。如果驱动器都位于同一个逻辑位置，则不会显示右侧的 *Anywhere in the storage array* 字段。
+
+====
+
+
+ a| 
+图例
+ a| 
+组件以特定颜色显示，以描绘其角色状态。要展开和折叠这些状态的描述，请单击 *Legend*。
+
+
+
+ a| 
+显示状态图标详细信息
+ a| 
+状态指示器可以包括可用性状态的文本描述。单击 *Show status icon details* 以显示或隐藏此状态文本。
+
+
+
+ a| 
+机架/机架图标
+ a| 
+每个盘架视图提供相关命令的列表，以及属性和状态。单击 *Shelf* 可查看命令的下拉列表。您还可以选择顶部的一个图标来查看各个组件的状态和属性：控制器、IOM（ESM）、电源、风扇、温度、电池和 SFP。
+
+
+
+ a| 
+上架顺序
+ a| 
+货架可以在硬件页面上重新排列。使用每个货架视图右上角的上下箭头更改货架的顶部/底部顺序。
+
+|===

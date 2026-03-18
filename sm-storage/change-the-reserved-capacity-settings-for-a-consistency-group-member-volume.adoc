@@ -1,0 +1,64 @@
+---
+permalink: sm-storage/change-the-reserved-capacity-settings-for-a-consistency-group-member-volume.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, reserved capacity, settings, consistency group, member volume 
+summary: 您可以更改一致性组成员卷的设置，以调整在成员卷的保留容量接近满时 System Manager 发送警报通知的百分比点，并更改要在保留容量达到其最大定义百分比时使用的策略。 
+---
+= 在 SANtricity System Manager 中更改一致性组成员卷的预留容量设置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以更改一致性组成员卷的设置，以调整成员卷的保留容量接近满时 SANtricity System Manager 发送警报通知的百分比点，并更改策略以在保留容量达到其最大定义百分比时使用。
+
+.关于此任务
+更改单个成员卷的保留容量设置也会更改与一致性组关联的所有成员卷的保留容量设置。
+
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 单击 *Reserved Capacity* 选项卡。
+. 选择要编辑的一致性组成员卷，然后单击 *View/Edit Settings*。
++
+此时将显示"成员卷保留容量设置"对话框。
+
+. 根据需要更改成员卷的预留容量设置。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 设置 | 说明 
+
+
+ a| 
+在...时提醒我
+ a| 
+使用微调框可调整 System Manager 在成员卷的保留容量接近满时发送警报通知的百分比点。
+
+当成员卷的保留容量超过指定阈值时，System Manager 会发送警报，允许您有时间增加保留容量或删除不必要的对象。
+
+
+NOTE: 更改一个成员卷的警报设置将更改属于相同一致性组的 _all_ 成员卷的警报设置。
+
+
+
+ a| 
+完全保留容量的政策
+ a| 
+您可以从以下策略中选择一项：
+
+** *清除最旧的 snapshot 映像* -- System Manager 会自动清除一致性组中最旧的 snapshot 映像，从而释放成员的保留容量，以便在组内重用。
+** *拒绝对基本卷的写入* -- 当保留容量达到其最大定义百分比时，System Manager 会拒绝对触发保留容量访问的基本卷的任何 I/O 写入请求。
+
+
+|===
+====
+. 单击 *Save* 以应用更改。
+
+
+.结果
+System Manager 更改成员卷的保留容量设置，以及一致性组中所有成员卷的保留容量设置。

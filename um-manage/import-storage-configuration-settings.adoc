@@ -1,0 +1,67 @@
+---
+permalink: um-manage/import-storage-configuration-settings.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, import, storage, configuration, settings 
+summary: 您可以将存储配置从一个存储阵列导入到其他存储阵列。当您需要在网络中配置多个阵列时，此批处理操作可节省时间。 
+---
+= 在 SANtricity Unified Manager 中导入存储配置设置
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以将存储配置从一个存储阵列导入到其他存储阵列。当您需要在网络中配置多个阵列时，此批处理操作可节省时间。
+
+.开始之前
+* 在 SANtricity System Manager 中为要用作源的存储阵列配置了存储。
+* 目标存储阵列的现有配置在 System Manager 中备份（菜单：Settings[System > Save Storage Array Configuration]）。
+* 源和目标阵列必须满足以下要求：
++
+** 控制器所在的货架必须相同。
+** 货架 ID 必须相同。
+** 扩展盘架必须在相同插槽中填充相同的驱动器类型。
+** RBOD 外壳类型必须相同。
+** HIC，包括主机的数据保证功能，必须相同。
+** 目标数组必须处于"最佳"状态。
+** 目标阵列上的卷容量大于源阵列的容量。
+
+
+* 您了解以下限制：
++
+** 不支持从双工配置导入到单工配置；但是，允许从单工配置导入到双工配置。
+** 源阵列上 64 TB 或更大的磁盘池卷将阻止目标上的导入过程。
+** 精简卷未包含在导入过程中。
+
+
+
+
+.关于此任务
+导入的设置包括配置的卷（仅限厚卷和非存储库卷）、卷组、池和热备用驱动器分配。
+
+.步骤
+. 在 Manage 页面中，单击 *Import Settings*。
++
+导入设置向导打开。
+
+. 在选择设置对话框中，选择 *Storage configuration*，然后单击 *Next*。
++
+此时将打开一个用于选择源阵列的对话框。
+
+. 在选择源对话框中，选择具有要导入的设置的数组，然后单击 *Next*。
+. 在"选择目标"对话框中，选择一个或多个阵列以接收新设置。
++
+[NOTE]
+====
+无法选择固件低于 8.50 的存储阵列。此外，如果 Unified Manager 无法与该阵列通信（例如，如果该阵列处于脱机状态，或者存在证书、密码或网络问题），则不会在此对话框中显示该阵列。
+
+====
+. 单击 *Finish*。
++
+操作页面显示导入操作的结果。如果操作失败，您可以单击其行以查看更多信息。
+
+
+
+.结果
+目标存储阵列现在已配置为与源阵列相同的存储配置。

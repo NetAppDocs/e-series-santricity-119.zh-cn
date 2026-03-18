@@ -1,0 +1,35 @@
+---
+permalink: sm-storage/rtv-manage-progress-of-remote-volume-import.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, remote, storage, imports 
+summary: 导入过程开始后，您可以查看其进度并对其执行操作。 
+---
+= 在 SANtricity System Manager 中管理远程存储导入的进度
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+导入过程开始后，您可以查看其进度并对其执行操作。
+
+.关于此任务
+对于每个导入操作，Operations in Progress 对话框将显示完成百分比和预计剩余时间。操作包括更改导入优先级、停止和恢复操作以及断开与操作的连接。
+
+您还可以从主页查看正在进行的操作（菜单：Home[Show operations in progress]）。
+
+.步骤
+. 在远程存储页面中，选择 *查看操作*。
++
+此时将显示正在执行的操作对话框。
+
+. 如果需要，请使用 *Actions* 列中的链接来停止和恢复、更改优先级或断开与操作的连接。
++
+** *Change Priority* -- 选择 *Change Priority* 以更改正在进行或待定的操作的处理优先级。将优先级应用于操作，然后单击 *OK*。
+** *停止* -- 选择 *停止* 以暂停从远程存储设备复制数据。导入对之间的关系仍然完好无损，当您准备好继续导入操作时，可以选择 *恢复*。
+** *Resume* -- 选择 *Resume* 以从中断的地方开始已停止或失败的过程。接下来，将优先级应用于 Resume 操作，然后单击 *OK*。此操作 _不会_ 从头开始重新启动导入。如果要从头重新启动该过程，则必须选择 *Disconnect*，然后通过 Import Remote Storage 向导重新创建导入。
+** *断开* -- 选择 *断开* 以断开已停止、完成或失败的导入操作的源卷和目标卷之间的关系。
+
+
+

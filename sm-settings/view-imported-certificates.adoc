@@ -1,0 +1,53 @@
+---
+permalink: sm-settings/view-imported-certificates.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, view, imported, certificate, information, 
+summary: '从"证书"页面，您可以查看存储阵列的证书类型、颁发机构以及证书的有效日期范围。' 
+---
+= 在 SANtricity System Manager 中查看导入的证书信息
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+从"证书"页面，您可以查看存储阵列的证书类型、颁发机构以及证书的有效日期范围。
+
+.开始之前
+必须使用包含 Security admin 权限的用户配置文件登录。否则，不会显示证书功能。
+
+.步骤
+. 选择菜单：Settings[Certificates]。
+. 选择其中一个选项卡以查看有关证书的信息。
++
+[cols="25h,~"]
+|===
+| 选项卡 | 说明 
+
+
+ a| 
+阵列管理
+ a| 
+查看有关为每个控制器导入的 CA 签名证书的信息，包括根文件、中间文件和服务器文件。
+
+
+
+ a| 
+值得信赖
+ a| 
+查看有关为控制器导入的所有其他类型证书的信息。使用 *Show certificates that are...* 下的筛选字段查看用户安装或预安装的证书。
+
+** *用户安装* -- 用户上传到存储阵列的证书，当控制器充当客户端（而不是服务器）时，可以包括受信任的证书、LDAPS 证书和 Identity Federation 证书。
+** *预安装* -- 存储阵列随附的自签名证书。
+
+
+
+
+ a| 
+密钥管理
+ a| 
+查看有关为外部密钥管理服务器导入的 CA 签名证书的信息。
+
+|===
+

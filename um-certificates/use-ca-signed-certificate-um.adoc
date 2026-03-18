@@ -1,0 +1,108 @@
+---
+permalink: um-certificates/use-ca-signed-certificate-um.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, ca-signed, certificates 
+summary: 您可以获取和导入 CA 签名的证书，以安全访问托管 Unified Manager 的管理系统。 
+---
+= 为管理系统使用 CA 签名的证书
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以获取和导入 CA 签名的证书，以安全访问托管 SANtricity Unified Manager 的管理系统。
+
+.开始之前
+必须使用包含 Security admin 权限的用户配置文件登录。否则，不会显示证书功能。
+
+.关于此任务
+使用 CA 签名的证书是一个三步过程。
+
+
+
+== 步骤 1：完成 CSR 文件
+
+您必须首先生成证书签名请求 (CSR) 文件，该文件标识您的组织和安装 Web Services Proxy 和 Unified Manager 的主机系统。
+
+[NOTE]
+====
+或者，您可以使用 OpenSSL 等工具生成 CSR 文件，然后跳到<<步骤 2：提交 CSR 文件>>。
+
+====
+.步骤
+. 选择 *Certificate Management*。
+. 在管理选项卡中，选择 *Complete CSR*。
+. 输入以下信息，然后单击 *Next*：
++
+** *组织* -- 贵公司或组织的完整法定名称。包括后缀，例如 Inc. 或 Corp.。
+** *组织单位（可选）* -- 处理证书的组织部门。
+** *城市/地区* -- 您的主机系统或企业所在的城市。
+** *州/地区（可选）* -- 您的主机系统或业务所在的州或地区。
+** *国家/地区 ISO 代码* -- 您所在国家/地区的两位数 ISO（International Organization for Standardization）代码，例如 US。
+
+
+. 输入有关安装 Web Services Proxy 的主机系统的以下信息：
++
+** *通用名称* -- 安装 Web Services Proxy 的主机系统的 IP 地址或 DNS 名称。确保此地址正确；它必须与您在浏览器中输入的访问 Unified Manager 的内容完全匹配。不包括 http:// 或 https://。DNS 名称不能以通配符开头。
+** *备用 IP 地址* -- 如果通用名称是 IP 地址，您可以选择输入主机系统的任何其他 IP 地址或别名。对于多个条目，请使用逗号分隔格式。
+** *备用 DNS 名称* -- 如果公用名称是 DNS 名称，请输入主机系统的任何其他 DNS 名称。对于多个条目，请使用逗号分隔格式。如果没有其他 DNS 名称，但您在第一个字段中输入了 DNS 名称，请将该名称复制到此处。DNS 名称不能以通配符开头。
+
+
+. 确保主机信息正确无误。如果不正确，当您尝试导入证书时，从 CA 返回的证书将失败。
+. 单击 *Finish*。
+. 转至 <<步骤 2：提交 CSR 文件>>。
+
+
+
+
+== 步骤 2：提交 CSR 文件
+
+创建证书签名请求 (CSR) 文件后，将其发送到证书颁发机构 (CA)，以接收托管 Unified Manager 和 Web Services Proxy 的系统的签名管理证书。
+
+
+NOTE: E-Series 系统要求签名证书采用 PEM 格式（Base64 ASCII 编码），其中包括以下文件类型：.pem、.crt、.cer 或 .key。
+
+.步骤
+. 找到下载的 CSR 文件。
++
+下载的文件夹位置取决于您的浏览器。
+
+. 将 CSR 文件提交给 CA（例如，Verisign 或 DigiCert），并以 PEM 格式请求已签名的证书。
++
+[CAUTION]
+====
+*向 CA 提交 CSR 文件后，请勿重新生成其他 CSR 文件。*每当您生成 CSR 时，系统都会创建私钥和公钥对。公钥是 CSR 的一部分，而私钥则保存在系统的密钥库中。当您收到签名的证书并导入它们时，系统将确保私钥和公钥都是原始对。如果密钥不匹配，则签名的证书将不起作用，您必须向 CA 请求新证书。
+
+====
+. 当 CA 返回已签名的证书时，请转到 <<步骤 3：导入管理证书>>。
+
+
+
+
+== 步骤 3：导入管理证书
+
+收到来自证书颁发机构 (CA) 的签名证书后，将证书导入安装了 Web Services Proxy 和 Unified Manager 界面的主机系统中。
+
+.开始之前
+* 您已收到来自 CA 的签名证书。这些文件包括根证书、一个或多个中间证书和服务器证书。
+* 如果 CA 提供了一个链接的证书文件（例如 .p7b 文件），则必须将链接的文件解压缩为单个文件：根证书、一个或多个中间证书和服务器证书。您可以使用 Windows `certmgr` 实用程序解压缩文件（右键单击并选择菜单：所有任务[导出]）。建议使用 Base-64 编码。导出完成后，将显示链中每个证书文件的 CER 文件。
+* 已将证书文件复制到运行 Web Services Proxy 的主机系统。
+
+
+.步骤
+. 选择 *Certificate Management*。
+. 从 Management 选项卡中，选择 *Import*。
++
+此时将打开一个用于导入证书文件的对话框。
+
+. 单击 *Browse* 首先选择根证书文件和中间证书文件，然后选择服务器证书。如果从外部工具生成了 CSR，则还必须导入与 CSR 一起创建的私钥文件。
++
+文件名显示在对话框中。
+
+. 单击 *Import*。
+
+
+.结果
+文件已上传并验证。证书信息显示在 Certificate Management 页面上。

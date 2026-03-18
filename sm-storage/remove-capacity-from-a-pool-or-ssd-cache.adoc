@@ -1,0 +1,61 @@
+---
+permalink: sm-storage/remove-capacity-from-a-pool-or-ssd-cache.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, remove, capacity, pool, ssd cache 
+summary: 您可以删除驱动器以减少现有池或 SSD Cache 的容量。 
+---
+= 从 SANtricity System Manager 中的池或 SSD Cache 中删除容量
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以删除驱动器以减少现有池或 SSD Cache 的容量。
+
+删除驱动器后，池或 SSD Cache 的每个卷中的数据将重新分配给剩余的驱动器。拆除的驱动器将被取消分配，其容量将成为存储阵列总可用容量的一部分。
+
+.关于此任务
+移除容量时，请遵循以下准则：
+
+* 如果不先删除 SSD Cache，则无法删除 SSD Cache 中的最后一个驱动器。
+* 您不能将池中的驱动器数量减少到少于 11 个驱动器。
+* 一次最多可以删除 12 个驱动器。如果需要拆除超过 12 个驱动器，请重复此过程。
+* 如果池或 SSD Cache 中没有足够的可用容量来包含数据，则无法删除驱动器，当该数据被重新分配到池或 SSD Cache 中的剩余驱动器时。
+
+
+.了解潜在的性能影响
+[%collapsible]
+====
+* 从池或 SSD 缓存中删除驱动器可能会导致卷性能降低。
+* 从池或 SSD Cache 中删除容量时，不会消耗保留容量。但是，根据池或 SSD Cache 中剩余的驱动器数量，保留容量可能会减少。
+
+
+====
+.了解对具有安全功能的驱动器的影响
+[%collapsible]
+====
+* 如果删除最后一个不支持安全功能的驱动器，则池中将保留所有支持安全功能的驱动器。在这种情况下，您可以选择启用池的安全性。
+* 如果删除最后一个不支持 Data Assurance (DA) 的驱动器，则池中将保留所有支持 DA 的驱动器。
+
+
+
+NOTE: 在池中创建的任何新卷都将支持 DA。如果希望现有卷具有 DA 功能，则需要删除该卷，然后重新创建该卷。
+
+====
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 选择池或 SSD Cache，然后单击菜单：更多[删除容量]。
++
+此时将显示"删除容量"对话框。
+
+. 在列表中选择一个或多个驱动器。
++
+当您在列表中选择或取消选择驱动器时，*选定的总容量* 字段会更新。此字段显示删除选定驱动器后产生的池或 SSD Cache 的总容量。
+
+. 单击 *Remove*，然后确认要删除驱动器。
++
+池或 SSD Cache 的新减少容量反映在池和卷组视图中。
+
+

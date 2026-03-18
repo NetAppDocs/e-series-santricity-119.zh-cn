@@ -1,0 +1,89 @@
+---
+permalink: um-admin/overview-interface-unified.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, interface, GUI 
+summary: Unified Manager 是一个基于 Web 的界面，允许您在单个视图中管理多个存储阵列。 
+---
+= 了解 SANtricity Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SANtricity Unified Manager 是一个基于 Web 的界面，允许您在单个视图中管理多个存储阵列。
+
+
+
+== 主页
+
+当您登录到 Unified Manager 时，主页打开到 *Manage - All*。在此页面中，您可以滚动浏览网络中发现的存储阵列列表，查看其状态，并在单个阵列或一组阵列上执行操作。
+
+
+
+== 导航侧边栏
+
+您可以从导航侧边栏访问 Unified Manager 特性和功能。
+
+[cols="25h,~"]
+|===
+| 区域 | 说明 
+
+
+ a| 
+管理
+ a| 
+发现网络中的存储阵列，为阵列启动 SANtricity System Manager，将设置从一个阵列导入到多个阵列，并管理阵列组。选中阵列名称旁边的复选框以对其执行操作，例如导入设置和创建阵列组。每行末尾的省略号为单个阵列的操作（例如重命名）提供了一个内联菜单。
+
+
+
+ a| 
+操作
+ a| 
+查看批处理操作的进度，例如将设置从一个阵列导入到另一个阵列。
+
+[NOTE]
+====
+当存储阵列具有非最佳状态时，某些操作不可用。
+
+====
+
+
+ a| 
+证书管理
+ a| 
+管理证书以在浏览器和客户端之间进行身份验证。
+
+
+
+ a| 
+访问管理
+ a| 
+为 Unified Manager 界面建立用户身份验证。
+
+
+
+ a| 
+支持
+ a| 
+查看技术支持选项、资源和联系人。
+
+|===
+
+
+== 界面设置和帮助
+
+在界面右上角，您可以访问帮助和其他文档。您还可以从登录名旁边的下拉菜单中访问管理选项。
+
+
+
+== 用户登录名和密码
+
+当前登录系统的用户显示在界面右上角。
+
+有关用户和密码的更多信息，请参见：
+
+* link:administrator-password-protection-unified.html["设置管理员密码保护"]
+* link:change-admin-password-unified.html["更改管理员密码"]
+* link:../um-certificates/change-passwords-unified.html["更改本地用户配置文件的密码"]
+

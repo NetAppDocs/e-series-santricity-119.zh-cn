@@ -1,0 +1,62 @@
+---
+permalink: sm-mirroring/increase-reserved-capacity.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, synchronous, mirroring, increase, reserved, capacity 
+summary: 您可以增加保留容量，这是用于存储对象上的任何复制服务操作的物理分配容量。 
+---
+= 在 SANtricity System Manager 中增加预留容量
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以增加保留容量，这是用于存储对象上的任何复制服务操作的物理分配容量。
+
+对于快照操作，它通常是基本卷的 40%；对于异步镜像操作，它通常是基本卷的 20%。通常，当您收到存储对象的保留容量正在变满的警告时，您会增加保留容量。
+
+.开始之前
+* 池或卷组中的卷必须具有"最佳"状态，并且不得处于任何修改状态。
+* 要用于增加容量的池或卷组中必须存在可用容量。
++
+如果任何池或卷组上不存在可用容量，则可以将未分配的容量以未使用的驱动器的形式添加到池或卷组中。
+
+
+
+.关于此任务
+对于以下存储对象，只能以 8 GiB 的增量增加保留容量：
+
+* Snapshot 组
+* Snapshot 卷
+* 一致性组成员卷
+* 镜像对卷
+
+
+如果您认为主卷将经历许多更改或特定复制服务操作的寿命将非常长，请使用较高的百分比。
+
+[NOTE]
+====
+您不能增加只读快照卷的保留容量。只有读写快照卷需要保留容量。
+
+====
+.步骤
+. 选择菜单：Storage[Pools & Volume Groups]。
+. 选择 *Reserved Capacity* 选项卡。
+. 选择要为其增加保留容量的存储对象，然后单击 *增加容量*。
++
+此时将显示"增加保留容量"对话框。
+
+. 使用微调框调整容量百分比。
++
+如果包含所选存储对象的池或卷组上不存在可用容量，并且存储阵列具有未分配容量，则可以创建新的池或卷组。然后，您可以使用该池或卷组上的新可用容量重试此操作。
+
+. 单击 *Increase*。
+
+
+.结果
+System Manager 执行以下操作：
+
+* 增加存储对象的保留容量。
+* 显示新增的保留容量。
+

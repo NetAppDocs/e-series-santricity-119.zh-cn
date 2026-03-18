@@ -1,0 +1,89 @@
+---
+permalink: sm-settings/alerts-terminology.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, alerts, terms, 
+summary: 了解警报条款如何适用于您的存储阵列。 
+---
+= 了解 SANtricity 软件中的警报术语
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解警报条款如何适用于您的存储阵列。
+
+[cols="25h,~"]
+|===
+| 组件 | 说明 
+
+
+ a| 
+事件监控器
+ a| 
+事件监视器驻留在存储阵列上，并作为后台任务运行。当事件监视器检测到存储阵列上的异常时，它会将有关问题的信息写入事件日志。问题可能包括电池故障、组件从 Optimal 到 Offline 或控制器中的冗余错误等事件。如果事件监视器确定事件是"可警报的"，则使用配置的警报方法（电子邮件、SNMP 和/或 syslog）发送通知。所有 Critical 事件以及一些 Warning 和 Informational 事件都被视为"可警报"事件。
+
+
+
+ a| 
+邮件服务器
+ a| 
+邮件服务器用于发送和接收电子邮件警报。服务器使用简单邮件传输协议 (SMTP)。
+
+
+
+ a| 
+SNMP
+ a| 
+简单网络管理协议 (SNMP) 是一种互联网标准协议，用于在 IP 网络上的设备之间管理和共享信息。
+
+
+
+ a| 
+SNMP 陷阱
+ a| 
+SNMP 陷阱是发送到 SNMP 服务器的通知。陷阱包含有关存储阵列重大问题的信息。
+
+
+
+ a| 
+SNMP 陷阱目标
+ a| 
+SNMP 陷阱目标是运行 SNMP 服务的服务器的 IPv4 或 IPv6 地址。
+
+
+
+ a| 
+社区名称
+ a| 
+社区名称是一个字符串，其作用类似于 SNMP 环境中网络服务器的密码。
+
+
+
+ a| 
+MIB 文件
+ a| 
+管理信息库 (MIB) 文件定义了存储阵列中被监控和管理的数据。必须在具有 SNMP 服务应用程序的服务器上复制和编译该文件。此 MIB 文件可在支持站点上与 System Manager 软件一起获取。
+
+
+
+ a| 
+MIB 变量
+ a| 
+Management Information Base (MIB) 变量可以返回值，例如存储阵列名称、阵列位置和联系人，以响应 SNMP GetRequests。
+
+
+
+ a| 
+系统日志
+ a| 
+Syslog 是网络设备用于将事件消息发送到日志记录服务器的协议。
+
+
+
+ a| 
+UDP
+ a| 
+用户数据报协议 (UDP) 是一种传输层协议，在其数据包标头中指定源和目标端口号。
+
+|===

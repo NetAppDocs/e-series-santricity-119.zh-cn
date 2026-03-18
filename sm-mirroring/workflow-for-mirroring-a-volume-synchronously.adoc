@@ -1,0 +1,43 @@
+---
+permalink: sm-mirroring/workflow-for-mirroring-a-volume-synchronously.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, workflow, mirroring, synchronously, 
+summary: 您可以使用以下工作流配置同步镜像。 
+---
+= 在 SANtricity 软件中同步镜像卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用以下工作流配置同步镜像。
+
+[NOTE]
+====
+此功能在 EF600/EF600C 或 EF300/EF300C 存储系统中不可用。
+
+====
+. 在 Unified Manager 中执行初始配置：
++
+.. 选择本地存储阵列作为数据传输的源。
+.. 从本地存储阵列中选择主卷。
+.. 选择远程存储阵列作为数据传输的目标，然后选择辅助卷。
+.. 选择同步和重新同步优先级。
+.. 开始从主卷到辅助卷的初始数据传输。根据卷的大小，此初始传输可能需要几个小时。
+
+
+. 检查初始同步的进度：
++
+.. 在 Unified Manager 中，为本地阵列启动 System Manager。
+.. 在 System Manager 中，查看镜像操作的状态。完成镜像后，镜像对的状态为"最佳"。这两个阵列试图通过正常操作保持同步。仅将新的和更改的块从主卷传输到辅助卷。
+
+
+. *可选：*您可以在 System Manager 中更改同步设置。
++
+[NOTE]
+====
+由于同步复制是连续的，因此两个站点之间的复制链路必须提供足够的带宽容量。
+
+====
+

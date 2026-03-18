@@ -1,0 +1,55 @@
+---
+permalink: sm-mirroring/overview-mirroring-async.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, ARVM, asynchronous, mirroring, firmware, 
+summary: 异步镜像功能为本地存储阵列和远程存储阵列之间的数据复制提供了控制器级、基于固件的机制。 
+---
+= 了解 SANtricity 软件中的异步镜像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+异步镜像功能为本地存储阵列和远程存储阵列之间的数据复制提供了控制器级、基于固件的机制。
+
+
+
+== 什么是异步镜像？
+
+_Asynchronous mirroring_ 捕获特定时间点的主卷的状态，并仅复制自上次图像捕获以来已更改的数据。可以立即更新主站点，并在带宽允许的情况下更新辅助站点。当网络资源可用时，信息将被缓存并稍后发送。
+
+异步镜像是基于每个卷创建的，但在组级别进行管理，允许您将不同的远程镜像卷与给定存储阵列上的任何主卷相关联。这种类型的镜像非常适合满足不间断操作的需求，并且一般来说，对于周期性流程来说，网络效率要高得多。
+
+了解详情：
+
+* link:how-asynchronous-mirroring-works.html["异步镜像的工作原理"]
+* link:asynchronous-terminology.html["异步镜像术语"]
+* link:asynchronous-mirror-status.html["异步镜像状态"]
+* link:volume-ownership-sync.html["卷所有权"]
+* link:role-change-of-a-mirror-consistency-group.html["镜像一致性组的角色更改"]
+
+
+
+
+== 如何配置异步镜像？
+
+您必须使用 Unified Manager 界面在阵列之间执行初始镜像配置。配置后，您可以在 System Manager 中管理镜像对和一致性组。
+
+了解详情：
+
+* link:requirements-for-using-asynchronous-mirroring.html["使用异步镜像的要求"]
+* link:workflow-for-mirroring-a-volume-asynchronously.html["异步镜像卷的工作流程"]
+* link:../um-manage/create-asynchronous-mirrored-pair-um.html["创建异步镜像对（在 Unified Manager 中）"]
+
+
+
+
+== 相关信息
+
+详细了解与异步镜像相关的概念：
+
+* link:what-do-i-need-to-know-before-creating-a-mirror-consistency-group.html["创建镜像一致性组之前需要了解的内容"]
+* link:asynchronous-mirroring-what-do-i-need-to-know-before-creating-a-mirrored-pair.html["创建镜像对之前需要了解的内容"]
+* link:how-does-asynchronous-mirroring-differ-from-synchronous-mirroring-async.html["异步镜像与同步镜像的区别"]
+

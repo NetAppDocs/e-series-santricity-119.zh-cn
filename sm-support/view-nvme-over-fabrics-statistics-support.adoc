@@ -1,0 +1,33 @@
+---
+permalink: sm-support/view-nvme-over-fabrics-statistics-support.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, view, nvme, over, fabrics, statistics 
+summary: 您可以查看有关 NVMe over Fabrics 连接到存储阵列的数据。 
+---
+= 在 SANtricity System Manager 中查看 NVMe over Fabrics 统计信息
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看有关 NVMe over Fabrics 连接到存储阵列的数据。
+
+.关于此任务
+System Manager 显示这些类型的 NVMe over Fabrics 统计信息。所有统计信息都是只读的，无法设置。
+
+* *NVMe 子系统统计信息* -- 显示 NVMe 控制器及其队列的统计信息。NVMe 控制器提供主机与存储阵列中的命名空间之间的访问路径。您可以查看连接失败、重置和关闭等项目的 NVMe 子系统统计信息。
+* *RDMA 接口统计* -- 提供 RDMA 接口上所有 NVMe over Fabrics 端口的统计信息，其中包括与每个交换机端口关联的性能统计信息和链路错误信息。此选项卡仅在 NVMe over Fabrics 端口可用时显示。
+
+
+您可以将这些统计数据中的每一个查看为原始统计数据或基线统计数据。原始统计数据是自控制器启动以来收集的所有统计数据。基线统计数据是自您设置基线时间以来收集的时间点统计数据。
+
+.步骤
+. 选择菜单：Support[Support Center > Diagnostics] 选项卡。
+. 选择 *View NVMe over Fabrics Statistics*。
+. 要设置基线，请单击 *Set new baseline*。
++
+设置基线为统计数据的收集设置了一个新的起点。所有 NVMe 统计信息都使用相同的基线。
+
+

@@ -1,0 +1,75 @@
+---
+permalink: sm-mirroring/complete-mirrored-pair-for-primary-volumes-created-on-legacy-system.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, complete, mirrored, pair, volumes, created, legacy, 
+summary: 如果您在无法由 SANtricity System Manager 管理的旧存储阵列上创建了主卷，则可以使用 System Manager 在此阵列上创建辅助卷。 
+---
+= 在 SANtricity System Manager 中为在旧系统上创建的主卷完成镜像对
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您在无法由 SANtricity System Manager 管理的旧存储阵列上创建了主卷，则可以使用 SANtricity System Manager 在此阵列上创建辅助卷。
+
+.关于此任务
+您可以在使用不同接口的传统阵列和可由 System Manager 管理的新阵列之间执行异步镜像。
+
+* 如果要在使用 System Manager 的两个存储阵列之间进行镜像，则可以跳过此任务，因为您已经完成了镜像对创建序列中的镜像对。
+* 在远程存储阵列上执行此任务。
+
+
+.步骤
+. 选择菜单：Storage[Asynchronous Mirroring]。
+. 选择 *Mirrored Pair* 选项卡。
++
+将显示 Mirrored Pairs（镜像对）表，并显示与存储阵列关联的所有镜像对。
+
+. 找到状态为 Incomplete 的镜像对卷，然后单击镜像对列中显示的 *Complete mirrored pair* 链接。
+. 通过选择以下单选按钮之一，选择是自动还是手动完成镜像对创建序列：
++
+** *自动* -- 创建新的辅助卷。
++
+通过选择要在其中创建辅助卷的现有池或卷组，接受镜像对远程端的默认设置。使用此推荐选项可使用默认设置为辅助卷分配保留容量。
+
+** *Manual* -- 选择现有卷。
++
+为辅助卷定义自己的参数。
+
++
+... 单击 *Next* 选择辅助卷。
+... 选择要用作辅助卷的现有卷，然后单击 *Next* 以分配保留容量。
+... 分配预留容量。执行以下操作之一：
++
+**** 接受默认设置。
++
+保留容量的默认设置为基本卷容量的 20%，通常此容量就足够了。
+
+**** 分配您自己的保留容量设置，以满足与异步镜像相关的数据存储需求。
++
+所需的容量因向主卷写入 I/O 的频率和大小以及保留容量所需的时间而异。一般来说，如果存在以下一种或两种情况，请为保留容量选择更大的容量：
+
++
+***** 您打算将镜像对保留很长一段时间。
+***** 由于繁重的 I/O 活动，主卷上的大部分数据块将发生变化。使用历史性能数据或其他操作系统实用程序来帮助您确定主卷的典型 I/O 活动。
+
+
+
+
+
+
+
+
+. 选择 *Complete*。
+
+
+.结果
+System Manager 执行以下操作：
+
+* 在远程存储阵列上创建辅助卷，并为镜像对的远程端分配保留容量。
+* 开始本地存储阵列和远程存储阵列之间的初始同步。
+* 如果正在镜像的卷是精简卷，则在初始同步期间仅将分配的块传输到辅助卷。这种传输会减少必须传输才能完成初始同步的数据量。
+* 在本地存储阵列和远程存储阵列上为镜像对创建保留容量。
+

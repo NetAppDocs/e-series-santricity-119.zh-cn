@@ -1,0 +1,219 @@
+---
+permalink: um-certificates/configure-saml.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, configure, saml, 
+summary: '要为 Access Management 配置身份验证，可以使用存储阵列中嵌入的 Security Assertion Markup Language (SAML) 功能。此配置在 Identity Provider 和 Storage Provider 之间建立连接。' 
+---
+= 在 SANtricity Unified Manager 中配置 SAML
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+要为 Access Management 配置身份验证，可以使用存储阵列中嵌入的 Security Assertion Markup Language (SAML) 功能。此配置在 Identity Provider 和 Storage Provider 之间建立连接。
+
+.开始之前
+* 必须使用包含 Security admin 权限的用户配置文件登录。否则，将不会显示 Access Management 功能。
+* 您必须知道存储阵列中控制器的 IP 地址或域名。
+* IdP 管理员已配置 IdP 系统。
+* IdP 管理员已确保 IdP 支持在身份验证时返回名称 ID 的功能。
+* 管理员已确保 IdP 服务器和控制器时钟同步（通过 NTP 服务器或通过调整控制器时钟设置）。
+* IdP 元数据文件从 IdP 系统下载，可在用于访问 Unified Manager 的本地系统上使用。
+
+
+.关于此任务
+标识提供程序 (IdP) 是一个外部系统，用于向用户请求凭据并确定该用户是否已成功通过身份验证。IdP 可以配置为提供多因素身份验证并使用任何用户数据库，例如 Active Directory。您的安全团队负责维护 IdP。服务提供商 (SP) 是控制用户身份验证和访问的系统。使用 SAML 配置访问管理时，存储阵列充当向身份提供程序请求身份验证的服务提供程序。要在 IdP 和存储阵列之间建立连接，请在这两个实体之间共享元数据文件。接下来，将 IdP 用户实体映射到存储阵列角色。最后，在启用 SAML 之前测试连接和 SSO 登录。
+
+[NOTE]
+====
+*SAML 和 Directory Services*。如果在将 Directory Services 配置为身份验证方法时启用 SAML，则 SAML 将取代 Unified Manager 中的 Directory Services。如果稍后禁用 SAML，Directory Services 配置将返回到以前的配置。
+
+====
+[CAUTION]
+====
+*编辑和禁用。*启用 SAML 后，您_不能_通过用户界面禁用它，也不能编辑 IdP 设置。如果需要禁用或编辑 SAML 配置，请联系技术支持以获得帮助。
+
+====
+配置 SAML 身份验证是一个多步骤过程。
+
+
+
+== 步骤 1：上传 IdP 元数据文件
+
+要向存储阵列提供 IdP 连接信息，请将 IdP 元数据导入 Unified Manager。IdP 系统需要此元数据才能将身份验证请求重定向到正确的 URL 并验证收到的响应。
+
+.步骤
+. 选择菜单：Settings[Access Management]。
+. 选择 *SAML* 选项卡。
++
+该页面显示了配置步骤的概述。
+
+. 单击 *Import Identity Provider (IdP) file* 链接。
++
+此时将打开导入身份提供程序文件对话框。
+
+. 单击 *Browse* 以选择并上传您复制到本地系统的 IdP 元数据文件。
++
+选择文件后，将显示 IdP 实体 ID。
+
+. 单击 *Import*。
+
+
+
+
+== 步骤 2：导出服务提供程序文件
+
+若要在 IdP 和存储阵列之间建立信任关系，请将 Service Provider 元数据导入 IdP。IdP 需要此元数据来与控制器建立信任关系并处理授权请求。该文件包括控制器域名或 IP 地址等信息，以便 IdP 可以与 Service Provider 进行通信。
+
+.步骤
+. 单击 *Export Service Provider files* 链接。
++
+此时将打开 Export Service Provider Files 对话框。
+
+. 在 *控制器 A* 字段中输入控制器 IP 地址或 DNS 名称，然后单击 *导出* 以将元数据文件保存到您的本地系统。
++
+单击 *导出* 后，服务提供商元数据将下载到您的本地系统。记下文件的存储位置。
+
+. 从本地系统中，找到您导出的 XML 格式的 Service Provider 元数据文件。
+. 从 IdP 服务器导入 Service Provider 元数据文件以建立信任关系。您可以直接导入文件，也可以从文件中手动输入控制器信息。
+
+
+
+
+== 步骤 3：映射角色
+
+要向用户提供对 Unified Manager 的授权和访问权限，必须将 IdP 用户属性和组成员身份映射到存储阵列的预定义角色。
+
+.开始之前
+* IdP 管理员在 IdP 系统中配置了用户属性和组成员身份。
+* IdP 元数据文件已导入到 Unified Manager。
+* 控制器的 Service Provider 元数据文件被导入到 IdP 系统中以用于信任关系。
+
+
+.步骤
+. 单击*映射 Unified Manager* 角色的链接。
++
+此时将打开角色映射对话框。
+
+. 将 IdP 用户属性和组分配给预定义的角色。一个组可以有多个分配的角色。
++
+.字段详细信息
+[%collapsible]
+====
+[cols="25h,~"]
+|===
+| 设置 | 说明 
+
+
+ a| 
+*映射*
+
+
+
+ a| 
+用户属性
+ a| 
+为要映射的 SAML 组指定属性（例如"成员"）。
+
+
+
+ a| 
+属性值
+ a| 
+指定要映射的组的属性值。支持正则表达式。如果这些特殊正则表达式字符不是正则表达式模式的一部分，则必须使用反斜杠(`\`转义：\.[]{}()<>*+-=!?^$|
+
+
+
+ a| 
+角色
+ a| 
+在字段中单击，然后选择要映射到属性的存储阵列的一个角色。您必须单独选择要包含的每个角色。要登录到 Unified Manager，需要与其他角色一起使用监视器角色。至少一个组也需要安全管理员角色。
+
+映射的角色包括以下权限：
+
+** *Storage admin* -- 对存储对象（例如卷和磁盘池）的完全读/写访问权限，但不能访问安全配置。
+** *安全管理员* -- 访问 Access Management 中的安全配置、证书管理、审核日志管理，以及打开或关闭旧版管理界面 (SYMbol) 的能力。
+** *Support admin* -- 访问存储阵列上的所有硬件资源、故障数据、MEL 事件和控制器固件升级。无法访问存储对象或安全配置。
+** *Monitor* -- 对所有存储对象的只读访问，但无法访问安全配置。
+
+
+|===
+====
++
+[NOTE]
+====
+所有用户（包括管理员）都需要监视器角色。如果没有监视器角色，Unified Manager 将无法为任何用户正常运行。
+
+====
+. 如果需要，单击 *Add another mapping* 以输入更多组到角色的映射。
++
+[NOTE]
+====
+启用 SAML 后，可以修改角色映射。
+
+====
+. 完成映射后，单击 *Save*。
+
+
+
+
+== 步骤 4：测试 SSO 登录
+
+为了确保 IdP 系统和存储阵列可以通信，您可以选择测试 SSO 登录。此测试也在启用 SAML 的最后一步中执行。
+
+.开始之前
+* IdP 元数据文件已导入到 Unified Manager。
+* 控制器的 Service Provider 元数据文件被导入到 IdP 系统中以用于信任关系。
+
+
+.步骤
+. 选择 *Test SSO Login* 链接。
++
+此时将打开一个用于输入 SSO 凭据的对话框。
+
+. 输入具有 Security Admin 权限和 Monitor 权限的用户的登录凭据。
++
+系统测试登录时将打开一个对话框。
+
+. 查找"测试成功"消息。如果测试成功完成，请转到下一步以启用 SAML。
++
+如果测试未成功完成，则会显示一条错误消息，其中包含更多信息。请确保：
+
++
+** 该用户属于具有 Security Admin 和 Monitor 权限的组。
+** 您为 IdP 服务器上传的元数据正确。
+** SP 元数据文件中的控制器地址正确。
+
+
+
+
+
+
+== 步骤 5：启用 SAML
+
+最后一步是完成用户身份验证的 SAML 配置。在此过程中，系统还会提示您测试 SSO 登录。上一步描述了 SSO 登录测试流程。
+
+.开始之前
+* IdP 元数据文件已导入到 Unified Manager。
+* 控制器的 Service Provider 元数据文件被导入到 IdP 系统中以用于信任关系。
+* 至少配置了一个 Monitor 和一个 Security Admin 角色映射。
+
+
+[CAUTION]
+====
+*编辑和禁用。*启用 SAML 后，您_不能_通过用户界面禁用它，也不能编辑 IdP 设置。如果需要禁用或编辑 SAML 配置，请联系技术支持以获得帮助。
+
+====
+.步骤
+. 从 *SAML* 选项卡中，选择 *Enable SAML* 链接。
++
+此时将打开确认启用 SAML 对话框。
+
+. 键入 `enable`，然后单击 *Enable*。
+. 输入 SSO 登录测试的用户凭据。
+
+
+.结果
+系统启用 SAML 后，将终止所有活动会话，并开始通过 SAML 对用户进行身份验证。

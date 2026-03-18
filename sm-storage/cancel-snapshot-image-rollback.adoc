@@ -1,0 +1,43 @@
+---
+permalink: sm-storage/cancel-snapshot-image-rollback.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, cancel, snapshot, image, rollback 
+summary: 您可以取消正在进行的活动回滚（正在复制数据）、挂起的回滚（在等待启动资源的挂起队列中）或由于错误而暂停的回滚。 
+---
+= 在 SANtricity System Manager 中取消快照映像回滚
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以取消正在进行的活动回滚（正在复制数据）、挂起的回滚（在等待启动资源的挂起队列中）或由于错误而暂停的回滚。
+
+.关于此任务
+当您取消正在执行的回滚操作时，基本卷将恢复到不可用状态并显示为失败。因此，仅当存在恢复基本卷内容的恢复选项时，才考虑取消回滚操作。
+
+[NOTE]
+====
+如果快照映像所在的快照组有一个或多个已自动清除的快照映像，则用于回滚操作的快照映像可能无法用于将来的回滚。
+
+====
+.步骤
+. 选择菜单：Storage[Snapshots]。
+. 单击 *Snapshot Images* 选项卡。
+. 选择活动或暂停的回滚，然后选择菜单：Rollback[Cancel]。
++
+此时将显示确认取消回滚对话框。
+
+. 单击 *是* 确认。
+
+
+.结果
+System Manager 停止回滚操作。基本卷可用，但可能存在不一致或不完整的数据。
+
+.完成后
+取消回滚操作后，必须采取以下操作之一：
+
+* 重新初始化基本卷的内容。
+* 执行新的回滚操作，使用在取消回滚操作中使用的相同快照映像或不同的快照映像来还原基本卷。
+

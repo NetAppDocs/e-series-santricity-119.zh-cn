@@ -1,0 +1,49 @@
+---
+permalink: sm-settings/set-automatic-load-balancing.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, set, automatic, load, balancing, 
+summary: 自动负载平衡功能可确保来自主机的传入 I/O 流量在两个控制器之间进行动态管理和平衡。默认情况下，此功能处于启用状态，但您可以从 System Manager 中禁用它。 
+---
+= 在 SANtricity System Manager 中设置自动负载平衡
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+自动负载平衡功能可确保来自主机的传入 I/O 流量在两个控制器之间进行动态管理和平衡。默认情况下，此功能处于启用状态，但您可以从 SANtricity System Manager 中禁用它。
+
+.关于此任务
+启用自动负载平衡后，它执行以下功能：
+
+* 自动监控和平衡控制器资源利用率。
+* 在需要时自动调整卷控制器所有权，从而优化主机和存储阵列之间的 I/O 带宽。
+
+
+您可能希望在存储阵列上禁用 Automatic Load Balancing，原因如下：
+
+* 您不希望自动更改特定卷的控制器所有权以平衡工作负载。
+* 您正在高度调节的环境中运行，其中有目的地设置负载分布，以实现控制器之间的特定分布。
+
+
+.步骤
+. 选择菜单：Settings[System]。
+. 向下滚动到 *Additional Settings*，然后单击 *Enable/Disable Automatic Load Balancing*。
++
+此选项下方的文本指示该功能当前是已启用还是已禁用。
+
++
+此时将打开一个确认对话框。
+
+. 单击 *是* 确认以继续。
++
+通过选择此选项，您可以在启用/禁用之间切换功能。
+
++
+[NOTE]
+====
+如果此功能从已禁用移至已启用，则也会自动启用 Host Connectivity Reporting 功能。
+
+====
+

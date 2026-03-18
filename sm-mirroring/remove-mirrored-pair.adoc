@@ -1,0 +1,41 @@
+---
+permalink: sm-mirroring/remove-mirrored-pair.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, remove, asynchronous, mirror, relationship, 
+summary: 删除镜像对可从本地存储阵列上的主卷和远程存储阵列上的辅助卷中删除镜像关系。 
+---
+= 在 SANtricity System Manager 中删除异步镜像关系
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+删除镜像对可从本地存储阵列上的主卷和远程存储阵列上的辅助卷中删除镜像关系。
+
+.关于此任务
+查看有关孤立镜像对的以下信息：
+
+* 当一致性镜像组中的成员卷在一侧（本地存储阵列侧或远程存储阵列侧）已被删除但在另一侧未被删除时，就会存在孤立的镜像对。
+* 当恢复阵列间通信且镜像配置的两侧协调镜像参数时，会检测到孤立的镜像对。
+* 您可以删除镜像对以更正孤立的镜像对状态。
+
+
+.步骤
+. 选择菜单：Storage[Asynchronous Mirroring]。
+. 选择 *Mirrored Pair* 选项卡。
++
+将显示 Mirrored Pairs（镜像对）表，并显示与存储阵列关联的所有镜像对。
+
+. 选择要删除的镜像对，然后单击 *删除*。
+. 确认要删除镜像对，然后单击 *Remove*。
+
+
+.结果
+System Manager 执行以下操作：
+
+* 从本地存储阵列和远程存储阵列上的镜像一致性组中删除镜像关系，并删除保留容量。
+* 将主卷和辅助卷返回到主机可访问的非镜像卷。
+* 通过删除异步镜像对来更新 Asynchronous Mirroring 磁贴。
+

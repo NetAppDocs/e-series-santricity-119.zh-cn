@@ -1,0 +1,59 @@
+---
+permalink: sm-storage/initialize-volumes.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, initialize, volumes 
+summary: 卷在首次创建时会自动初始化。但是，Recovery Guru 可能会建议您手动初始化卷以从某些故障条件下恢复。仅在技术支持指导下使用此选项。您可以选择一个或多个要初始化的卷。 
+---
+= 在 SANtricity System Manager 中初始化卷
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+卷在首次创建时会自动初始化。但是，Recovery Guru 可能会建议您手动初始化卷以从某些故障条件下恢复。仅在技术支持指导下使用此选项。您可以选择一个或多个要初始化的卷。
+
+.开始之前
+* 所有 I/O 操作已停止。
+* 必须卸载要初始化的卷上的任何设备或文件系统。
+* 卷处于 Optimal 状态，卷上没有正在进行的修改操作。
+
+
+[CAUTION]
+====
+操作开始后无法取消。所有卷数据都被擦除。请勿尝试此操作，除非 Recovery Guru 建议您这样做。在开始此过程之前，请联系技术支持。
+
+====
+.关于此任务
+初始化卷时，卷将保留其 WWN、主机分配、分配的容量和保留的容量设置。它还保留相同的数据保障 (DA) 设置和安全设置。
+
+以下类型的卷_无法_初始化：
+
+* 快照卷的基本卷
+* 镜像关系中的主卷
+* 镜像关系中的辅助卷
+* 卷副本中的源卷
+* 卷副本中的目标卷
+* 正在执行初始化的卷
+
+
+本主题仅适用于从池或卷组创建的标准卷。
+
+.步骤
+. 选择菜单：Storage[Volumes]。
+. 选择任何卷，然后选择菜单：More[Initialize volumes]。
++
+此时将显示"初始化卷"对话框。此对话框中将显示存储阵列上的所有卷。
+
+. 选择要初始化的一个或多个卷，并确认要执行此操作。
+
+
+.结果
+System Manager 执行以下操作：
+
+* 擦除已初始化卷的所有数据。
+* 清除块索引，这会导致未写入的块被读取，就好像它们是零填充的（卷看起来完全为空）。
+
+
+选择菜单：Home[View Operations in Progress] 以查看当前为所选卷运行的初始化操作的进度。此操作可能很长，并可能影响系统性能。

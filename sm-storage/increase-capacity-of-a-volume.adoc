@@ -1,0 +1,58 @@
+---
+permalink: sm-storage/increase-capacity-of-a-volume.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, increase, capacity, volume 
+summary: 您可以使用池或卷组中的可用容量来增加卷的报告容量（报告给主机的容量）。 
+---
+= 在 SANtricity System Manager 中增加卷的容量
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用池或卷组中的可用容量来增加卷的报告容量（报告给主机的容量）。
+
+.开始之前
+* 卷的关联池或卷组中有足够的可用容量。
+* 此卷为 Optimal，未处于任何修改状态。
+* 对于薄卷，尚未达到 256 TiB 的最大报告容量。
+* 卷中没有正在使用的热备盘驱动器。（仅适用于卷组中的卷。）
+
+
+
+NOTE: 一次最多只能将卷容量扩展到 128 TiB。
+
+.关于此任务
+请记住，您将来可能对此池或卷组中的其他卷有任何容量要求。确保您有足够的可用容量来创建快照映像、快照卷或远程镜像。
+
+[NOTE]
+====
+仅在某些操作系统上支持增加卷的容量。如果在不受支持的主机操作系统上增加卷容量，则扩展的容量将无法使用，并且无法恢复原始卷容量。
+
+====
+.步骤
+. 选择菜单：Storage[Volumes]。
+. 选择要增加容量的卷，然后选择 *增加容量*。
++
+此时将显示确认增加容量对话框。
+
+. 选择 *是* 以继续。
++
+此时将显示"增加报告容量"对话框。
+
++
+此对话框显示卷的当前报告容量和卷的关联池或卷组中的可用容量。
+
+. 使用*通过添加...增加报告容量*框以向当前可用报告容量添加容量。您可以更改以 mebibytes (MiB)、gibibytes (GiB) 或 tebibytes (TiB) 显示的容量值。
+. 单击 *Increase*。
+
+
+.结果
+* System Manager 根据您的选择增加卷的容量。
+* 选择菜单：Home[View Operations in Progress] 以查看当前为所选卷运行的增加容量操作的进度。此操作可能很长，并可能影响系统性能。
+
+
+.完成后
+扩展卷容量后，您必须手动增加文件系统大小以匹配。如何执行此操作取决于您正在使用的文件系统。有关详细信息，请参阅您的主机操作系统文档。

@@ -1,0 +1,64 @@
+---
+permalink: sm-hardware/unlock-or-reset-a-locked-nvme-drive.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, unlock, reset, locked, fips, nvme, drives, 
+summary: '如果将一个或多个锁定的 NVMe 或 FIPS 驱动器插入存储阵列，则可以通过添加与驱动器关联的安全密钥文件来解锁驱动器数据。如果您没有安全密钥，则可以通过输入其 Physical Security ID (PSID) 来对每个锁定驱动器执行重置，以重置其安全属性并擦除驱动器数据。' 
+---
+= 在 SANtricity System Manager 中解锁或重置锁定的 NVMe 或 FIPS 驱动器
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果将一个或多个锁定的 NVMe 或 FIPS 驱动器插入存储阵列，则可以通过添加与驱动器关联的安全密钥文件来解锁驱动器数据。如果您没有安全密钥，则可以通过输入其 Physical Security ID (PSID) 来对每个锁定驱动器执行重置，以重置其安全属性并擦除驱动器数据。
+
+.开始之前
+* 对于"解锁"选项，请确保在管理客户端（使用浏览器访问 System Manager 的系统）上提供安全密钥文件（扩展名为 `.slk`）。您还必须知道与密钥相关的密码短语。
+* 对于重置选项，您必须在要重置的每个驱动器上找到 PSID。要查找 PSID，请实际移除驱动器，并在驱动器标签上找到 PSID 字符串（最多 32 个字符），然后重新安装驱动器。
+
+
+.关于此任务
+此任务介绍如何通过将安全密钥文件导入存储阵列来解锁 NVMe 或 FIPS 驱动器中的数据。对于安全密钥不可用的情况，此任务还描述了如何对锁定的驱动器执行重置。
+
+[NOTE]
+====
+如果使用外部密钥管理服务器锁定驱动器，请在 System Manager 中选择菜单：Settings[System > Security key management] 以配置外部密钥管理并解锁驱动器。
+
+====
+您可以从硬件页面或菜单访问解锁功能：Settings[System > Security key management]。下面的任务提供了硬件页面的说明。
+
+.步骤
+. 选择 *Hardware*。
+. 如果图形显示控制器，请单击 *Drives* 选项卡。
++
+图形更改为显示驱动器而不是控制器。
+
+. 选择要解锁或重置的 NVMe 或 FIPS 驱动器。
++
+驱动器的上下文菜单打开。
+
+. 选择 *Unlock* 应用安全密钥文件，如果没有安全密钥文件，则选择 *Reset*。
++
+仅当您选择锁定的 NVMe 或 FIPS 驱动器时，才会显示这些选项。
+
++
+[CAUTION]
+====
+在重置操作期间，所有数据都将被擦除。仅当您没有安全密钥时才执行重置。重置锁定的驱动器将永久删除驱动器上的所有数据，并将其安全属性重置为"支持安全"，但未启用。*此操作不可逆。*
+
+====
+. 执行以下操作之一：
++
+.. *解锁*：在 *解锁安全驱动器* 对话框中，单击 *浏览*，然后选择与要解锁的驱动器对应的安全密钥文件。接下来，输入密码，然后单击 *解锁*。
+.. *重置*：在 *重置锁定驱动器* 对话框中，在字段中输入 PSID 字符串，然后键入 `RESET`以确认。单击 *重置*。
++
+对于解锁操作，只需执行一次此操作即可解锁所有 NVMe 或 FIPS 驱动器。对于重置操作，必须单独选择要重置的每个驱动器。
+
+
+
+
+
+.结果
+驱动器现在可以在另一个卷组或磁盘池或另一个存储阵列中使用。

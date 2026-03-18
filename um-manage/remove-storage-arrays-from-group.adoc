@@ -1,0 +1,24 @@
+---
+permalink: um-manage/remove-storage-arrays-from-group.html 
+sidebar: sidebar 
+keywords: SANtricity, Unified Manager, E-Series, remove, storage, arrays, group 
+summary: 如果不想再从特定存储组进行管理，则可以从组中删除一个或多个托管存储阵列。 
+---
+= 从 SANtricity Unified Manager 中的组中删除存储阵列
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果不想再从特定存储组进行管理，则可以从组中删除一个或多个托管存储阵列。
+
+.关于此任务
+从组中删除存储阵列不会以任何方式影响存储阵列或其数据。如果您的存储阵列由 System Manager 管理，您仍然可以使用浏览器管理它。如果存储阵列意外从组中删除，可以再次添加它。
+
+.步骤
+. 在"管理"页面中，选择菜单：管理组 [从组中删除存储阵列]。
+. 从下拉列表中，选择包含要删除的存储阵列的组，然后单击要从组中删除的每个存储阵列旁边的复选框。
+. 单击 *Remove*。
+

@@ -1,0 +1,45 @@
+---
+permalink: sm-settings/enable-certificate-revocation-checking.html 
+sidebar: sidebar 
+keywords: SANtricity, System Manager, E-Series, enable, certificate, revocation checking, 
+summary: '您可以启用已吊销证书的自动检查，以便 Online Certificate Status Protocol (OCSP) 服务器阻止用户进行非安全连接。' 
+---
+= 在 SANtricity System Manager 中启用证书吊销检查
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以启用已吊销证书的自动检查，以便 Online Certificate Status Protocol (OCSP) 服务器阻止用户进行非安全连接。
+
+.开始之前
+* 必须使用包含 Security admin 权限的用户配置文件登录。否则，不会显示证书功能。
+* 两个控制器上都配置了 DNS 服务器，这使得 OCSP 服务器可以使用完全限定的域名。此任务可从硬件页面获得。
+* 如果要指定自己的 OCSP 服务器，则必须知道该服务器的 URL。
+
+
+.关于此任务
+在 CA 颁发证书不当或私钥泄露的情况下，自动吊销检查非常有用。
+
+在此任务期间，您可以配置 OCSP 服务器或使用证书文件中指定的服务器。OCSP 服务器确定 CA 是否在其计划到期日期之前吊销了任何证书，然后如果证书被吊销，则阻止用户访问站点。
+
+.步骤
+. 选择菜单：Settings[Certificates]。
+. 选择 *Trusted* 选项卡。
++
+[NOTE]
+====
+您还可以从 *Key Management* 选项卡启用吊销检查。
+
+====
+. 单击 *Uncommon Tasks*，然后从下拉菜单中选择 *Enable Revocation Checking*。
+. 选择 *I want to enable revocation checking*，以便在复选框中显示复选标记，并在对话框中显示其他字段。
+. 在 *OCSP responder address* 字段中，您可以选择输入 OCSP responder 服务器的 URL。如果您不输入地址，系统将使用证书文件中 OCSP 服务器的 URL。
+. 单击 *Test Address* 以确保系统可以打开与指定 URL 的连接。
+. 单击 *Save*。
+
+
+.结果
+如果存储阵列尝试连接到具有已吊销证书的服务器，则连接将被拒绝并记录事件。
