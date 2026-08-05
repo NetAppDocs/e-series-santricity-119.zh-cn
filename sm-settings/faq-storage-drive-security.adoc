@@ -16,6 +16,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-do-i-need-to-know-before-creating-a-security-key]]
 == 在创建安全密钥之前，我需要知道什么？
 
 安全密钥由存储阵列中的控制器和启用安全功能的驱动器共享。如果从存储阵列中删除了启用安全的驱动器，安全密钥将保护数据免受未经授权的访问。
@@ -28,6 +29,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[internal-key-management]]
 === 内部密钥管理
 
 内部密钥得到维护，并"隐藏"在控制器永久内存上的不可访问位置。在创建内部安全密钥之前，您必须执行以下操作：
@@ -40,6 +42,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[external-key-management]]
 === 外部密钥管理
 
 外部密钥使用密钥管理互操作性协议 (KMIP) 维护在单独的密钥管理服务器上。在创建外部安全密钥之前，必须执行以下操作：
@@ -60,12 +63,14 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[why-do-i-need-to-define-a-pass-phrase]]
 == 为什么需要定义密码短语？
 
 密码短语用于对存储在本地管理客户端上的安全密钥文件进行加密和解密。如果没有密码短语，安全密钥将无法解密，并且在重新安装到另一个存储阵列中时无法用于从启用安全的驱动器解锁数据。
 
 
 
+[[why-is-it-important-to-record-security-key-information]]
 == 为什么记录安全密钥信息很重要？
 
 如果丢失安全密钥信息且没有备份，则可能会在重新定位启用安全的驱动器或升级控制器时丢失数据。您需要安全密钥才能解锁驱动器上的数据。
@@ -74,6 +79,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-do-i-need-to-know-before-backing-up-a-security-key]]
 == 在备份安全密钥之前，我需要知道什么？
 
 如果您的原始安全密钥已损坏，并且您没有备份，则如果驱动器从一个存储阵列迁移到另一个存储阵列，您将失去对驱动器上数据的访问权限。
@@ -99,6 +105,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-do-i-need-to-know-before-unlocking-secure-drives]]
 == 解锁安全驱动器之前，我需要了解哪些信息？
 
 要从启用安全的驱动器解锁数据，您必须导入其安全密钥。
@@ -113,6 +120,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-is-readwrite-accessibility]]
 == 什么是读/写可访问性？
 
 Drive Settings 窗口包含有关 Drive Security 属性的信息。"Read/Write Accessible"是驱动器数据已锁定时显示的属性之一。
@@ -121,6 +129,7 @@ Drive Settings 窗口包含有关 Drive Security 属性的信息。"Read/Write A
 
 
 
+[[what-do-i-need-to-know-about-validating-the-security-key]]
 == 关于验证安全密钥，我需要了解哪些信息？
 
 创建安全密钥后，应验证密钥文件，以确保其未损坏。
@@ -134,6 +143,7 @@ Drive Settings 窗口包含有关 Drive Security 属性的信息。"Read/Write A
 
 
 
+[[what-is-the-difference-between-internal-security-key-and-external-security-key-management]]
 == 内部安全密钥和外部安全密钥管理有什么区别？
 
 当您实施 Drive Security 功能时，可以使用内部安全密钥或外部安全密钥在从存储阵列中移除启用安全的驱动器时锁定数据。

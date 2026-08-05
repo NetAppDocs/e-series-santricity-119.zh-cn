@@ -15,6 +15,7 @@ summary: 异步镜像功能为本地存储阵列和远程存储阵列之间的�
 
 
 
+[[what-is-asynchronous-mirroring]]
 == 什么是异步镜像？
 
 _Asynchronous mirroring_ 捕获特定时间点的主卷的状态，并仅复制自上次图像捕获以来已更改的数据。可以立即更新主站点，并在带宽允许的情况下更新辅助站点。当网络资源可用时，信息将被缓存并稍后发送。
@@ -32,6 +33,7 @@ _Asynchronous mirroring_ 捕获特定时间点的主卷的状态，并仅复制�
 
 
 
+[[how-do-i-configure-asynchronous-mirroring]]
 == 如何配置异步镜像？
 
 您必须使用 Unified Manager 界面在阵列之间执行初始镜像配置。配置后，您可以在 System Manager 中管理镜像对和一致性组。
@@ -45,6 +47,7 @@ _Asynchronous mirroring_ 捕获特定时间点的主卷的状态，并仅复制�
 
 
 
+[[related-information]]
 == 相关信息
 
 详细了解与异步镜像相关的概念：

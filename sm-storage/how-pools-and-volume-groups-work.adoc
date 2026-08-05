@@ -36,6 +36,7 @@ image::../media/sam1130-dwg-volumes-drive-structure-pools-and-volume-groups.gif[
 
 
 
+[[pools]]
 == 池
 
 池旨在将物理硬盘驱动器聚合到大型存储空间中，并为其提供增强的 RAID 保护。池根据分配给池的驱动器总数创建多个虚拟 RAID 集，并在所有参与的驱动器之间均匀分布数据。如果驱动器丢失或添加，System Manager 会在所有活动驱动器上动态重新平衡数据。
@@ -44,12 +45,14 @@ image::../media/sam1130-dwg-volumes-drive-structure-pools-and-volume-groups.gif[
 
 
 
+[[drive-matching]]
 === 驱动器匹配
 
 您可以从 HDD 或 SSD 中选择在池中使用；但是，与卷组一样，池中的所有驱动器都必须使用相同的技术。控制器会自动选择要包含的驱动器，因此您必须确保您有足够数量的驱动器用于您选择的技术。
 
 
 
+[[managing-failed-drives]]
 === 管理故障驱动器
 
 池的最小容量为 11 个驱动器；但是，在发生驱动器故障时，会为备用容量保留一个驱动器的容量。这种备用容量称为"`preservation capacity`"。
@@ -60,6 +63,7 @@ image::../media/sam1130-dwg-volumes-drive-structure-pools-and-volume-groups.gif[
 
 
 
+[[volume-groups]]
 == 卷组
 
 卷组定义如何在存储系统中将容量分配给卷。磁盘驱动器被组织成 RAID 组，卷驻留在 RAID 组中的驱动器上。因此，卷组配置设置确定哪些驱动器属于该组以及使用什么 RAID 级别。
@@ -68,6 +72,7 @@ image::../media/sam1130-dwg-volumes-drive-structure-pools-and-volume-groups.gif[
 
 
 
+[[drive-matching]]
 === 驱动器匹配
 
 您必须匹配卷组中驱动器的大小和性能。如果卷组中有较小和较大的驱动器，则所有驱动器都将被识别为最小容量大小。如果卷组中有较慢和较快的驱动器，则会以最慢的速度识别所有驱动器。这些因素会影响存储系统的性能和整体容量。
@@ -76,6 +81,7 @@ image::../media/sam1130-dwg-volumes-drive-structure-pools-and-volume-groups.gif[
 
 
 
+[[managing-failed-drives]]
 === 管理故障驱动器
 
 卷组使用热备盘驱动器作为备用，以防卷组中包含的 RAID 1/10、RAID 3、RAID 5 或 RAID 6 卷中的驱动器出现故障。热备盘驱动器不包含任何数据，并为存储阵列添加另一个级别的冗余。

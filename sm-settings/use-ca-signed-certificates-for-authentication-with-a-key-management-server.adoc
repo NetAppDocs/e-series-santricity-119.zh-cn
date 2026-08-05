@@ -22,6 +22,7 @@ summary: 为了在密钥管理服务器和存储阵列控制器之间进行安�
 
 
 
+[[step-1-complete-and-submit-csr-for-authentication-with-a-key-management-server]]
 == 步骤 1：完成并提交 CSR 以通过密钥管理服务器进行身份验证
 
 您必须首先生成证书签名请求 (CSR) 文件，然后使用 CSR 从密钥管理服务器信任的证书颁发机构 (CA) 请求签名的客户端证书。您还可以使用下载的 CSR 文件从密钥管理服务器创建和下载客户端证书。客户端证书验证存储阵列的控制器，以便密钥管理服务器可以信任其 Key Management Interoperability Protocol (KMIP) 请求。
@@ -56,6 +57,7 @@ NOTE: 密钥管理服务器通常具有直接生成签名证书的设施，因�
 
 
 
+[[step-2-import-certificates-for-the-key-management-server]]
 == 步骤 2：导入密钥管理服务器的证书
 
 下一步是导入证书，以便在存储阵列和密钥管理服务器之间进行身份验证。有两种类型的证书：客户端证书验证存储阵列的控制器，而密钥管理服务器证书验证服务器。必须同时加载控制器的客户端证书文件和密钥管理服务器的服务器证书文件。

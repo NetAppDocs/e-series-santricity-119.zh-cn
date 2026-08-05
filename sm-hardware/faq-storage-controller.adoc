@@ -16,6 +16,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-is-auto-negotiation]]
 == 什么是自动协商？
 
 自动协商是网络接口与另一个网络接口自动协调其自身连接参数（速度和双工）的能力。
@@ -29,6 +30,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 ====
 
 
+[[what-is-ipv6-stateless-address-auto-configuration]]
 == 什么是 IPv6 无状态地址自动配置？
 
 使用无状态自动配置，主机不会从服务器获取地址和其他配置信息。
@@ -49,12 +51,14 @@ IPv6 中的无状态自动配置具有链路本地地址、多播和邻居发现
 
 
 
+[[which-do-i-choose-dhcp-or-manual-configuration]]
 == 我应该选择哪一个— DHCP 或手动配置？
 
 网络配置的默认方法是 Dynamic Host Configuration Protocol (DHCP)。除非您的网络没有 DHCP 服务器，否则始终使用此选项。
 
 
 
+[[what-is-a-dhcp-server]]
 == 什么是 DHCP 服务器？
 
 动态主机配置协议 (DHCP) 是一种自动分配互联网协议 (IP) 地址的协议。
@@ -65,6 +69,7 @@ IPv6 中的无状态自动配置具有链路本地地址、多播和邻居发现
 
 
 
+[[how-do-i-configure-my-dhcp-server]]
 == 如何配置我的 DHCP 服务器？
 
 必须将动态主机配置协议 (DHCP) 服务器配置为对存储阵列中的控制器使用静态 Internet 协议 (IP) 地址。
@@ -75,6 +80,7 @@ DHCP 服务器分配的 IP 地址通常是动态的，并且可以更改，因�
 
 
 
+[[why-do-i-need-to-change-the-controller-network-configuration]]
 == 为什么需要更改控制器网络配置？
 
 使用带外管理时，必须为每个控制器设置网络配置（其 Internet Protocol (IP) 地址、子网掩码（子网掩码）和网关）。
@@ -83,6 +89,7 @@ DHCP 服务器分配的 IP 地址通常是动态的，并且可以更改，因�
 
 
 
+[[where-do-i-get-the-network-configuration]]
 == 从何处获取网络配置？
 
 您可以从网络管理员处获取 Internet Protocol (IP) 地址、子网掩码 (subnet mask) 和网关信息。
@@ -91,6 +98,7 @@ DHCP 服务器分配的 IP 地址通常是动态的，并且可以更改，因�
 
 
 
+[[what-are-icmp-ping-responses]]
 == 什么是 ICMP PING 响应？
 
 互联网控制消息协议 (ICMP) 是 TCP/IP 套件的协议之一。
@@ -99,6 +107,7 @@ DHCP 服务器分配的 IP 地址通常是动态的，并且可以更改，因�
 
 
 
+[[when-should-i-refresh-the-port-configuration]]
 == 何时应刷新端口配置？
 
 在修改或升级服务器时刷新 DHCP 服务器，并且与要使用的当前存储阵列和存储阵列相关的 DHCP 信息已更改。
@@ -112,6 +121,7 @@ DHCP 服务器分配的 IP 地址通常是动态的，并且可以更改，因�
 ====
 
 
+[[what-should-i-do-after-configuring-the-management-ports]]
 == 配置管理端口后我该怎么做？
 
 如果更改了存储阵列的 IP 地址，则可能需要在 SANtricity Unified Manager 中更新全局阵列视图。
@@ -122,6 +132,7 @@ DHCP 服务器分配的 IP 地址通常是动态的，并且可以更改，因�
 
 
 
+[[why-is-the-storage-system-in-non-optimal-mode]]
 == 为什么存储系统处于非优化模式？
 
 处于非最佳模式的存储系统是由于系统配置状态无效所致。尽管存在此状态，但完全支持对现有卷的正常 I/O 访问；但是，SANtricity System Manager 将禁止某些操作。

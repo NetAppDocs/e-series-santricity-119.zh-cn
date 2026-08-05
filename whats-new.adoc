@@ -16,18 +16,44 @@ summary: SANtricity 操作系统中的新功能。
 
 
 
+[[new-features-in-version-11-90r6]]
+== 版本 11.90R6 中的新增功能
+
+[cols="35h,~"]
+|===
+| 新功能 | 说明 
+
+
+ a| 
+更新了IOM/DCM固件版本支持
+ a| 
+现在支持以下 IOM/DCM 型号的新 IOM/DCM 固件版本：
+
+* IOM12A - v0412
+* IOM12B - v0212
+* IOM12C - v0112
+* IOM12G - v0212
+* DCM3 - v01.12.09.02
+
+
+|===
+
+
+[[new-features-in-version-11-90r5]]
 == 版本 11.90R5 中的新增功能
 
 此版本仅包含缺陷修复，不包含新功能。有关此版本中更改的更多信息，请参见 E-Series SANtricity 操作系统 11.90R5 README。
 
 
 
+[[new-features-in-version-11-90r4]]
 == 版本 11.90R4 中的新增功能
 
 此版本仅包含小的更改，没有新功能。有关此版本中更改的更多信息，请参见 E-Series SANtricity 操作系统 11.90R4 README。
 
 
 
+[[new-features-in-version-11-90r3]]
 == 版本 11.90R3 中的新增功能
 
 [cols="35h,~"]
@@ -43,12 +69,14 @@ SANtricity 操作系统支持 IOM12C 和 DCM3
 |===
 
 
+[[new-features-in-version-11-90r2]]
 == 版本 11.90R2 中的新增功能
 
 此版本仅包含小的更改，没有新功能。有关此版本中更改的更多信息，请参见  https://library.netapp.com/ecm/ecm_download_file/ECMLP3334464["E-Series 11.90 发行说明"^]。
 
 
 
+[[new-features-in-version-11-90r1]]
 == 版本 11.90R1 中的新增功能
 
 [cols="35h,~"]
@@ -71,6 +99,7 @@ E4000 控制器现在支持 12Gb SAS 主机接口卡。
 |===
 
 
+[[new-features-in-version-11-90]]
 == 版本 11.90 中的新增功能
 
 [cols="35h,~"]

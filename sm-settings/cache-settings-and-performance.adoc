@@ -24,6 +24,7 @@ summary: 高速缓存内存是控制器上的临时易失性存储区域，其�
 
 
 
+[[storage-array-cache-settings]]
 == 存储阵列缓存设置
 
 对于存储阵列中的所有卷，您可以从系统页面指定以下值：
@@ -34,6 +35,7 @@ summary: 高速缓存内存是控制器上的临时易失性存储区域，其�
 
 
 
+[[volume-cache-settings]]
 == 卷缓存设置
 
 对于存储阵列中的各个卷，您可以从 Volumes 页面（菜单：Storage[Volumes]）指定以下值：

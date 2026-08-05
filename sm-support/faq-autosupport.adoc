@@ -16,6 +16,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-data-am-i-collecting]]
 == 我正在收集哪些数据？
 
 AutoSupport 功能和手动支持数据收集功能提供了在客户支持包中收集数据的方法，以便技术支持人员进行远程故障排除和问题分析。
@@ -24,6 +25,7 @@ AutoSupport 功能和手动支持数据收集功能提供了在客户支持包�
 
 
 
+[[what-does-unreadable-sectors-data-show-me]]
 == 无法读取的扇区数据向我显示了什么？
 
 您可以显示有关在存储阵列中的驱动器上检测到的不可读扇区的详细数据。
@@ -104,6 +106,7 @@ logical unit number（逻辑单元号）(LUN)
 |===
 
 
+[[what-is-a-health-image]]
 == 什么是健康映像？
 
 健康映像是控制器处理器内存的原始数据转储，技术支持可以使用它来诊断控制器的问题。
@@ -112,6 +115,7 @@ logical unit number（逻辑单元号）(LUN)
 
 
 
+[[what-do-the-autosupport-features-do]]
 == 这些 AutoSupport 功能有什么作用？
 
 该 AutoSupport 功能由三个单独的功能组成，您可以分别启用这些功能。
@@ -123,6 +127,7 @@ logical unit number（逻辑单元号）(LUN)
 
 
 
+[[what-type-of-data-is-collected-through-the-autosupport-feature]]
 == 通过 AutoSupport 功能收集哪些类型的数据？
 
 AutoSupport 功能包含三种标准调度类型：事件调度、计划调度以及按需和远程诊断调度。
@@ -157,6 +162,7 @@ AutoSupport 功能会按常规时间表自动发送多个派单。
 
 
 
+[[how-do-i-configure-the-delivery-method-for-the-autosupport-feature]]
 == 如何为 AutoSupport 功能配置交付方式？
 
 AutoSupport 功能支持 HTTPS 和 SMTP 协议，用于将 AutoSupport 调度发送到技术支持。
@@ -213,6 +219,7 @@ AutoSupport 功能支持 HTTPS 和 SMTP 协议，用于将 AutoSupport 调度发
 
 
 
+[[what-is-configuration-data]]
 == 什么是配置数据？
 
 选择收集配置数据时，系统会保存 RAID 配置数据库的当前状态。
@@ -221,6 +228,7 @@ RAID 配置数据库包括控制器上卷组和磁盘池的所有数据。"收�
 
 
 
+[[what-do-i-need-to-know-before-upgrading-the-santricity-os-software]]
 == 在升级 SANtricity 操作系统软件之前，我需要知道什么？
 
 在升级控制器的软件和固件之前，请注意这些项目。
@@ -268,6 +276,7 @@ CAUTION: 请勿在升级过程中更改存储阵列。
 
 
 
+[[what-do-i-need-to-know-before-suspending-iom-auto-synchronization]]
 == 在暂停 IOM 自动同步之前，我需要知道什么？
 
 暂停 IOM 自动同步可防止 IOM 固件在下次发生 SANtricity 操作系统控制器软件升级时进行升级。
@@ -276,6 +285,7 @@ CAUTION: 请勿在升级过程中更改存储阵列。
 
 
 
+[[why-is-my-firmware-upgrade-progressing-so-slowly]]
 == 为什么我的固件升级进展如此缓慢？
 
 固件升级进度取决于系统的整体负载。
@@ -284,6 +294,7 @@ CAUTION: 请勿在升级过程中更改存储阵列。
 
 
 
+[[what-do-i-need-to-know-before-upgrading-drive-firmware]]
 == 在升级驱动器固件之前，我需要知道什么？
 
 在升级驱动器固件之前，请注意这些项目。
@@ -298,6 +309,7 @@ CAUTION: 请勿在升级过程中更改存储阵列。
 
 
 
+[[how-do-i-choose-which-type-of-upgrade-to-perform]]
 == 如何选择要执行的升级类型？
 
 根据池或卷组的状态，选择要在驱动器上执行的升级类型。

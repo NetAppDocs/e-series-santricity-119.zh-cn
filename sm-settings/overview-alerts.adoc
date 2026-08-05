@@ -16,6 +16,7 @@ summary: 您可以配置 System Manager 以通过电子邮件、SNMP 陷阱和 s
 
 
 
+[[what-are-alerts]]
 == 什么是警报？
 
 _Alerts_ 通知管理员存储阵列上发生的重要事件。事件可能包括电池故障、组件从 Optimal 到 Offline 或控制器中的冗余错误等问题。所有 Critical 事件以及一些 Warning 和 Informational 事件都被视为"可警报"事件。
@@ -28,6 +29,7 @@ _Alerts_ 通知管理员存储阵列上发生的重要事件。事件可能包�
 
 
 
+[[how-do-i-configure-alerts]]
 == 如何配置警报？
 
 您可以将警报配置为作为消息发送到一个或多个电子邮件地址、作为 SNMP 陷阱发送到 SNMP 服务器或作为消息发送到 syslog 服务器。警报配置可从 menu:Settings[Alerts] 获得。
@@ -41,6 +43,7 @@ _Alerts_ 通知管理员存储阵列上发生的重要事件。事件可能包�
 
 
 
+[[related-information]]
 == 相关信息
 
 详细了解与警报相关的概念：

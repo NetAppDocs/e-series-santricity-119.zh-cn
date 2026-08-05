@@ -15,6 +15,7 @@ summary: '对于访问管理，管理员可以使用嵌入在数组中的安全�
 
 
 
+[[configuration-workflow]]
 == 配置工作流
 
 SAML 配置的工作原理如下：
@@ -49,6 +50,7 @@ SAML 配置的工作原理如下：
 
 
 
+[[management]]
 == 管理
 
 使用 SAML 进行身份验证时，管理员可以执行以下管理任务：
@@ -59,6 +61,7 @@ SAML 配置的工作原理如下：
 
 
 
+[[access-restrictions]]
 == 访问限制
 
 启用 SAML 后，用户无法从旧版 Storage Manager 界面发现或管理该阵列的存储。

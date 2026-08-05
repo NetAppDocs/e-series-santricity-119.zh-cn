@@ -16,6 +16,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-if-i-dont-see-all-of-my-hardware-components]]
 == 如果我没有看到所有硬件组件，该怎么办？
 
 如果在"验证硬件"对话框中未显示所有硬件组件，则可能表示驱动器盘架未正确连接，或者存储阵列中安装了不兼容的盘架。
@@ -24,6 +25,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-if-i-dont-see-all-of-my-hosts]]
 == 如果我没有看到所有主机，该怎么办？
 
 如果未看到已连接的主机，则表示自动检测失败、主机连接不正确或当前未连接任何主机。
@@ -36,6 +38,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[how-does-identifying-applications-help-me-manage-my-storage-array]]
 == 识别应用程序如何帮助我管理存储阵列？
 
 识别应用程序时，SANtricity System Manager 会自动推荐基于应用程序类型优化存储的卷配置。
@@ -44,6 +47,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-is-a-workload]]
 == 什么是工作负载？
 
 对于网络中的某些应用程序（例如 SQL Server 或 Exchange），可以定义优化该应用程序存储的工作负载。
@@ -54,6 +58,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[how-do-i-configure-the-delivery-method-for-autosupport]]
 == 如何配置 AutoSupport 的传送方式？
 
 要访问 AutoSupport 交付方式的配置任务，请转到菜单：支持[Support Center]，然后单击 *AutoSupport* 选项卡。
@@ -62,6 +67,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[how-do-i-know-if-i-should-accept-the-recommended-pool-configuration]]
 == 如何知道我是否应该接受建议的池配置？
 
 是否接受推荐的池配置取决于几个因素。
@@ -77,6 +83,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[santricity-system-manager-has-not-detected-any-hosts-what-do-i-do]]
 == SANtricity System Manager 未检测到任何主机。我该怎么做？
 
 如果未看到已连接的主机，则表示自动检测失败、主机连接不正确或当前未连接任何主机。

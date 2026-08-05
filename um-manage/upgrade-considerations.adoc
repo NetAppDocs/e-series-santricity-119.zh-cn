@@ -15,12 +15,14 @@ summary: 在使用 Unified Manager 升级多个存储阵列之前，请在规划
 
 
 
+[[current-versions]]
 == 当前版本
 
 您可以从 Unified Manager 的"管理"页面查看每个发现的存储阵列的当前 SANtricity 操作系统软件版本。版本显示在 SANtricity 操作系统软件列中。当您单击每行中的 SANtricity 操作系统版本时，控制器固件和 NVSRAM 信息在弹出对话框中可用。
 
 
 
+[[other-components-requiring-upgrade]]
 == 需要升级的其他组件
 
 作为升级过程的一部分，您可能还需要升级主机的多路径/故障转移驱动程序或 HBA 驱动程序，以便主机可以与控制器正确交互。
@@ -29,6 +31,7 @@ summary: 在使用 Unified Manager 升级多个存储阵列之前，请在规划
 
 
 
+[[dual-controllers]]
 == 双控制器
 
 如果存储阵列包含两个控制器，并且您安装了多路径驱动程序，则在升级过程中，存储阵列可以继续处理 I/O。在升级过程中，会发生以下过程：

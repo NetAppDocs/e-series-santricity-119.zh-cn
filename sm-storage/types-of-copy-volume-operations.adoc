@@ -19,6 +19,7 @@ summary: 您可以执行脱机 Copy Volume 操作或联机 Copy Volume 操作。
 
 
 
+[[offline-copy-volume-operation]]
 == 离线拷贝卷操作
 
 脱机拷贝卷关系位于源卷和目标卷之间。脱机副本从源卷读取数据并将其复制到目标卷，同时暂停对正在进行复制的源卷的所有更新。将暂停对源卷的所有更新，以防止在目标卷上创建按时间顺序排列的不一致。
@@ -49,6 +50,7 @@ summary: 您可以执行脱机 Copy Volume 操作或联机 Copy Volume 操作。
 |===
 
 
+[[online-copy-volume-operation]]
 == 联机复制卷操作
 
 联机 Copy Volume 关系是快照卷和目标卷之间的关系。您可以在源卷联机并可用于数据写入时启动 Copy Volume 操作。此功能通过创建卷的快照并将快照用作副本的实际源卷来实现。

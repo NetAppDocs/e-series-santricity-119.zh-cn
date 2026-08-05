@@ -15,12 +15,14 @@ summary: 在 System Manager 中，您可以按照以下步骤创建快照映像�
 
 
 
+[[workflow-for-creating-snapshot-images]]
 == 创建快照映像的工作流程
 
 image::../media/sam1130-flw-snapshots-create-ss-images.gif[创建 snapshot 映像工作流]
 
 
 
+[[workflow-for-creating-snapshot-volumes]]
 == 创建快照卷的工作流程
 
 image::../media/sam1130-flw-snapshots-create-ss-volumes.gif[创建快照卷工作流]

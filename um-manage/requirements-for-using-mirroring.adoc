@@ -16,6 +16,7 @@ summary: 如果您计划配置镜像，请记住以下要求。
 
 
 
+[[unified-manager]]
 == Unified Manager
 
 * Web Services Proxy 服务必须正在运行。
@@ -25,6 +26,7 @@ summary: 如果您计划配置镜像，请记住以下要求。
 
 
 
+[[storage-arrays]]
 == 存储阵列
 
 [NOTE]
@@ -44,6 +46,7 @@ EF600/EF600C 或 EF300/EF300C 存储阵列上不提供同步镜像。
 
 
 
+[[connectivity-requirements]]
 == 连接要求
 
 通过 FC 接口（异步或同步）进行镜像需要满足以下要求：
@@ -78,6 +81,7 @@ iSCSI 控制器间通信必须使用主机连接端口，而不是管理以太�
 ====
 
 
+[[mirrored-volume-candidates]]
 == 镜像卷候选项
 
 * 在镜像对的主卷和辅助卷上，RAID 级别、缓存参数和段大小可以不同。
@@ -101,6 +105,7 @@ NOTE: 对于 EF600 和 EF300 控制器，异步镜像对的主卷和辅助卷必
 
 
 
+[[reserved-capacity]]
 == 预留容量
 
 异步镜像：
@@ -117,6 +122,7 @@ NOTE: 对于 EF600 和 EF300 控制器，异步镜像对的主卷和辅助卷必
 
 
 
+[[drive-security-feature]]
 == 驱动器安全功能
 
 * 如果使用具有安全功能的驱动器，则主卷和辅助卷必须具有兼容的安全设置。此限制未强制执行；因此，您必须自己验证。

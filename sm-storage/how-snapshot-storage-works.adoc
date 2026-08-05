@@ -15,6 +15,7 @@ summary: 快照功能使用写时复制技术来存储快照映像并使用分�
 
 
 
+[[how-snapshot-images-are-used]]
 == 如何使用快照映像
 
 快照映像是在特定时间点捕获的卷内容的逻辑只读副本。您可以使用快照来防止数据丢失。
@@ -23,6 +24,7 @@ summary: 快照功能使用写时复制技术来存储快照映像并使用分�
 
 
 
+[[snapshot-creation]]
 == Snapshot 创建
 
 创建快照时， Snapshots 功能按如下方式存储图像数据：
@@ -42,6 +44,7 @@ image::../media/sam1130-dwg-snapshots-cow-overview.gif[Snapshot 概述]
 
 
 
+[[snapshot-restoration]]
 == Snapshot 恢复
 
 要将数据还原到基本卷，您可以使用快照卷或快照映像：

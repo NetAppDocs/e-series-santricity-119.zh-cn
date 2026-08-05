@@ -17,6 +17,7 @@ Copy Volume 功能可通过在同一存储阵列上创建两个单独的卷（�
 
 
 
+[[data-copying-for-greater-access]]
 == 数据复制以获得更大的访问权限
 
 当您对卷的存储要求发生变化时，您可以使用 Copy Volume 功能将数据从使用较小容量驱动器的池或卷组复制到使用较大容量驱动器的池或卷组。例如，您可以使用 Copy Volume 功能执行以下操作：
@@ -37,6 +38,7 @@ Copy Volume 功能可通过在同一存储阵列上创建两个单独的卷（�
 
 
 
+[[change-a-thin-volume-to-a-thick-volume]]
 == 将精简卷更改为厚卷
 
 如果要将精简卷更改为厚卷，请使用 Copy Volume 操作创建精简卷的副本。Copy Volume 操作的目标始终是厚卷。
@@ -48,18 +50,21 @@ System Manager 不提供创建精简卷的选项。如果要创建精简卷，�
 ====
 
 
+[[backup-data]]
 == 备份数据
 
 复制卷功能允许您通过将数据从一个卷复制到同一存储阵列上的另一个卷来备份卷。您可以将目标卷用作源卷的备份、用于系统测试或备份到其他设备（如磁带驱动器）。
 
 
 
+[[restore-snapshot-volume-data-to-the-base-volume]]
 == 将快照卷数据还原到基本卷
 
 如果需要将数据从其关联的快照卷还原到基本卷，可以使用 Copy Volume 功能将数据从快照卷复制到基本卷。您可以在快照卷上创建数据的卷副本，然后将数据复制到基本卷。
 
 
 
+[[source-and-target-volumes]]
 == 源卷和目标卷
 
 下表指定了可用于 Copy Volume 功能的源卷和目标卷的卷类型。

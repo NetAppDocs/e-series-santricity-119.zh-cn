@@ -17,6 +17,7 @@ summary: 主界面上的 Storage Hierarchy 提供了由存储阵列管理的各�
 
 
 
+[[physical-components]]
 == 物理组件
 
 下表描述了存储阵列的物理组件。
@@ -81,6 +82,7 @@ summary: 主界面上的 Storage Hierarchy 提供了由存储阵列管理的各�
 |===
 
 
+[[logical-components]]
 == 逻辑组件
 
 存储阵列中的驱动器提供数据的物理存储容量。使用 System Manager 将物理容量配置到逻辑组件中，例如池、卷组和卷。这些组件是用于配置、存储、维护和保留存储阵列上的数据的工具。下表描述了存储阵列的逻辑组件。

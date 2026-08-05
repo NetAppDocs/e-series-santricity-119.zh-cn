@@ -16,12 +16,14 @@ summary: 使用升级中心下载最新软件和固件，并升级存储阵列�
 
 
 
+[[controller-upgrade-overview]]
 == 控制器升级概述
 
 您可以升级存储阵列的软件和固件，以获取所有最新功能和错误修复。
 
 
 
+[[components-included-in-the-os-controller-upgrade]]
 === OS 控制器升级中包含的组件
 
 几个存储阵列组件包含您可能需要偶尔升级的软件或硬件。
@@ -43,12 +45,14 @@ image::../media/sam1130-dwg-upgrade-firmware-locations.gif[升级固件位置]
 
 
 
+[[when-to-stop-io]]
 === 何时停止 I/O
 
 如果您的存储阵列包含两个控制器，并且您安装了多路径驱动程序，则在升级过程中，存储阵列可以继续处理 I/O。在升级期间，控制器 A 将其所有卷故障转移到控制器 B，升级，取回其卷和控制器 B 的所有卷，然后升级控制器 B。
 
 
 
+[[pre-upgrade-health-check]]
 === 升级前运行状况检查
 
 升级前运行状况检查在升级过程中运行。升级前运行状况检查会评估所有存储阵列组件，以确保升级可以继续。以下情况可能会阻止升级：
@@ -68,12 +72,14 @@ image::../media/sam1130-dwg-upgrade-firmware-locations.gif[升级固件位置]
 
 
 
+[[drive-upgrade-overview]]
 == 驱动器升级概述
 
 驱动器固件控制驱动器的低级操作特性。驱动器制造商会定期发布驱动器固件更新，以添加新功能、提高性能并修复缺陷。
 
 
 
+[[online-and-offline-drive-firmware-upgrades]]
 === 在线和离线驱动器固件升级
 
 有两种类型的驱动器固件升级方法：在线和离线。
@@ -113,6 +119,7 @@ image::../media/sam1130-dwg-upgrade-firmware-locations.gif[升级固件位置]
 
 
 
+[[compatibility]]
 === 兼容性
 
 每个驱动器固件文件都包含有关固件运行所在的驱动器类型的信息。您只能将指定的固件文件下载到兼容的驱动器。System Manager 在升级过程中自动检查兼容性。

@@ -52,6 +52,7 @@ summary: 访问管理是在 SANtricity System Manager 中建立用户身份验�
 
 
 
+[[tasks-available-in-system-manager]]
 == System Manager 中的可用任务
 
 对任务的访问取决于用户分配的角色，包括以下内容：
@@ -66,6 +67,7 @@ summary: 访问管理是在 SANtricity System Manager 中建立用户身份验�
 
 
 
+[[limitations-in-unified-manager-and-storage-manager]]
 == Unified Manager 和 Storage Manager 中的限制
 
 如果为存储阵列配置了 SAML，则用户无法从 Unified Manager 或旧版 Storage Manager 界面发现或管理该阵列的存储。

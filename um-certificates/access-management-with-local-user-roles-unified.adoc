@@ -15,6 +15,7 @@ summary: 管理员可以使用 SANtricity Unified Manager 中强制实施的 RBA
 
 
 
+[[configuration-workflow]]
 == 配置工作流
 
 本地用户角色已在系统中预配置。要使用本地用户角色进行身份验证，管理员可以执行以下操作：
@@ -33,6 +34,7 @@ summary: 管理员可以使用 SANtricity Unified Manager 中强制实施的 RBA
 
 
 
+[[management]]
 == 管理
 
 当仅使用本地用户角色进行身份验证时，管理员可以执行以下管理任务：

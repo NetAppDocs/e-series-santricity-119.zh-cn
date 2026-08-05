@@ -16,6 +16,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-are-the-supported-browsers]]
 == 支持哪些浏览器？
 
 SANtricity System Manager 支持这些浏览器版本。
@@ -54,12 +55,14 @@ Microsoft Edge
 |===
 
 
+[[what-are-the-keyboard-shortcuts]]
 == 键盘快捷键有哪些？
 
 您可以单独使用键盘在 SANtricity System Manager 中导航。
 
 
 
+[[overall-navigation]]
 === 整体导航
 
 [cols="1a,1a"]
@@ -117,6 +120,7 @@ Enter
 |===
 
 
+[[table-navigation]]
 === 表格导航
 
 [cols="1a,1a"]
@@ -146,6 +150,7 @@ Tab 选择一行，然后按 Enter
 |===
 
 
+[[calendar-navigation]]
 === 日历导航
 
 [cols="1a,1a"]
@@ -245,6 +250,7 @@ Control / Command + End
 |===
 
 
+[[how-do-performance-statistics-for-individual-volumes-relate-to-the-total]]
 == 单个卷的性能统计与总量有何关系？
 
 通过聚合所有卷（包括保留容量卷）来计算池和卷组的统计信息。
@@ -255,6 +261,7 @@ Control / Command + End
 
 
 
+[[why-does-data-display-as-zero-in-the-graphs-and-table]]
 == 为什么数据在图形和表格中显示为零？
 
 当图形和表格中的数据点显示零时，表示该时间点的对象没有 I/O 活动。发生这种情况的原因可能是主机未启动对该对象的 I/O，也可能是该对象本身存在问题。
@@ -315,6 +322,7 @@ Control / Command + End
 |===
 
 
+[[what-does-the-latency-graph-show]]
 == 延迟图表显示了什么？
 
 延迟图提供了卷、卷组、池、应用程序和工作负载的延迟统计信息，以毫秒 (ms) 为单位。此图形显示在逻辑视图、物理视图和应用程序和工作负载视图选项卡中。
@@ -328,6 +336,7 @@ Control / Command + End
 
 
 
+[[what-does-the-iops-graph-show]]
 == IOPS 图形显示了什么？
 
 IOPS 图表显示每秒输入/输出操作的统计信息。在主页上，此图表显示存储阵列的统计信息。在性能图块的 Logical View、Physical View 和 Applications & Workloads View 选项卡中，此图表显示存储阵列、卷、卷组、池、应用程序和工作负载的统计信息。
@@ -341,6 +350,7 @@ IOPS 是_每秒输入/输出 (I/O) 操作_的缩写。将光标悬停在图形�
 
 
 
+[[what-does-the-mibs-graph-show]]
 == MiB/s 图表显示了什么？
 
 MiB/s 图表以每秒 mebibyte 为单位显示传输速度统计信息。在主页上，此图表显示存储阵列的统计信息。在性能图块的 Logical View、Physical View 和 Applications & Workloads View 选项卡中，此图表显示存储阵列、卷、卷组、池、应用程序和工作负载的统计信息。
@@ -354,6 +364,7 @@ MiB/s 是 _mebibytes per second_ 或 1,048,576 bytes per second 的缩写。将�
 
 
 
+[[what-does-the-cpu-graph-show]]
 == CPU 图形显示了什么？
 
 CPU 图表显示每个控制器（控制器 A 和控制器 B）的处理能力统计信息。CPU 是_中央处理器_的缩写。在主页上，此图表显示存储阵列的统计信息。在性能图块的物理视图选项卡上，此图表显示存储阵列和驱动器的统计信息。
@@ -362,6 +373,7 @@ CPU 图形显示针对阵列上的操作使用的 CPU 处理容量的百分比�
 
 
 
+[[what-does-the-headroom-graph-show]]
 == 净空图表显示了什么？
 
 净空图与存储阵列控制器的剩余性能功能相关。此图形在主页和 Performance 磁贴的 Physical View 选项卡上可见。
@@ -370,6 +382,7 @@ CPU 图形显示针对阵列上的操作使用的 CPU 处理容量的百分比�
 
 
 
+[[where-can-i-find-more-information-about-display-preferences]]
 == 在哪里可以找到有关显示首选项的详细信息？
 
 要查找有关可用显示选项的信息：

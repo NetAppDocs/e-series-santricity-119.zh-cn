@@ -16,6 +16,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-happens-when-i-use-an-isns-server-for-registration]]
 == 使用 iSNS 服务器进行注册时会发生什么？
 
 使用 Internet Storage Name Service (iSNS) 服务器信息时，可以将主机（启动器）配置为查询 iSNS 服务器以从目标（控制器）检索信息。
@@ -24,6 +25,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[which-registration-methods-are-automatically-supported-for-iscsi]]
 == iSCSI 自动支持哪些注册方法？
 
 iSCSI 实现支持 Internet Storage Name Service (iSNS) 发现方法或使用 Send Targets 命令。
@@ -34,6 +36,7 @@ iSNS 方法允许在启动程序（iSCSI 主机）和目标（控制器）之间
 
 
 
+[[how-do-i-interpret-iser-over-infiniband-statistics]]
 == 如何解释基于 InfiniBand 的 iSER 统计数据？
 
 View iSER over InfiniBand Statistics 对话框显示本地目标（协议）统计数据和 iSER over InfiniBand (IB) 接口统计数据。所有统计信息均为只读，无法设置。
@@ -46,6 +49,7 @@ View iSER over InfiniBand Statistics 对话框显示本地目标（协议）统�
 
 
 
+[[what-else-do-i-need-to-do-to-configure-or-diagnose-iser-over-infiniband]]
 == 我还需要做些什么来配置或诊断基于 InfiniBand 的 iSER？
 
 下表列出了可用于在 InfiniBand 会话中配置和管理 iSER 的 SANtricity System Manager 功能。
@@ -87,6 +91,7 @@ View iSER over InfiniBand Statistics 对话框显示本地目标（协议）统�
 |===
 
 
+[[what-else-do-i-need-to-do-to-configure-or-diagnose-iscsi]]
 == 我还需要执行哪些操作来配置或诊断 iSCSI？
 
 iSCSI 会话可与异步镜像关系中的主机或远程存储阵列一起进行。下表列出了可用于配置和管理这些 iSCSI 会话的 SANtricity System Manager 功能。
@@ -98,6 +103,7 @@ iSCSI 会话可与异步镜像关系中的主机或远程存储阵列一起进�
 ====
 
 
+[[configure-iscsi]]
 === 配置 iSCSI
 
 [cols="1a,1a"]
@@ -142,6 +148,7 @@ iSCSI 会话可与异步镜像关系中的主机或远程存储阵列一起进�
 |===
 
 
+[[diagnose-iscsi]]
 === 诊断 iSCSI
 
 [cols="1a,1a"]

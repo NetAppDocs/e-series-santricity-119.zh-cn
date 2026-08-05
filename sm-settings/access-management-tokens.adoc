@@ -15,6 +15,7 @@ summary: 访问令牌提供对阵列的访问，而不会暴露用户名和密�
 
 
 
+[[saml-and-json-web-token-access]]
 == SAML 和 JSON Web 令牌访问
 
 默认情况下，启用了 SAML 的系统不允许访问传统命令行工具。REST API 和 CLI 实际上变得不可操作，因为 MFA 工作流需要重定向到身份提供程序服务器进行身份验证。因此，您必须在 System Manager 中生成令牌，该令牌要求用户通过 MFA 进行身份验证。
@@ -24,6 +25,7 @@ NOTE: 无需启用 SAML 即可使用 web 令牌，但建议使用 SAML 以获得
 
 
 
+[[workflow-for-creating-and-using-tokens]]
 == 创建和使用令牌的工作流程
 
 . 在 System Manager 中创建令牌并确定其过期时间。

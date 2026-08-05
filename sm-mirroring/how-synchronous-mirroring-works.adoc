@@ -24,12 +24,14 @@ EF600/EF600C 或 EF300/EF300C 存储阵列上不提供同步镜像。
 
 
 
+[[synchronous-mirroring-relationship]]
 == 同步镜像关系
 
 同步镜像关系由不同存储阵列上的主卷和辅助卷组成。包含主卷的存储阵列通常位于主站点，并为活动主机提供服务。包含辅助卷的存储阵列通常位于辅助站点，并保存数据的副本。如果主卷的存储阵列不可用，则使用辅助卷，例如，由于主站点完全停电、火灾或硬件故障。
 
 
 
+[[synchronous-mirroring-session]]
 == 同步镜像会话
 
 同步镜像配置过程涉及将卷配置成对。创建镜像对（由一个存储阵列上的主卷和另一个存储阵列上的辅助卷组成）后，可以开始同步镜像。同步镜像的步骤如下所示。
@@ -49,6 +51,7 @@ image::../media/sam-1130-dwg-sync-mirroring-session.gif[同步镜像会话]
 
 
 
+[[disaster-recovery]]
 == 灾难恢复
 
 同步镜像会维护物理上远离数据所在站点的数据副本。如果主站点发生灾难，例如停电或洪水，则可以从辅助站点快速访问数据。
@@ -57,6 +60,7 @@ image::../media/sam-1130-dwg-sync-mirroring-session.gif[同步镜像会话]
 
 
 
+[[synchronization-settings]]
 == 同步设置
 
 创建镜像对时，还可以定义镜像对在通信中断后用于完成重新同步操作的同步优先级和重新同步策略。
@@ -69,6 +73,7 @@ image::../media/sam-1130-dwg-sync-mirroring-session.gif[同步镜像会话]
 
 
 
+[[unsynchronized-data]]
 == 未同步的数据
 
 当主卷的存储阵列无法将数据写入辅助卷时，主卷和辅助卷将不同步。这可能是由于以下问题造成的：
@@ -80,6 +85,7 @@ image::../media/sam-1130-dwg-sync-mirroring-session.gif[同步镜像会话]
 
 
 
+[[orphaned-mirrored-pair]]
 == 孤立的镜像对
 
 当一侧（主侧或辅助侧）的成员卷已被移除但另一侧未被移除时，存在孤立的镜像对卷。
@@ -90,6 +96,7 @@ image::../media/sam-1130-dwg-sync-mirroring-session.gif[同步镜像会话]
 
 
 
+[[configuration-and-management]]
 == 配置和管理
 
 要启用和配置两个阵列之间的镜像，必须使用 Unified Manager 界面。启用镜像后，您可以在 System Manager 中管理镜像对和同步设置。

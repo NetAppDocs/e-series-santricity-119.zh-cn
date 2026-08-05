@@ -16,6 +16,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[how-does-asynchronous-mirroring-differ-from-synchronous-mirroring]]
 == 异步镜像与同步镜像有何不同？
 
 Asynchronous Mirroring 功能与 Synchronous Mirroring 功能在一个基本方面有所不同：它捕获特定时间点的源卷状态，并仅复制自上次图像捕获以来发生变化的数据。
@@ -112,6 +113,7 @@ Asynchronous Mirroring 功能与 Synchronous Mirroring 功能在一个基本方�
 |===
 
 
+[[why-cant-i-access-my-chosen-mirroring-feature]]
 == 为什么我无法访问我选择的镜像功能？
 
 镜像在 SANtricity Unified Manager 界面中配置。
@@ -137,6 +139,7 @@ EF600/EF600C 或 EF300/EF300C 存储阵列上不提供同步镜像。
 
 
 
+[[what-do-i-need-to-know-before-creating-a-mirror-consistency-group]]
 == 在创建镜像一致性组之前，我需要知道什么？
 
 在创建镜像一致性组之前，请遵循这些指南。
@@ -167,6 +170,7 @@ EF600/EF600C 或 EF300/EF300C 存储系统上不提供同步镜像。
 
 
 
+[[asynchronous-mirroring-what-do-i-need-to-know-before-creating-a-mirrored-pair]]
 == 异步镜像 - 在创建镜像对之前，我需要知道什么？
 
 您可以在 SANtricity Unified Manager 界面中配置镜像对，然后在 SANtricity System Manager 中管理这些对。
@@ -187,6 +191,7 @@ EF600/EF600C 或 EF300/EF300C 存储系统上不提供同步镜像。
 
 
 
+[[what-do-i-need-to-know-before-increasing-my-reserved-capacity-on-a-mirrored-pair-volume]]
 == 在增加镜像对卷上的预留容量之前，我需要知道什么？
 
 通常，当您收到镜像对的保留容量已满的警告时，应增加保留容量。您只能以 8 GiB 的增量增加保留容量。
@@ -208,6 +213,7 @@ EF600/EF600C 或 EF300/EF300C 存储系统上不提供同步镜像。
 
 
 
+[[why-cant-i-increase-reserved-capacity-with-my-requested-amount]]
 == 为什么我无法按请求的数量增加预留容量？
 
 您只能以 4 GiB 的增量增加保留容量。
@@ -226,6 +232,7 @@ EF600/EF600C 或 EF300/EF300C 存储系统上不提供同步镜像。
 
 
 
+[[why-would-i-change-this-percentage]]
 == 为什么要更改此百分比？
 
 保留容量通常为快照操作的基本卷的 40%，异步镜像操作的基本卷的 20%。
@@ -240,6 +247,7 @@ EF600/EF600C 或 EF300/EF300C 存储系统上不提供同步镜像。
 
 
 
+[[why-do-i-see-more-than-one-reserved-capacity-candidate]]
 == 为什么我看到多个预留容量候选项？
 
 如果池或卷组中有多个卷符合您为存储对象选择的容量百分比量，您将看到多个候选项。
@@ -248,6 +256,7 @@ EF600/EF600C 或 EF300/EF300C 存储系统上不提供同步镜像。
 
 
 
+[[why-do-i-see-not-available-values-displayed-in-the-table]]
 == 为什么在表中显示 Not Available 值？
 
 当位于远程存储阵列上的数据不可显示时，该表列出了 Not Available 值。
@@ -256,6 +265,7 @@ EF600/EF600C 或 EF300/EF300C 存储系统上不提供同步镜像。
 
 
 
+[[why-dont-i-see-all-of-my-pools-and-volume-groups]]
 == 为什么我没有看到所有的池和卷组？
 
 为异步镜像对创建辅助卷时，系统将显示该异步镜像对的所有符合条件的池和卷组的列表。任何不符合使用条件的池或卷组都不会显示在该列表中。
@@ -269,6 +279,7 @@ EF600/EF600C 或 EF300/EF300C 存储系统上不提供同步镜像。
 
 
 
+[[asynchronous-mirroring-why-dont-i-see-all-my-volumes]]
 == 异步镜像 - 为什么我看不到所有卷？
 
 为镜像对选择主卷时，列表会显示所有符合条件的卷。
@@ -285,6 +296,7 @@ NOTE: 对于 EF600 和 EF300 控制器，异步镜像对的主卷和辅助卷必
 
 
 
+[[asynchronous-mirroring-why-dont-i-see-all-the-volumes-on-the-remote-storage-array]]
 == 异步镜像 - 为什么我看不到远程存储阵列上的所有卷？
 
 在远程存储阵列上选择辅助卷时，列表会显示该镜像对的所有合格卷。
@@ -304,6 +316,7 @@ NOTE: 对于 EF600 和 EF300 控制器，异步镜像对的主卷和辅助卷必
 
 
 
+[[why-would-i-update-my-remote-storage-arrays-ip-address]]
 == 为什么要更新远程存储阵列的 IP 地址？
 
 当 iSCSI 端口的 IP 地址更改且本地存储阵列无法与远程存储阵列通信时，可以更新远程存储阵列的 IP 地址。

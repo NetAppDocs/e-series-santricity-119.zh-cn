@@ -15,6 +15,7 @@ summary: 快照功能利用基本卷、保留容量和快照组。
 
 
 
+[[base-volumes]]
 == 基础卷
 
 _基本卷_是用作快照映像源的卷。基本卷可以是厚卷或精简卷，并且可以位于池或卷组中。
@@ -29,6 +30,7 @@ image::../media/sam1130-dwg-snapshots-images-overview.gif[快照对象和基本�
 
 
 
+[[reserved-capacity-and-snapshot-groups]]
 == 预留容量和快照组
 
 System Manager 将快照映像组织到_快照组_中。当 System Manager 建立快照组时，它会自动创建关联的_预留容量_来保存该组的快照映像，并跟踪对其他快照的后续更改。
@@ -43,6 +45,7 @@ System Manager 将快照映像组织到_快照组_中。当 System Manager 建�
 
 
 
+[[auto-deletion]]
 == 自动删除
 
 使用快照时，使用默认选项启用自动删除。当快照组达到 32 个图像的快照组限制时，自动删除会自动删除最旧的快照图像。如果关闭自动删除，则最终会超出快照组限制，您必须采取手动操作来配置快照组设置和管理保留容量。

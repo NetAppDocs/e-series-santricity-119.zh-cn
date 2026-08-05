@@ -21,12 +21,14 @@ summary: 使用计划收集 Snapshot 映像，并使用 Snapshot 一致性组来
 
 
 
+[[snapshot-schedule]]
 == Snapshot 计划
 
 如果要自动为基本卷拍摄 Snapshot，可以创建 Snapshot 计划。例如，您可以定义一个 Snapshot 计划，每周六午夜、每月 1 日或您决定的任何日期和时间拍摄 Snapshot 映像。在单个 Snapshot 计划最多达到 32 个 Snapshot 后，您可以挂起计划的 Snapshot，创建更多保留容量，也可以删除 Snapshot。Snapshot 可以手动删除，也可以通过自动删除过程删除。删除 Snapshot 映像后，额外的保留容量可供重复使用。
 
 
 
+[[snapshot-consistency-group]]
 == 快照一致性组
 
 如果要确保同时在多个卷上拍摄 Snapshot 映像，请创建 Snapshot 一致性组。对整个 Snapshot 一致性组执行 Snapshot 映像操作。例如，您可以计划具有相同时间戳的所有卷的同步 Snapshot。Snapshot 一致性组非常适合跨多个卷的应用程序，例如将日志存储在一个卷上而将数据库文件存储在另一个卷上的数据库应用程序。

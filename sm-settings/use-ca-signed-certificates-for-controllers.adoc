@@ -24,6 +24,7 @@ summary: 您可以获取 CA 签名的证书，以便在控制器和用于访问 
 
 
 
+[[step-1-complete-csrs-for-the-controllers]]
 == 步骤 1：完成控制器的 CSR
 
 您必须首先为存储阵列中的每个控制器生成证书签名请求 (CSR) 文件。
@@ -85,6 +86,7 @@ summary: 您可以获取 CA 签名的证书，以便在控制器和用于访问 
 
 
 
+[[step-2-submit-the-csr-files]]
 == 步骤 2：提交 CSR 文件
 
 创建证书签名请求 (CSR) 文件后，将文件发送到证书颁发机构 (CA)。E-Series 系统要求签名证书采用 PEM 格式 (Base64 ASCII 编码)，其中包括以下文件类型：.pem、.crt、.cer 或 .key。
@@ -103,6 +105,7 @@ summary: 您可以获取 CA 签名的证书，以便在控制器和用于访问 
 
 
 
+[[step-3-import-signed-certificates-for-controllers]]
 == 步骤 3：导入控制器的签名证书
 
 收到来自证书颁发机构 (CA) 的签名证书后，导入控制器的文件。

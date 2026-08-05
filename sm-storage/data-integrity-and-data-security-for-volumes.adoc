@@ -15,6 +15,7 @@ summary: '您可以启用卷以使用 Data Assurance (DA) 功能和 Drive Securi
 
 
 
+[[data-assurance]]
 == 数据保障
 
 数据保障 (DA) 实施 T10 Protection Information (PI) 标准，该标准通过检查和纠正沿 I/O 路径传输数据时可能发生的错误来提高数据完整性。数据保障功能的典型使用将检查控制器和驱动器之间的 I/O 路径部分。DA 功能在池和卷组级别呈现。
@@ -23,24 +24,28 @@ summary: '您可以启用卷以使用 Data Assurance (DA) 功能和 Drive Securi
 
 
 
+[[drive-security]]
 == 驱动器安全
 
 驱动器安全是一项功能，可防止在从存储阵列中移除时对启用安全功能的驱动器上的数据进行未经授权的访问。这些驱动器可以是全磁盘加密 (FDE) 驱动器，也可以是经认证符合联邦信息处理标准 140-2 级别 2 (FIPS 驱动器) 的驱动器。
 
 
 
+[[how-drive-security-works-at-the-drive-level]]
 === Drive Security 在驱动器级别的工作原理
 
 具有安全功能的驱动器（FDE 或 FIPS）在写入期间对数据进行加密，在读取期间对数据进行解密。此加密和解密不会影响性能或用户工作流程。每个驱动器都有自己独特的加密密钥，永远无法从驱动器传输。
 
 
 
+[[how-drive-security-works-at-the-volume-level]]
 === Drive Security 在卷级别的工作原理
 
 从支持安全的驱动器创建池或卷组时，还可以为这些池或卷组启用驱动器安全。驱动器安全选项使驱动器以及关联的卷组和池安全-_已启用_。池或卷组可以同时包含具有安全功能和不具有安全功能的驱动器，但所有驱动器都必须具有安全功能才能使用其加密功能。
 
 
 
+[[how-to-implement-drive-security]]
 === 如何实施驱动器安全
 
 要实现驱动器安全，请执行以下步骤。

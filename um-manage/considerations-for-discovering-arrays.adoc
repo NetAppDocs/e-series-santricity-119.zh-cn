@@ -15,12 +15,14 @@ SANtricity Unified Manager 必须先发现要在组织网络中管理的存储�
 
 
 
+[[discovering-multiple-storage-arrays]]
 == 发现多个存储阵列
 
 如果选择发现多个阵列，则输入网络 IP 地址范围，然后 Unified Manager 会尝试单个连接到该范围内的每个 IP 地址。成功到达的任何存储阵列都会显示在"发现"页面上，并可能添加到您的管理域中。
 
 
 
+[[discovering-a-single-storage-array]]
 == 发现单个存储阵列
 
 如果选择发现单个阵列，则为存储阵列中的一个控制器输入单个 IP 地址，然后添加单个存储阵列。
@@ -32,12 +34,14 @@ Unified Manager 仅发现并显示分配给控制器的单个 IP 地址或范围
 ====
 
 
+[[user-credentials]]
 == 用户凭据
 
 作为发现过程的一部分，必须为要添加的每个存储阵列提供管理员密码。
 
 
 
+[[web-services-certificates]]
 == Web 服务证书
 
 作为发现过程的一部分，Unified Manager 会验证发现的存储阵列是否正在使用受信任来源的证书。Unified Manager 对它与浏览器建立的所有连接使用两种基于证书的身份验证：

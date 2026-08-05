@@ -22,6 +22,7 @@ summary: 您可以获取和导入 CA 签名的证书，以安全访问托管 Uni
 
 
 
+[[step-1-complete-a-csr-file]]
 == 步骤 1：完成 CSR 文件
 
 您必须首先生成证书签名请求 (CSR) 文件，该文件标识您的组织和安装 Web Services Proxy 和 Unified Manager 的主机系统。
@@ -57,6 +58,7 @@ summary: 您可以获取和导入 CA 签名的证书，以安全访问托管 Uni
 
 
 
+[[step-2-submit-csr-file]]
 == 步骤 2：提交 CSR 文件
 
 创建证书签名请求 (CSR) 文件后，将其发送到证书颁发机构 (CA)，以接收托管 Unified Manager 和 Web Services Proxy 的系统的签名管理证书。
@@ -81,6 +83,7 @@ NOTE: E-Series 系统要求签名证书采用 PEM 格式（Base64 ASCII 编码�
 
 
 
+[[step-3-import-management-certificates]]
 == 步骤 3：导入管理证书
 
 收到来自证书颁发机构 (CA) 的签名证书后，将证书导入安装了 Web Services Proxy 和 Unified Manager 界面的主机系统中。

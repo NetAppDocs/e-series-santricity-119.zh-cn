@@ -19,6 +19,7 @@ AutoSupport 数据包括有关存储阵列的配置、状态、性能和系统�
 
 
 
+[[key-benefits]]
 == 主要优势
 
 AutoSupport 功能的一些主要优势包括：
@@ -33,6 +34,7 @@ AutoSupport 功能的一些主要优势包括：
 
 
 
+[[individual-autosupport-features]]
 == 各个 AutoSupport 功能
 
 该 AutoSupport 功能由三个单独的功能组成，您可以分别启用这些功能。
@@ -44,6 +46,7 @@ AutoSupport 功能的一些主要优势包括：
 
 
 
+[[difference-between-autosupport-and-collect-support-data]]
 == AutoSupport 与收集支持数据之间的差异
 
 存储阵列中存在两种收集支持数据的方法：

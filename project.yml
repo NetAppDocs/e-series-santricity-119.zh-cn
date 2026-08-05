@@ -10,7 +10,7 @@ settings:
   versions:
   - version-number: '11.9'
     url: "/e-series-santricity-119"
-  - version-number: '12.0'
+  - version-number: 12.x
     url: "/e-series-santricity"
   - version-number: '11.8'
     url: "/e-series-santricity-118"

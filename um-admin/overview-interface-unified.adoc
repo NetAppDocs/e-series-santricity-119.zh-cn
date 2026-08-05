@@ -15,12 +15,14 @@ SANtricity Unified Manager 是一个基于 Web 的界面，允许您在单个视
 
 
 
+[[main-page]]
 == 主页
 
 当您登录到 Unified Manager 时，主页打开到 *Manage - All*。在此页面中，您可以滚动浏览网络中发现的存储阵列列表，查看其状态，并在单个阵列或一组阵列上执行操作。
 
 
 
+[[navigation-sidebar]]
 == 导航侧边栏
 
 您可以从导航侧边栏访问 Unified Manager 特性和功能。
@@ -71,12 +73,14 @@ SANtricity Unified Manager 是一个基于 Web 的界面，允许您在单个视
 |===
 
 
+[[interface-settings-and-help]]
 == 界面设置和帮助
 
 在界面右上角，您可以访问帮助和其他文档。您还可以从登录名旁边的下拉菜单中访问管理选项。
 
 
 
+[[user-logins-and-passwords]]
 == 用户登录名和密码
 
 当前登录系统的用户显示在界面右上角。

@@ -23,6 +23,7 @@ summary: 自动负载平衡通过对负载随时间的变化做出动态反应�
 
 
 
+[[enabling-and-disabling-automatic-load-balancing]]
 == 启用和禁用 Automatic Load Balancing
 
 所有存储阵列上的自动负载平衡默认处于启用状态。
@@ -35,6 +36,7 @@ summary: 自动负载平衡通过对负载随时间的变化做出动态反应�
 
 
 
+[[host-types-that-support-the-automatic-load-balancing-feature]]
 == 支持自动负载平衡功能的主机类型
 
 即使在存储阵列级别启用了自动负载平衡，您为主机或主机群集选择的主机类型也会对该功能的运行方式产生直接影响。
@@ -82,6 +84,7 @@ VMware
 
 
 
+[[verifying-os-compatibility-with-the-automatic-load-balancing-feature]]
 == 验证操作系统与 Automatic Load Balancing 功能的兼容性
 
 在设置新的（或迁移现有）系统之前，验证操作系统与 Automatic Load Balancing 功能的兼容性。

@@ -25,6 +25,7 @@ summary: 您可以发现多个阵列，以检测管理服务器所在子网中�
 
 
 
+[[step-1-enter-network-address]]
 == 步骤 1：输入网络地址
 
 输入要在本地子网中搜索的网络地址范围。成功到达的任何存储阵列都会显示在"发现"页面上，并可能被添加到您的管理域中。
@@ -57,6 +58,7 @@ Unified Manager 将对要添加到管理域的每个阵列进行凭据检查。�
 
 
 
+[[step-2-resolve-self-signed-certificates-during-discovery]]
 == 步骤 2：在发现过程中解析自签名证书
 
 作为发现过程的一部分，系统会验证存储阵列是否正在使用受信任来源的证书。
@@ -73,6 +75,7 @@ Unified Manager 将对要添加到管理域的每个阵列进行凭据检查。�
 
 
 
+[[step-3-resolve-untrusted-certificates-during-discovery]]
 == 步骤 3：在发现期间解析不受信任的证书
 
 当存储阵列尝试与 Unified Manager 建立安全连接，但连接无法确认为安全时，会发生不受信任的证书。在阵列发现过程中，可以通过导入由受信任的第三方颁发的证书颁发机构 (CA) 证书（或 CA 签名的证书）来解决不受信任的证书。
@@ -109,6 +112,7 @@ Unified Manager 将对要添加到管理域的每个阵列进行凭据检查。�
 
 
 
+[[step-4-provide-passwords]]
 == 步骤 4：提供密码
 
 必须输入要添加到管理域的存储阵列的密码。

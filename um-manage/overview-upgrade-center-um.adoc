@@ -16,12 +16,14 @@ summary: 从升级中心，您可以管理多个存储阵列的 SANtricity 操�
 
 
 
+[[how-do-upgrades-work]]
 == 升级如何运作？
 
 下载最新的 OS 软件，然后升级一个或多个阵列。
 
 
 
+[[upgrade-workflow]]
 === 升级工作流
 
 以下步骤提供了执行软件升级的高级工作流。
@@ -46,6 +48,7 @@ summary: 从升级中心，您可以管理多个存储阵列的 SANtricity 操�
 
 
 
+[[immediate-or-staged-upgrade]]
 === 立即或分阶段升级
 
 您可以立即激活升级，也可以将其暂存以供稍后使用。出于以下原因，您可以选择稍后激活：
@@ -58,6 +61,7 @@ summary: 从升级中心，您可以管理多个存储阵列的 SANtricity 操�
 
 
 
+[[health-check]]
 === 运行状况检查
 
 运行状况检查是升级过程的一部分，但您也可以在开始之前单独运行运行状况检查（转到菜单：Upgrade Center[Pre-Upgrade Health Check]）。
@@ -77,18 +81,21 @@ summary: 从升级中心，您可以管理多个存储阵列的 SANtricity 操�
 
 
 
+[[what-do-i-need-to-know-before-upgrading]]
 == 升级前需要了解哪些信息？
 
 在升级多个存储阵列之前，请在规划过程中查看主要注意事项。
 
 
 
+[[current-versions]]
 === 当前版本
 
 您可以从 Unified Manager 的"管理"页面查看每个发现的存储阵列的当前 SANtricity 操作系统软件版本。版本显示在 SANtricity 操作系统软件列中。当您单击每行中的 SANtricity 操作系统版本时，控制器固件和 NVSRAM 信息在弹出对话框中可用。
 
 
 
+[[other-components-requiring-upgrade]]
 === 需要升级的其他组件
 
 作为升级过程的一部分，您可能还需要升级主机的多路径/故障转移驱动程序或 HBA 驱动程序，以便主机可以与控制器正确交互。
@@ -97,6 +104,7 @@ summary: 从升级中心，您可以管理多个存储阵列的 SANtricity 操�
 
 
 
+[[dual-controllers]]
 === 双控制器
 
 如果存储阵列包含两个控制器，并且您安装了多路径驱动程序，则在升级过程中，存储阵列可以继续处理 I/O。在升级过程中，会发生以下过程：

@@ -16,6 +16,7 @@ summary: '访问管理是在 SANtricity System Manager 中建立用户身份验�
 
 
 
+[[what-authentication-methods-are-available]]
 == 有哪些可用的身份验证方法？
 
 身份验证方法包括 RBAC（基于角色的访问控制）、Directory Services 和 Security Assertion Markup Language (SAML)：
@@ -37,6 +38,7 @@ summary: '访问管理是在 SANtricity System Manager 中建立用户身份验�
 
 
 
+[[how-do-i-configure-authentication]]
 == 如何配置身份验证？
 
 存储阵列已预配置为使用本地用户角色，这是 RBAC 功能的实现。如果要配置其他方法，请转到菜单：Settings[Access Management]。
@@ -49,6 +51,7 @@ summary: '访问管理是在 SANtricity System Manager 中建立用户身份验�
 
 
 
+[[related-information]]
 == 相关信息
 
 详细了解与访问管理相关的任务：

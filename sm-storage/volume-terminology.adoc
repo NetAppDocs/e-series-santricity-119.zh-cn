@@ -15,6 +15,7 @@ summary: 了解卷术语如何适用于您的存储阵列。
 
 
 
+[[all-volume-types]]
 == 所有卷类型
 
 [cols="25h,~"]
@@ -215,6 +216,7 @@ LUN
 |===
 
 
+[[specific-to-thin-volumes]]
 == 特定于精简卷
 
 [NOTE]

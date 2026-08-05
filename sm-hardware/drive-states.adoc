@@ -15,6 +15,7 @@ SANtricity System Manager 报告驱动器的各种状态。
 
 
 
+[[accessibility-states]]
 == 辅助功能状态
 
 [cols="25h,~"]
@@ -63,6 +64,7 @@ SANtricity System Manager 报告驱动器的各种状态。
 |===
 
 
+[[role-states]]
 == 角色状态
 
 [cols="25h,~"]
@@ -99,6 +101,7 @@ SANtricity System Manager 报告驱动器的各种状态。
 |===
 
 
+[[availability-states]]
 == 可用性状态
 
 [cols="25h,~"]

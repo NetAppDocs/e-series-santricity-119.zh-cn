@@ -18,6 +18,7 @@ summary: 远程存储功能允许您将数据从远程存储系统导入到本�
 
 
 
+[[hardware-setup]]
 == 硬件设置
 
 使用以下工作流程准备硬件连接。
@@ -55,6 +56,7 @@ NOTE: E4000 系统当前不支持 SANtricity Remote Storage Volumes。
 
 
 
+[[system-manager-setup]]
 == System Manager 设置
 
 使用以下工作流为导入创建远程存储对象：

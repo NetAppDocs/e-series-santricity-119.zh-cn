@@ -16,6 +16,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-do-i-need-to-know-before-creating-a-remote-storage-connection]]
 == 在创建远程存储连接之前，我需要了解哪些信息？
 
 要配置远程存储功能，您必须通过 iSCSI 直接连接远程设备和目标存储系统。
@@ -28,6 +29,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[why-am-i-being-prompted-to-remove-my-remote-volumes]]
 == 为什么系统提示我删除远程卷？
 
 当它达到远程卷的最大数量时，存储系统会自动检测任何未使用的远程卷，并提示您删除它们。
@@ -36,6 +38,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[why-dont-i-see-all-my-volumes-on-my-destination-array]]
 == 为什么我在目标阵列上看不到所有卷？
 
 在为远程存储功能配置导入时，您可能会注意到，由于块大小、容量或卷可用性，某些卷未出现在目标候选列表中。
@@ -57,6 +60,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-do-i-need-to-know-about-the-remote-volume-in-an-import]]
 == 关于导入中的远程卷，我需要了解什么？
 
 使用远程存储功能时，请注意远程卷是数据的来源。
@@ -65,12 +69,14 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-do-i-need-to-know-before-starting-a-remote-storage-import]]
 == 开始远程存储导入之前，我需要了解哪些信息？
 
 远程存储功能允许您将数据从远程存储系统复制到本地 E 系列存储系统上的卷。在使用此功能之前，请查看以下指南。
 
 
 
+[[configuration]]
 === 配置
 
 在创建远程存储导入之前，您必须完成以下操作并验证以下条件：
@@ -92,6 +98,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[import-process]]
 === 导入流程
 
 以下步骤概述了导入过程。
@@ -114,6 +121,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[restrictions]]
 === 限制
 
 远程存储功能具有以下限制：
@@ -132,6 +140,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[additional-information]]
 === 追加信息
 
 有关远程存储功能的更多信息，请参阅 https://www.netapp.com/pdf.html?item=/media/28697-tr-4893-deploy.pdf["远程存储技术报告"^]。

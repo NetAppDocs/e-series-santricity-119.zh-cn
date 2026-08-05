@@ -16,12 +16,14 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-is-a-volume-group]]
 == 什么是卷组？
 
 卷组是具有共享特征的卷的容器。卷组具有定义的容量和 RAID 级别。您可以使用卷组创建一个或多个可供主机访问的卷。（您可以从卷组或池创建卷。）
 
 
 
+[[what-is-a-pool]]
 == 什么是池？
 
 池是逻辑上分组的一组驱动器。您可以使用池创建一个或多个可供主机访问的卷。（您可以从池或卷组创建卷。）
@@ -32,6 +34,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-is-reserved-capacity]]
 == 什么是预留容量？
 
 保留容量是物理分配的容量，用于存储快照映像、一致性组成员卷和镜像对卷等复制服务对象的数据。
@@ -40,6 +43,7 @@ summary: 如果您只是在寻找问题的快速答案，此常见问题可以�
 
 
 
+[[what-is-fdefips-security]]
 == 什么是 FDE/FIPS 安全？
 
 FDE/FIPS 安全是指在写入期间加密数据并在读取期间使用唯一加密密钥解密数据的具有安全功能的驱动器。这些具有安全功能的驱动器可防止对从存储阵列中物理移除的驱动器上的数据进行未经授权的访问。
@@ -53,6 +57,7 @@ FDE/FIPS 安全是指在写入期间加密数据并在读取期间使用唯一�
 ====
 
 
+[[what-is-redundancy-check]]
 == 什么是冗余检查？
 
 冗余检查确定池或卷组中的卷上的数据是否一致。冗余数据用于在池或卷组中的一个驱动器发生故障时快速重建替换驱动器上的信息。
@@ -71,6 +76,7 @@ FDE/FIPS 安全是指在写入期间加密数据并在读取期间使用唯一�
 ====
 
 
+[[what-are-the-differences-between-pools-and-volume-groups]]
 == 池和卷组之间有什么区别？
 
 池类似于卷组，具有以下差异。
@@ -84,6 +90,7 @@ FDE/FIPS 安全是指在写入期间加密数据并在读取期间使用唯一�
 
 
 
+[[why-would-i-want-to-manually-configure-a-pool]]
 == 为什么要手动配置池？
 
 以下示例说明了为什么要手动配置池。
@@ -103,6 +110,7 @@ FDE/FIPS 安全是指在写入期间加密数据并在读取期间使用唯一�
 
 
 
+[[why-are-capacity-alerts-important]]
 == 为什么容量警报很重要？
 
 容量警报指示何时将驱动器添加到池中。池需要足够的可用容量才能成功执行存储阵列操作。您可以通过配置 SANtricity System Manager 在池的可用容量达到或超过指定百分比时发送警报来防止这些操作中断。
@@ -116,6 +124,7 @@ FDE/FIPS 安全是指在写入期间加密数据并在读取期间使用唯一�
 ====
 
 
+[[why-cant-i-increase-my-preservation-capacity]]
 == 为什么我无法增加保存容量？
 
 如果已在所有可用的可用容量上创建了卷，则可能无法增加保留容量。
@@ -131,6 +140,7 @@ FDE/FIPS 安全是指在写入期间加密数据并在读取期间使用唯一�
 ====
 
 
+[[is-there-a-limit-on-the-number-of-drives-i-can-remove-from-a-pool]]
 == 我可以从池中删除的驱动器数量是否有限制？
 
 SANtricity System Manager 为可以从池中删除的驱动器数量设置限制。
@@ -142,12 +152,14 @@ SANtricity System Manager 为可以从池中删除的驱动器数量设置限制
 
 
 
+[[what-media-types-are-supported-for-a-drive]]
 == 驱动器支持哪些媒体类型？
 
 支持以下媒体类型：硬盘驱动器 (HDD) 和固态硬盘 (SSD)。
 
 
 
+[[why-are-some-drives-not-showing-up]]
 == 为什么有些驱动器没有显示？
 
 在添加容量对话框中，并非所有驱动器都可用于向现有池或卷组添加容量。
@@ -176,6 +188,7 @@ SANtricity System Manager 为可以从池中删除的驱动器数量设置限制
 ====
 
 
+[[how-do-i-maintain-shelfdrawer-loss-protection]]
 == 如何维护货架/抽屉丢失保护？
 
 要为池或卷组维护货架/抽屉丢失保护，请使用下表中指定的标准。
@@ -240,6 +253,7 @@ RAID 0
 ====
 
 
+[[what-is-the-optimal-drive-positioning-for-pools-and-volume-groups]]
 == 池和卷组的最佳驱动器定位是什么？
 
 创建池和卷组时，请确保在上驱动器插槽和下驱动器插槽之间平衡驱动器选择。
@@ -248,12 +262,14 @@ RAID 0
 
 
 
+[[what-raid-level-is-best-for-my-application]]
 == 哪个 RAID 级别最适合我的应用程序？
 
 要最大限度地提高卷组的性能，必须选择适当的 RAID 级别。您可以通过了解正在访问卷组的应用程序的读取和写入百分比来确定适当的 RAID 级别。使用"性能"页面获取这些百分比。
 
 
 
+[[raid-levels-and-application-performance]]
 === RAID 级别和应用程序性能
 
 RAID 依赖于一系列名为 _levels_ 的配置，以确定如何从驱动器写入和检索用户和冗余数据。每个 RAID 级别提供不同的性能功能。由于 RAID 5 和 RAID 6 配置的出色读取性能，具有高读取百分比的应用程序在使用 RAID 5 卷或 RAID 6 卷时将表现良好。
@@ -382,6 +398,7 @@ RAID 依赖于一系列名为 _levels_ 的配置，以确定如何从驱动器�
 ====
 
 
+[[raid-levels-and-data-protection]]
 === RAID 级别和数据保护
 
 RAID 1、RAID 5 和 RAID 6 将冗余数据写入驱动器介质以实现容错。冗余数据可以是数据的副本（镜像）或从数据导出的纠错代码。如果驱动器发生故障，您可以使用冗余数据快速重建替换驱动器上的信息。
@@ -390,6 +407,7 @@ RAID 1、RAID 5 和 RAID 6 将冗余数据写入驱动器介质以实现容错�
 
 
 
+[[what-is-data-assurance]]
 == 什么是数据保障？
 
 数据保障 (DA) 实施 T10 Protection Information (PI) 标准，该标准通过检查和纠正沿 I/O 路径传输数据时可能发生的错误来提高数据完整性。
@@ -402,12 +420,14 @@ Data Assurance 功能的典型使用将检查控制器和驱动器之间的 I/O 
 
 
 
+[[what-is-secure-capable-drive-security]]
 == 什么是安全功能 (Drive Security)？
 
 驱动器安全是一项功能，可防止在从存储阵列中移除启用安全功能的驱动器时对其上的数据进行未经授权的访问。这些驱动器可以是全磁盘加密 (FDE) 驱动器或联邦信息处理标准 (FIPS) 驱动器。
 
 
 
+[[what-do-i-need-to-know-about-increasing-reserved-capacity]]
 == 关于增加预留容量，我需要知道什么？
 
 通常，当您收到预留容量可能已满的警告时，您应该增加容量。您只能以 8 GiB 的增量增加预留容量。
@@ -425,6 +445,7 @@ Data Assurance 功能的典型使用将检查控制器和驱动器之间的 I/O 
 
 
 
+[[why-cant-i-choose-another-amount-to-decrease-by]]
 == 为什么我不能选择其他减少金额？
 
 您只能按照之前增加预留容量的数量来减少预留容量。成员卷的预留容量只能按照添加时的相反顺序进行删除。
@@ -443,6 +464,7 @@ Data Assurance 功能的典型使用将检查控制器和驱动器之间的 I/O 
 
 
 
+[[why-do-i-need-reserved-capacity-for-each-member-volume]]
 == 为什么我需要为每个成员卷保留容量？
 
 快照一致性组中的每个成员卷必须具有自己的保留容量，以保存主机应用程序对基本卷所做的任何修改，而不会影响引用的一致性组快照映像。保留容量为主机应用程序提供对指定为读写的成员卷中包含的数据副本的写入访问权限。
@@ -453,6 +475,7 @@ Data Assurance 功能的典型使用将检查控制器和驱动器之间的 I/O 
 
 
 
+[[how-do-i-view-and-interpret-all-ssd-cache-statistics]]
 == 如何查看和解释所有 SSD Cache 统计信息？
 
 您可以查看 SSD Cache 的名义统计数据和详细统计数据。名义统计数据是详细统计数据的子集。
@@ -461,6 +484,7 @@ Data Assurance 功能的典型使用将检查控制器和驱动器之间的 I/O 
 
 
 
+[[nominal-statistics]]
 === 名义统计
 
 要查看 SSD Cache 统计信息，请选择菜单：Storage[Pools & Volume Groups]。选择要查看其统计信息的 SSD Cache，然后选择菜单：More[View Statistics]。标称统计信息显示在"View SSD Cache Statistics"对话框中。
@@ -513,6 +537,7 @@ Data Assurance 功能的典型使用将检查控制器和驱动器之间的 I/O 
 |===
 
 
+[[detailed-statistics]]
 === 详细统计信息
 
 详细统计数据由名义统计数据加上其他统计数据组成。这些其他统计数据与名义统计数据一起保存，但与名义统计数据不同，它们不会显示在"查看 SSD 缓存统计数据"对话框中。您只能在将统计信息导出到  `.csv` 文件后才能查看详细统计信息。
@@ -637,6 +662,7 @@ SSD 缓存中包含来自基本卷的数据的已分配字节数。可用字节�
 |===
 
 
+[[what-is-optimization-capacity-for-pools]]
 == 什么是池的优化容量？
 
 当未分配部分容量时，SSD 驱动器将具有更长的使用寿命和更好的最大写入性能。
@@ -652,6 +678,7 @@ SSD 缓存中包含来自基本卷的数据的已分配字节数。可用字节�
 ====
 
 
+[[what-is-optimization-capacity-for-volume-groups]]
 == 什么是卷组的优化容量？
 
 当未分配部分容量时，SSD 驱动器将具有更长的使用寿命和更好的最大写入性能。
@@ -667,6 +694,7 @@ SSD 缓存中包含来自基本卷的数据的已分配字节数。可用字节�
 ====
 
 
+[[what-is-resource-provisioning-capable]]
 == 资源配置功能是什么？
 
 资源调配是 EF300 和 EF600 存储阵列中提供的一项功能，它允许卷立即投入使用，而无需后台初始化过程。
@@ -680,6 +708,7 @@ NOTE: 目前 EF300C 或 EF600C 存储阵列不支持 DULBE。
 
 
 
+[[what-do-i-need-to-know-about-the-resource-provisioned-volumes-feature]]
 == 关于资源调配的卷功能，我需要了解哪些信息？
 
 资源调配是 EF300 和 EF600 存储阵列中提供的一项功能，它允许卷立即投入使用，而无需后台初始化过程。

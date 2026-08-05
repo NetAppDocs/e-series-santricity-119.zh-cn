@@ -16,6 +16,7 @@ summary: 如果您计划使用同步镜像，请记住以下要求。
 
 
 
+[[unified-manager]]
 == Unified Manager
 
 要启用和配置两个阵列之间的镜像，必须使用 Unified Manager 界面。Unified Manager 与 Web Services Proxy 一起安装在主机系统上。
@@ -27,6 +28,7 @@ summary: 如果您计划使用同步镜像，请记住以下要求。
 
 
 
+[[storage-arrays]]
 == 存储阵列
 
 [NOTE]
@@ -46,6 +48,7 @@ EF300/EF300C 或 EF600/EF600C 存储阵列上不提供同步镜像。
 
 
 
+[[supported-connections]]
 == 支持的连接
 
 仅在具有光纤通道 (FC) 主机端口的控制器上支持同步镜像的通信。
@@ -54,6 +57,7 @@ EF300/EF300C 或 EF600/EF600C 存储阵列上不提供同步镜像。
 
 
 
+[[mirrored-volume-candidates]]
 == 镜像卷候选项
 
 * RAID 级别、缓存参数和段大小在同步镜像对的主卷和辅助卷上可以不同。
@@ -66,6 +70,7 @@ EF300/EF300C 或 EF600/EF600C 存储阵列上不提供同步镜像。
 
 
 
+[[reserved-capacity]]
 == 预留容量
 
 * 主卷和辅助卷需要保留容量来记录写入信息，以便从控制器重置和其他临时中断中恢复。
@@ -74,6 +79,7 @@ EF300/EF300C 或 EF600/EF600C 存储阵列上不提供同步镜像。
 
 
 
+[[drive-security-feature]]
 == 驱动器安全功能
 
 * 如果使用具有安全功能的驱动器，则主卷和辅助卷必须具有兼容的安全设置。此限制未强制执行；因此，您必须自己验证。

@@ -15,6 +15,7 @@ SANtricity System Manager 是一个基于 Web 的界面，允许您在单个视�
 
 
 
+[[home-page]]
 == 主页
 
 主页为您的存储阵列的日常管理提供了一个仪表板视图。当您登录到 System Manager 时，主页是显示的第一个屏幕。
@@ -55,6 +56,7 @@ SANtricity System Manager 是一个基于 Web 的界面，允许您在单个视�
 |===
 
 
+[[interface-settings]]
 == 接口设置
 
 您可以从主界面更改显示首选项和其他设置。
@@ -86,6 +88,7 @@ SANtricity System Manager 是一个基于 Web 的界面，允许您在单个视�
 |===
 
 
+[[user-logins-and-passwords]]
 == 用户登录名和密码
 
 当前登录系统的用户显示在界面右上角。

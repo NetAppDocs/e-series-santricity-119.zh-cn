@@ -19,6 +19,7 @@ summary: 创建卷时，选择一个工作负载以自定义特定应用程序�
 
 
 
+[[types-of-workloads]]
 == 工作负载类型
 
 您可以创建两种类型的工作负载：Application-specific 和 Other。
@@ -39,6 +40,7 @@ summary: 创建卷时，选择一个工作负载以自定义特定应用程序�
 
 
 
+[[application-and-workload-views]]
 == 应用程序和工作负载视图
 
 要查看应用程序和工作负载，请启动 SANtricity System Manager。从该界面，您可以通过几种不同的方式查看与特定于应用程序的工作负载相关的信息：
