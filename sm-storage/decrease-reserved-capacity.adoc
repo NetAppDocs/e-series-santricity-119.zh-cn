@@ -2,7 +2,7 @@
 permalink: sm-storage/decrease-reserved-capacity.html 
 sidebar: sidebar 
 keywords: SANtricity, System Manager, E-Series, decrease, reserved, capacity 
-summary: '您可以使用"减少容量"选项来减少以下存储对象的保留容量：快照组、快照卷和一致性组成员卷。您只能按用于增加保留容量的数量来减少保留容量。' 
+summary: 您可以使用减少容量选项来减少快照组、快照卷和一致性组成员卷的预留容量。您只能按之前增加的容量大小来减少预留容量。 
 ---
 = 降低 SANtricity System Manager 中的预留容量
 :allow-uri-read: 

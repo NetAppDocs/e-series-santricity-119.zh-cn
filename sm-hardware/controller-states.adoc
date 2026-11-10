@@ -2,7 +2,7 @@
 permalink: sm-hardware/controller-states.html 
 sidebar: sidebar 
 keywords: SANtricity, System Manager, E-Series, controller, states, 
-summary: 您可以将控制器置于三种不同的状态：在线、离线和服务模式。 
+summary: 您可以将控制器置于三种不同的状态，即在线、离线和服务模式。 
 ---
 = 了解 SANtricity System Manager 中的控制器状态
 :allow-uri-read: 

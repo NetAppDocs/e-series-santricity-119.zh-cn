@@ -16,6 +16,13 @@ summary: SANtricity 操作系统中的新功能。
 
 
 
+[[new-features-in-version-11-90r7]]
+== 版本 11.90R7 中的新增功能
+
+此版本仅包含缺陷修复，不包含新功能。有关此版本中更改的更多信息，请参见 E-Series SANtricity 操作系统 11.90R7 README。
+
+
+
 [[new-features-in-version-11-90r6]]
 == 版本 11.90R6 中的新增功能
 

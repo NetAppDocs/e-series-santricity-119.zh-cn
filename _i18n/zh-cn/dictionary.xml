@@ -5425,7 +5425,6 @@
   <block id="945ae7820c24188a29edbd29e427962f" category="paragraph">容量扩展（增加容量）</block>
   <block id="bd3fd623256db562bebda3e697d43452" category="paragraph">容量减少</block>
   <block id="dca785ddf6462cb2ce8d0332432fef85" category="paragraph">池或卷组均不支持混合驱动器类型（HDD、SSD）。</block>
-  <block id="28777dded0f4b7a62c3138973e35582c" category="summary">您可以使用"减少容量"选项来减少以下存储对象的保留容量：快照组、快照卷和一致性组成员卷。您只能按用于增加保留容量的数量来减少保留容量。</block>
   <block id="37e9db9b7a1415532978e5e59b0e1792" category="doc">降低 SANtricity System Manager 中的预留容量</block>
   <block id="115acc53492ff3d71c7e0717c01220a6" category="paragraph">您可以使用"减少容量"选项来减少以下存储对象的保留容量：快照组、快照卷和一致性组成员卷。您只能按用于增加保留容量的数量来减少保留容量。</block>
   <block id="1d76cca7e5eb092d02723fdb9a2c1272" category="list-text">存储对象必须包含多个保留容量卷。</block>
@@ -9049,4 +9048,9 @@
   <block id="24c9cd56861c16e2290412c4fe4d5a8f" category="list-text">IOM12C - v0112</block>
   <block id="818d5ca9647738ea76069fc99cf59499" category="list-text">IOM12G - v0212</block>
   <block id="9133a8b23ddd677242ee6747a18b0e24" category="list-text">DCM3 - v01.12.09.02</block>
+  <block id="fb2a0888f91c24b63218fe88807bbba3" category="summary">您可以将控制器置于三种不同的状态，即在线、离线和服务模式。</block>
+  <block id="49390b5788f909c095a9221fc5028cc6" category="summary">您可以在卷上执行许多不同的操作，包括增加容量、删除、复制、初始化、重新分发、更改所有权、更改缓存设置以及更改媒体扫描设置。</block>
+  <block id="5fde626ba0e89d16805ea6acf1d0ad24" category="summary">您可以使用减少容量选项来减少快照组、快照卷和一致性组成员卷的预留容量。您只能按之前增加的容量大小来减少预留容量。</block>
+  <block id="9587f27e2d9da9b950f8b3a7d00fbad9" category="section-title">版本 11.90R7 中的新增功能</block>
+  <block id="7e2382649b16a571eb0ec2a8e1b78824" category="paragraph">此版本仅包含缺陷修复，不包含新功能。有关此版本中更改的更多信息，请参见 E-Series SANtricity 操作系统 11.90R7 README。</block>
 </blocks>
